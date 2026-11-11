@@ -7,7 +7,8 @@
 - [tokens.json](https://cipreslab.github.io/poliescol/tokens.json): colores, tipografías, tamaños, radios y formatos exactos.
 - [css/tokens.css](https://cipreslab.github.io/poliescol/css/tokens.css): variables CSS y fuentes para piezas HTML.
 
-## Plantillas (HTML 1080x1350, editar elementos con data-editar)
+## Plantillas (HTML 1080x1350, editar solo elementos con data-editar)
+- [plantillas.json](https://cipreslab.github.io/poliescol/plantillas/plantillas.json): ficha técnica de cada plantilla (colores, logo, jerarquía, campos editables y bloqueados). Léela antes de editar.
 - [Comunicado](https://cipreslab.github.io/poliescol/plantillas/comunicado.html)
 - [Bienvenida](https://cipreslab.github.io/poliescol/plantillas/bienvenida.html)
 - [Cumpleaños](https://cipreslab.github.io/poliescol/plantillas/cumpleanos.html)
@@ -20,12 +21,12 @@
 - [Claris Sans (TTF, licencia SIL OFL)](https://cipreslab.github.io/poliescol/assets/fonts/ClarisSans.ttf)
 - [Roboto, familia completa (ZIP, licencia SIL OFL)](https://cipreslab.github.io/poliescol/descargas/poliescol-fuente-roboto.zip)
 
-## Logos (SVG oficiales; nunca redibujar)
-- [Principal, fondo oscuro](https://cipreslab.github.io/poliescol/assets/logo-blanco.svg)
-- [Principal, fondo claro](https://cipreslab.github.io/poliescol/assets/logo-negro.svg)
-- [Horizontal, fondo oscuro](https://cipreslab.github.io/poliescol/assets/logo-horizontal-blanco.svg)
-- [Horizontal, fondo claro](https://cipreslab.github.io/poliescol/assets/logo-horizontal-negro.svg)
-- [Ícono](https://cipreslab.github.io/poliescol/assets/icono.svg)
+## Logos (archivos oficiales; PROHIBIDO recrearlos o generarlos con IA)
+- [Principal, fondo oscuro](https://cipreslab.github.io/poliescol/descargas/poliescol-logo-principal-blanco.svg)
+- [Principal, fondo claro](https://cipreslab.github.io/poliescol/descargas/poliescol-logo-principal-negro.svg)
+- [Horizontal, fondo oscuro](https://cipreslab.github.io/poliescol/descargas/poliescol-logo-horizontal-blanco.svg)
+- [Horizontal, fondo claro](https://cipreslab.github.io/poliescol/descargas/poliescol-logo-horizontal-negro.svg)
+- [Ícono](https://cipreslab.github.io/poliescol/descargas/poliescol-icono.svg)
 
 ## Descargas oficiales (PNG, PDF, ZIP)
 - [Kit de marca completo (.zip)](https://cipreslab.github.io/poliescol/descargas/poliescol-kit-de-marca.zip)

@@ -149,6 +149,44 @@
   .kit h3{margin:0;font-size:38px}
   .kit p{font-size:15px;margin-top:6px;max-width:560px}
   .kit .btn{background:#000;color:#fff;padding:16px 24px;font-size:14px}
+
+  /* biblioteca, alertas y fichas */
+  .alerta{border:1.5px solid var(--p-naranja);background:rgba(255,98,29,.08);border-radius:16px;padding:16px 20px;font-size:15px;color:#f1f1f1;margin:0 0 22px}
+  .alerta b{color:var(--p-naranja)}
+  .libs{display:grid;grid-template-columns:1fr;gap:16px}
+  .lib{display:grid;grid-template-columns:340px 1fr;border:1.5px solid #222;border-radius:22px;overflow:hidden;background:#0b0b0b}
+  .lib .pv{display:grid;place-items:center;padding:30px;min-height:220px}
+  .lib .pv img{height:110px;width:100%;object-fit:contain}
+  .lib .pv.chk{background:repeating-conic-gradient(#e9e9e9 0 25%,#fff 0 50%) 0 0/20px 20px}
+  .lib .in{padding:24px 26px}
+  .lib h4{font-size:26px;margin-bottom:12px}
+  .lib dl{display:grid;grid-template-columns:170px 1fr;gap:6px 16px;font-size:14px}
+  .lib dt{color:#888;font-weight:700}
+  .lib dd{color:#ddd}
+  .lib .bs{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .lib .bs a{font:900 12px var(--p-font-copy);text-decoration:none;padding:9px 13px;border-radius:999px;border:1.5px solid #333}
+  .lib .bs a:first-child{background:var(--p-verde);color:#000;border-color:var(--p-verde)}
+  .lib .bs a:hover{border-color:#fff}
+  @media (max-width:900px){.lib{grid-template-columns:1fr}.lib dl{grid-template-columns:1fr}}
+  .fichas{display:grid;gap:22px}
+  .ficha{display:grid;grid-template-columns:300px 1fr;gap:32px;border:1.5px solid #222;border-radius:24px;padding:24px;background:#0b0b0b}
+  .ficha .fimg{display:block;text-decoration:none;position:relative}
+  .ficha .fimg img{width:100%;border-radius:14px;aspect-ratio:4/5;object-fit:cover}
+  .ficha .fimg span{display:block;margin-top:10px;font:900 13px var(--p-font-copy);color:var(--p-verde)}
+  .ficha h4{font-size:36px;margin:6px 0 14px}
+  .ficha .meta{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}
+  .ficha .meta div{background:#141414;border-radius:12px;padding:12px 14px;font-size:13px;color:#ddd}
+  .ficha .meta small{display:block;font:900 10.5px var(--p-font-copy);letter-spacing:.14em;text-transform:uppercase;color:#888;margin-bottom:4px}
+  .ficha .cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .ficha h5{font-family:var(--p-font-copy);font-weight:900;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#999;margin:4px 0 8px}
+  .ficha ul{list-style:none;font-size:14px;color:#ddd;display:grid;gap:5px;margin-bottom:14px}
+  .ficha ul.x li::before{content:"✕ ";color:var(--p-naranja);font-weight:900}
+  .ficha ul.ok li::before{content:"✓ ";color:var(--p-verde);font-weight:900}
+  .ficha p{font-size:14px;color:#ddd;margin-bottom:14px}
+  .ficha>*,.lib>*{min-width:0}
+  .ficha code,.lib code{word-break:break-all}
+  @media (max-width:560px){.ficha .meta{grid-template-columns:1fr !important}.ficha{padding:16px}}
+  @media (max-width:1100px){.ficha{grid-template-columns:1fr}.ficha .fimg{max-width:300px}.ficha .meta{grid-template-columns:1fr 1fr}.ficha .cols{grid-template-columns:1fr}}
   /* IA */
   pre{background:#0d0d0d;border:1.5px solid #252525;border-radius:18px;padding:24px;overflow:auto;font-size:13.5px;line-height:1.55;color:#e6e6e6;white-space:pre-wrap}
   .pre-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
@@ -210,8 +248,8 @@
   </div>
   <h3>las 7 reglas que no se negocian</h3>
   <ol class="reglas si" style="counter-reset:r">
-    <li>El logotipo se usa tal cual: sin deformar, rotar, recolorear ni separar el ícono de la palabra.</li>
-    <li>El negro manda. Los cuatro colores complementarios acompañan; en cada pieza domina uno solo.</li>
+    <li>El logotipo se usa tal cual, desde el archivo oficial: sin deformar, rotar, recolorear ni separar el ícono de la palabra. Prohibido recrearlo o generarlo con IA.</li>
+    <li>El negro manda. El color de cada pieza no se elige: lo define su categoría (tabla de la sección 04).</li>
     <li>Titulares en minúscula, con la tipografía de titulares (Claris Sans).</li>
     <li>Sobre verde, aqua y naranja el texto va en negro. Sobre violeta y negro, en blanco.</li>
     <li>Un mensaje por pieza. Titular corto, bajada breve, datos concretos.</li>
@@ -299,19 +337,87 @@
 <section id="logo">
   <div class="sec-h"><span class="n">03.</span><h2>logotipo</h2>
   <p>El logotipo es la base de la identidad: es nuestra firma y debe reflejar fielmente nuestra esencia. Tiene dos versiones oficiales.</p></div>
-  <h3>versión principal</h3>
-  <div class="g2">
-    <div class="logo-box bx-negro"><img src="assets/logo-blanco.svg" alt="Logo principal sobre negro"><small>Sobre negro · logo-blanco.svg</small></div>
-    <div class="logo-box bx-blanco"><img src="assets/logo-negro.svg" alt="Logo principal sobre blanco"><small>Sobre blanco · logo-negro.svg</small></div>
-  </div>
-  <p class="muted" style="margin-top:14px">Úsala siempre que el espacio lo permita: formatos verticales, cuadrados, cierres de video, piezas de Gestión Humana.</p>
-  <h3>versión secundaria (horizontal)</h3>
-  <div class="g2">
-    <div class="logo-box bx-negro"><img src="assets/logo-horizontal-blanco.svg" alt="Logo horizontal sobre negro" style="max-height:80px"><small>logo-horizontal-blanco.svg</small></div>
-    <div class="logo-box bx-blanco"><img src="assets/logo-horizontal-negro.svg" alt="Logo horizontal sobre blanco" style="max-height:80px"><small>logo-horizontal-negro.svg</small></div>
-  </div>
-  <p class="muted" style="margin-top:14px">Solo cuando el área de aplicación lo exija: banners muy horizontales, firmas de correo, encabezados, bordados pequeños.</p>
 
+  <div class="alerta"><b>Regla obligatoria.</b> Está prohibido recrear, redibujar, reinterpretar, vectorizar de nuevo o generar versiones del logotipo mediante inteligencia artificial o cualquier otra herramienta. Siempre se debe utilizar el archivo oficial suministrado en esta biblioteca.</div>
+  <h3>biblioteca oficial de logos</h3>
+  <p class="muted" style="margin-bottom:20px">Cinco archivos oficiales. Cada uno tiene un uso y unos fondos definidos. Usos incorrectos para todas las versiones: No deformar, rotar, recolorear, mover el ícono, agregar sombras/contornos/efectos, reescribir con otra letra, usar sobre fondos sin contraste o fotos recargadas, ni recrear con IA.</p>
+  <div class="libs">
+    <article class="lib" id="logo-principal-blanco">
+      <div class="pv" style="background:#000"><img src="descargas/poliescol-logo-principal-blanco.svg" alt="Logo principal · blanco"></div>
+      <div class="in">
+        <h4>Logo principal · blanco</h4>
+        <dl>
+          <dt>Archivo</dt><dd><code>poliescol-logo-principal-blanco.svg</code><br><code>poliescol-logo-principal-blanco-transparente.png</code></dd>
+          <dt>Cuándo usarlo</dt><dd>Versión preferente. Formatos verticales y cuadrados, piezas de Gestión Humana, cierres de video.</dd>
+          <dt>Fondos permitidos</dt><dd>Negro #000000, violeta #741DEC, fotos oscuras con zona limpia.</dd>
+          <dt>Fondos prohibidos</dt><dd>Blanco, gris claro, verde, aqua, naranja.</dd>
+          <dt>Área de protección</dt><dd>Manual: 1 cm arriba/abajo y 1,5 cm a los lados. Digital: ≥ 10 % del ancho del logo arriba/abajo y ≥ 15 % a los lados.</dd>
+          <dt>Tamaño mínimo</dt><dd>20 mm de ancho impreso · 50 px de ancho digital.</dd>
+        </dl>
+        <div class="bs"><a href="descargas/poliescol-logo-principal-blanco.svg" download>SVG</a><a href="descargas/poliescol-logo-principal-blanco-transparente.png" download>PNG transparente</a><a href="descargas/poliescol-logo-principal-fondo-negro.png" download>PNG con fondo negro</a></div>
+      </div>
+    </article>
+    <article class="lib" id="logo-principal-negro">
+      <div class="pv chk" style=""><img src="descargas/poliescol-logo-principal-negro.svg" alt="Logo principal · negro"></div>
+      <div class="in">
+        <h4>Logo principal · negro</h4>
+        <dl>
+          <dt>Archivo</dt><dd><code>poliescol-logo-principal-negro.svg</code><br><code>poliescol-logo-principal-negro-transparente.png</code></dd>
+          <dt>Cuándo usarlo</dt><dd>Versión preferente sobre fondos claros o de color.</dd>
+          <dt>Fondos permitidos</dt><dd>Blanco, gris claro #EDEDED, verde #B5FF04, aqua #20F9F5, naranja #FF621D.</dd>
+          <dt>Fondos prohibidos</dt><dd>Negro, violeta, fotos oscuras.</dd>
+          <dt>Área de protección</dt><dd>Manual: 1 cm arriba/abajo y 1,5 cm a los lados. Digital: ≥ 10 % del ancho del logo arriba/abajo y ≥ 15 % a los lados.</dd>
+          <dt>Tamaño mínimo</dt><dd>20 mm de ancho impreso · 50 px de ancho digital.</dd>
+        </dl>
+        <div class="bs"><a href="descargas/poliescol-logo-principal-negro.svg" download>SVG</a><a href="descargas/poliescol-logo-principal-negro-transparente.png" download>PNG transparente</a></div>
+      </div>
+    </article>
+    <article class="lib" id="logo-horizontal-blanco">
+      <div class="pv" style="background:#000"><img src="descargas/poliescol-logo-horizontal-blanco.svg" alt="Logo horizontal · blanco"></div>
+      <div class="in">
+        <h4>Logo horizontal · blanco</h4>
+        <dl>
+          <dt>Archivo</dt><dd><code>poliescol-logo-horizontal-blanco.svg</code><br><code>poliescol-logo-horizontal-blanco-transparente.png</code></dd>
+          <dt>Cuándo usarlo</dt><dd>Solo cuando el formato es muy horizontal (proporción ≥ 3:1): banners, firma de correo, encabezados, bordados pequeños.</dd>
+          <dt>Fondos permitidos</dt><dd>Negro #000000, violeta #741DEC.</dd>
+          <dt>Fondos prohibidos</dt><dd>Blanco, gris claro, verde, aqua, naranja.</dd>
+          <dt>Área de protección</dt><dd>Manual: 1 cm arriba/abajo y 1,5 cm a los lados. Digital: ≥ 10 % del ancho del logo arriba/abajo y ≥ 15 % a los lados.</dd>
+          <dt>Tamaño mínimo</dt><dd>20 mm / 50 px de ancho (manual). Recomendado ≥ 120 px en digital.</dd>
+        </dl>
+        <div class="bs"><a href="descargas/poliescol-logo-horizontal-blanco.svg" download>SVG</a><a href="descargas/poliescol-logo-horizontal-blanco-transparente.png" download>PNG transparente</a><a href="descargas/poliescol-logo-horizontal-fondo-negro.png" download>PNG con fondo negro</a></div>
+      </div>
+    </article>
+    <article class="lib" id="logo-horizontal-negro">
+      <div class="pv chk" style=""><img src="descargas/poliescol-logo-horizontal-negro.svg" alt="Logo horizontal · negro"></div>
+      <div class="in">
+        <h4>Logo horizontal · negro</h4>
+        <dl>
+          <dt>Archivo</dt><dd><code>poliescol-logo-horizontal-negro.svg</code><br><code>poliescol-logo-horizontal-negro-transparente.png</code></dd>
+          <dt>Cuándo usarlo</dt><dd>Versión horizontal sobre fondos claros o de color.</dd>
+          <dt>Fondos permitidos</dt><dd>Blanco, gris claro, verde, aqua, naranja.</dd>
+          <dt>Fondos prohibidos</dt><dd>Negro, violeta.</dd>
+          <dt>Área de protección</dt><dd>Manual: 1 cm arriba/abajo y 1,5 cm a los lados. Digital: ≥ 10 % del ancho del logo arriba/abajo y ≥ 15 % a los lados.</dd>
+          <dt>Tamaño mínimo</dt><dd>20 mm / 50 px de ancho (manual). Recomendado ≥ 120 px en digital.</dd>
+        </dl>
+        <div class="bs"><a href="descargas/poliescol-logo-horizontal-negro.svg" download>SVG</a><a href="descargas/poliescol-logo-horizontal-negro-transparente.png" download>PNG transparente</a></div>
+      </div>
+    </article>
+    <article class="lib" id="logo-icono">
+      <div class="pv chk" style=""><img src="descargas/poliescol-icono.svg" alt="Ícono · ventana de luz"></div>
+      <div class="in">
+        <h4>Ícono · ventana de luz</h4>
+        <dl>
+          <dt>Archivo</dt><dd><code>poliescol-icono.svg</code><br><code>poliescol-icono-transparente.png</code></dd>
+          <dt>Cuándo usarlo</dt><dd>Avatar de perfiles, favicon, sellos. Ampliado como recurso gráfico (ver 07). No reemplaza al logo en piezas formales.</dd>
+          <dt>Fondos permitidos</dt><dd>Negro, blanco, gris claro.</dd>
+          <dt>Fondos prohibidos</dt><dd>Verde, aqua, violeta o naranja (un bloque desaparece), salvo como recurso gráfico con la regla del bloque negro.</dd>
+          <dt>Área de protección</dt><dd>Alrededor, como mínimo el ancho de un bloque del ícono (regla complementaria).</dd>
+          <dt>Tamaño mínimo</dt><dd>24 px de alto digital · 8 mm impreso (regla complementaria, no está en el manual 2024).</dd>
+        </dl>
+        <div class="bs"><a href="descargas/poliescol-icono.svg" download>SVG</a><a href="descargas/poliescol-icono-transparente.png" download>PNG transparente</a><a href="descargas/poliescol-icono-alta-resolucion.jpg" download>JPG alta resolución</a><a href="descargas/poliescol-icono-transparente-posicion-horizontal.png" download>PNG alineado a horizontal</a></div>
+      </div>
+    </article>
+  </div>
   <h3>el ícono: una ventana de luz</h3>
   <div class="g2" style="align-items:center">
     <div class="logo-box bx-negro"><img src="assets/icono.svg" alt="Ícono Poliescol" style="max-height:170px"></div>
@@ -345,6 +451,7 @@
     <div class="logo-box mal" style="background:url(assets/aplicaciones/fachada.jpg) center/cover"><img src="assets/logo-blanco.svg" alt="" style="max-height:90px"><p style="color:#fff">No usar sobre fotos recargadas</p></div>
     <div class="logo-box bx-negro mal"><img src="assets/logo-blanco.svg" alt="" style="max-height:90px;filter:drop-shadow(8px 8px 0 #741DEC)"><p>No agregar sombras ni efectos</p></div>
     <div class="logo-box bx-negro mal"><span style="font:700 52px Georgia,serif;color:#fff">Poliescol</span><p>No reescribir con otra letra</p></div>
+    <div class="logo-box bx-negro mal"><span style="font:900 15px var(--p-font-copy);color:#fff;text-align:center;line-height:1.4">“genera el logo<br>de Poliescol”</span><p>No recrear con IA</p></div>
   </div>
 </section>
 
@@ -377,25 +484,87 @@
       <tr><td><span class="sw" style="background:#EDEDED"></span>Gris claro</td><td><b>Negro</b>, acentos en violeta</td><td>18 : 1</td><td>Verde y aqua no sirven como texto sobre claro.</td></tr>
     </tbody></table></div>
 
-  <h3>color según el mensaje (Gestión Humana)</h3>
+  <h3>color por categoría de comunicación</h3>
+  <div class="alerta"><b>Regla obligatoria.</b> La IA (y cualquier persona) no puede elegir libremente colores de la paleta: debe usar exactamente la combinación asignada a la categoría de la comunicación. Si la categoría no está en la tabla, se usa la de Comunicado institucional.</div>
   <div class="tw"><table>
-    <thead><tr><th>Tipo de mensaje</th><th>Color protagonista</th><th>Por qué</th></tr></thead>
+    <thead><tr><th>Categoría</th><th>Fondo</th><th>Texto</th><th>Acento</th><th>Complementos y prohibidos</th><th>Plantilla</th></tr></thead>
     <tbody>
-      <tr><td><b>Comunicados e informativos</b></td><td><span class="sw" style="background:#000;border:1px solid #444"></span>Negro + acento aqua</td><td>Claridad y confianza.</td></tr>
-      <tr><td><b>Bienvenidas</b></td><td><span class="sw" style="background:var(--p-aqua)"></span>Aqua</td><td>Comunicación clara, armonía.</td></tr>
-      <tr><td><b>Reconocimientos y aniversarios</b></td><td><span class="sw" style="background:var(--p-verde)"></span>Verde</td><td>Autenticidad y creatividad: “tu trabajo es arte”.</td></tr>
-      <tr><td><b>Formación, charlas y eventos</b></td><td><span class="sw" style="background:var(--p-violeta)"></span>Violeta</td><td>Sabiduría.</td></tr>
-      <tr><td><b>Cumpleaños y celebraciones</b></td><td><span class="sw" style="background:var(--p-naranja)"></span>Naranja</td><td>Entusiasmo y pasión.</td></tr>
-      <tr><td><b>Bienestar, salud y seguridad</b></td><td><span class="sw" style="background:#EDEDED"></span>Gris claro + los cuatro en pasos</td><td>Calma y orden.</td></tr>
-      <tr><td><b>Fechas espirituales y de gratitud</b></td><td><span class="sw" style="background:var(--p-violeta)"></span>Violeta o negro</td><td>Espiritualidad.</td></tr>
-      <tr><td><b>Duelo y condolencias</b></td><td><span class="sw" style="background:#000;border:1px solid #444"></span>Solo negro y blanco</td><td>Respeto. Sin colores ni ventana.</td></tr>
+      <tr><td><b>Comunicado institucional</b><br><span class="muted">Avisos, cambios de horario, procesos, recordatorios</span></td>
+        <td><span class="sw" style="background:#000000; border:1px solid #444;"></span>Negro <code>#000000</code></td>
+        <td><span class="sw" style="background:#FFFFFF;"></span>Blanco <code>#FFFFFF</code></td>
+        <td><span class="sw" style="background:#20F9F5;"></span>Aqua <code>#20F9F5</code></td>
+        <td>Panel gris claro #EDEDED con texto negro; ventana de luz pequeña.<br><span style="color:var(--p-naranja)">No: Verde, violeta o naranja como acento.</span></td>
+        <td><a href="plantillas/comunicado.html" style="color:var(--p-aqua)">comunicado.html</a></td></tr>
+      <tr><td><b>Bienvenida</b><br><span class="muted">Ingreso de una persona nueva</span></td>
+        <td><span class="sw" style="background:#20F9F5;"></span>Aqua <code>#20F9F5</code></td>
+        <td><span class="sw" style="background:#000000; border:1px solid #444;"></span>Negro <code>#000000</code></td>
+        <td><span class="sw" style="background:#000000; border:1px solid #444;"></span>Negro <code>#000000</code></td>
+        <td>Foto de la persona.<br><span style="color:var(--p-naranja)">No: Cualquier otro complementario.</span></td>
+        <td><a href="plantillas/bienvenida.html" style="color:var(--p-aqua)">bienvenida.html</a></td></tr>
+      <tr><td><b>Cumpleaños</b><br><span class="muted">Cumpleaños individual o del mes</span></td>
+        <td><span class="sw" style="background:#000000; border:1px solid #444;"></span>Negro <code>#000000</code></td>
+        <td><span class="sw" style="background:#FFFFFF;"></span>Blanco <code>#FFFFFF</code></td>
+        <td><span class="sw" style="background:#FF621D;"></span>Naranja <code>#FF621D</code></td>
+        <td>Ventana de luz grande rotada −8°; nombre en naranja.<br><span style="color:var(--p-naranja)">No: Fondos de color; otro color para el nombre.</span></td>
+        <td><a href="plantillas/cumpleanos.html" style="color:var(--p-aqua)">cumpleanos.html</a></td></tr>
+      <tr><td><b>Reconocimiento</b><br><span class="muted">Logros, aniversarios, buenas prácticas</span></td>
+        <td><span class="sw" style="background:#B5FF04;"></span>Verde limón <code>#B5FF04</code></td>
+        <td><span class="sw" style="background:#000000; border:1px solid #444;"></span>Negro <code>#000000</code></td>
+        <td><span class="sw" style="background:#B5FF04;"></span>Verde limón sobre panel negro <code>#B5FF04</code></td>
+        <td>Panel negro #000000 con texto blanco.<br><span style="color:var(--p-naranja)">No: Aqua, violeta o naranja.</span></td>
+        <td><a href="plantillas/reconocimiento.html" style="color:var(--p-aqua)">reconocimiento.html</a></td></tr>
+      <tr><td><b>Formación y eventos</b><br><span class="muted">Capacitaciones, charlas, jornadas</span></td>
+        <td><span class="sw" style="background:#741DEC;"></span>Violeta <code>#741DEC</code></td>
+        <td><span class="sw" style="background:#FFFFFF;"></span>Blanco <code>#FFFFFF</code></td>
+        <td><span class="sw" style="background:#B5FF04;"></span>Verde limón <code>#B5FF04</code></td>
+        <td>Bloque de fecha negro; panel de datos gris claro con texto negro.<br><span style="color:var(--p-naranja)">No: Aqua o naranja.</span></td>
+        <td><a href="plantillas/formacion.html" style="color:var(--p-aqua)">formacion.html</a></td></tr>
+      <tr><td><b>Bienestar, salud y seguridad</b><br><span class="muted">Pausas activas, SST, salud</span></td>
+        <td><span class="sw" style="background:#EDEDED;"></span>Gris claro <code>#EDEDED</code></td>
+        <td><span class="sw" style="background:#000000; border:1px solid #444;"></span>Negro <code>#000000</code></td>
+        <td><span class="sw" style="background:#741DEC;"></span>Violeta <code>#741DEC</code></td>
+        <td>Pasos numerados en verde, aqua y naranja (en ese orden).<br><span style="color:var(--p-naranja)">No: Fondo negro o de color.</span></td>
+        <td><a href="plantillas/bienestar.html" style="color:var(--p-aqua)">bienestar.html</a></td></tr>
+      <tr><td><b>Condolencias y duelo</b><br><span class="muted">Fallecimientos</span></td>
+        <td><span class="sw" style="background:#000000; border:1px solid #444;"></span>Negro <code>#000000</code></td>
+        <td><span class="sw" style="background:#FFFFFF;"></span>Blanco <code>#FFFFFF</code></td>
+        <td>Ninguno </td>
+        <td>Grises #BDBDBD y #8A8A8A para textos secundarios.<br><span style="color:var(--p-naranja)">No: Cualquier color complementario, ventana de luz, emojis.</span></td>
+        <td><a href="plantillas/condolencia.html" style="color:var(--p-aqua)">condolencia.html</a></td></tr>
     </tbody></table></div>
+
 </section>
 
 <!-- ============ 05 TIPOGRAFÍA ============ -->
 <section id="tipo">
   <div class="sec-h"><span class="n">05.</span><h2>tipografía</h2>
-  <p>Tres niveles. Todos los titulares van en minúscula, como en el manual.</p></div>
+  <p>Dos familias, tres niveles. Usa siempre los archivos oficiales; nunca deduzcas la tipografía a partir de una imagen.</p></div>
+  <h3>ficha técnica obligatoria</h3>
+  <div class="alerta"><b>Regla obligatoria.</b> No deduzcas tipografías a partir de imágenes ni las sustituyas por parecidas. Usa los archivos oficiales enlazados. La alternativa solo se permite si la herramienta no admite instalar fuentes.</div>
+  <div class="tw"><table>
+    <thead><tr><th>Elemento</th><th>Especificación</th><th>Reglas</th><th>Archivo</th></tr></thead>
+    <tbody>
+      <tr><td><b>Tipografía principal</b></td><td>Claris Sans</td><td>Archivo único (un solo estilo). No aplicar negrita, cursiva ni contorno sintéticos.</td><td><a href="assets/fonts/ClarisSans.ttf" download style="color:var(--p-aqua)">ClarisSans.ttf</a></td></tr>
+      <tr><td><b>Tipografía de apoyo</b></td><td>Roboto</td><td>Familia completa de Thin (100) a Black (900), con itálicas y variable.</td><td><a href="descargas/poliescol-fuente-roboto.zip" download style="color:var(--p-aqua)">poliescol-fuente-roboto.zip</a></td></tr>
+      <tr><td><b>Titulares</b></td><td>Claris Sans · estilo único</td><td>Siempre en minúscula. Interlineado 0,98. Tracking −1,5 %. Máx. 7 palabras.</td><td><a href="assets/fonts/ClarisSans.ttf" download style="color:var(--p-aqua)">ClarisSans.ttf</a></td></tr>
+      <tr><td><b>Numerales (01. 02.) y cifras grandes</b></td><td>Claris Sans · estilo único</td><td>Formato “01.” con punto final.</td><td><a href="assets/fonts/ClarisSans.ttf" download style="color:var(--p-aqua)">ClarisSans.ttf</a></td></tr>
+      <tr><td><b>Subtítulos, etiquetas y destacados</b></td><td>Roboto Black (900)</td><td>Etiquetas en MAYÚSCULAS con tracking +20 %. Nombres de personas y etiquetas de datos (“Hora:”).</td><td><a href="descargas/poliescol-fuente-roboto.zip" download style="color:var(--p-aqua)">Roboto-Black.ttf</a></td></tr>
+      <tr><td><b>Cuerpo de texto y bajadas</b></td><td>Roboto Regular (400)</td><td>Interlineado 1,35–1,45. Sin justificar: alineado a la izquierda.</td><td><a href="descargas/poliescol-fuente-roboto.zip" download style="color:var(--p-aqua)">Roboto-Regular.ttf</a></td></tr>
+      <tr><td><b>Tipografía alternativa</b></td><td>Titulares: Outfit SemiBold (600) · Textos: Arial / Arial Black</td><td>Solo si la herramienta no permite instalar Claris Sans o Roboto (p. ej. algunos equipos con Office). Nunca por gusto.</td><td><a href="assets/fonts/outfit-latin-600-normal.woff2" download style="color:var(--p-aqua)">Outfit (web)</a></td></tr>
+    </tbody></table></div>
+  <div class="tw" style="margin-top:16px"><table>
+    <thead><tr><th>Color</th><th>Nombre</th><th>HEX</th></tr></thead>
+    <tbody>
+      <tr><td><b>Color principal</b></td><td><span class="sw" style="background:#000000; border:1px solid #444;"></span>Negro</td><td><code>#000000</code> <button class="copy" data-c="#000000">copiar</button></td></tr>
+      <tr><td><b>Color secundario 1 · Automotriz</b></td><td><span class="sw" style="background:#B5FF04;"></span>Verde limón</td><td><code>#B5FF04</code> <button class="copy" data-c="#B5FF04">copiar</button></td></tr>
+      <tr><td><b>Color secundario 2 · Arquitectónico</b></td><td><span class="sw" style="background:#20F9F5;"></span>Azul agua marina</td><td><code>#20F9F5</code> <button class="copy" data-c="#20F9F5">copiar</button></td></tr>
+      <tr><td><b>Color secundario 3 · Metalmecánico</b></td><td><span class="sw" style="background:#741DEC;"></span>Violeta</td><td><code>#741DEC</code> <button class="copy" data-c="#741DEC">copiar</button></td></tr>
+      <tr><td><b>Color secundario 4 · Madera</b></td><td><span class="sw" style="background:#FF621D;"></span>Naranja</td><td><code>#FF621D</code> <button class="copy" data-c="#FF621D">copiar</button></td></tr>
+      <tr><td><b>Neutro · fondo claro</b></td><td><span class="sw" style="background:#EDEDED;"></span>Gris claro</td><td><code>#EDEDED</code> <button class="copy" data-c="#EDEDED">copiar</button></td></tr>
+      <tr><td><b>Neutro · numerales y texto secundario</b></td><td><span class="sw" style="background:#5F5F5F;"></span>Gris medio</td><td><code>#5F5F5F</code> <button class="copy" data-c="#5F5F5F">copiar</button></td></tr>
+      <tr><td><b>Neutro · texto sobre oscuro</b></td><td><span class="sw" style="background:#FFFFFF;"></span>Blanco</td><td><code>#FFFFFF</code> <button class="copy" data-c="#FFFFFF">copiar</button></td></tr>
+    </tbody></table></div>
+  <h3>muestras</h3>
   <div class="spec"><div class="lbl"><b>Titulares</b>Claris Sans<br>Archivo: <a href="assets/fonts/ClarisSans.ttf" download style="color:var(--p-aqua)">ClarisSans.ttf</a> · licencia OFL<br>Respaldo: Outfit</div>
     <div style="font-family:var(--p-font-titular);font-weight:600;font-size:clamp(40px,5vw,72px);line-height:1;text-transform:lowercase">todo pintor es un artista.</div></div>
   <div class="spec"><div class="lbl"><b>Copys y destacados</b>Roboto Black (900)<br><a href="descargas/poliescol-fuente-roboto.zip" download style="color:var(--p-aqua)">Descargar Roboto (.zip)</a> · licencia OFL</div>
@@ -448,15 +617,128 @@
 <!-- ============ 08 GH ============ -->
 <section id="gh">
   <div class="sec-h"><span class="n">08.</span><h2>piezas para gestión humana</h2>
-  <p>Plantillas reales en HTML, en formato 1080 × 1350 px (4:5) para pantallas, WhatsApp y redes internas. Ábrelas, cambia los textos marcados con <code>data-editar</code> y exporta. Cada una sigue todas las reglas de este manual.</p></div>
-  <div class="g4">
-    <a class="tpl" href="plantillas/comunicado.html"><img src="plantillas/vistas/comunicado.jpg" alt="Plantilla comunicado"><div><b>comunicado</b><span>Avisos, cambios, procesos · negro + aqua</span></div></a>
-    <a class="tpl" href="plantillas/bienvenida.html"><img src="plantillas/vistas/bienvenida.jpg" alt="Plantilla bienvenida"><div><b>bienvenida</b><span>Persona nueva · aqua</span></div></a>
-    <a class="tpl" href="plantillas/cumpleanos.html"><img src="plantillas/vistas/cumpleanos.jpg" alt="Plantilla cumpleaños"><div><b>cumpleaños</b><span>Celebraciones · negro + naranja</span></div></a>
-    <a class="tpl" href="plantillas/reconocimiento.html"><img src="plantillas/vistas/reconocimiento.jpg" alt="Plantilla reconocimiento"><div><b>reconocimiento</b><span>Logros, aniversarios · verde</span></div></a>
-    <a class="tpl" href="plantillas/formacion.html"><img src="plantillas/vistas/formacion.jpg" alt="Plantilla formación"><div><b>formación y eventos</b><span>Charlas, jornadas · violeta</span></div></a>
-    <a class="tpl" href="plantillas/bienestar.html"><img src="plantillas/vistas/bienestar.jpg" alt="Plantilla bienestar"><div><b>bienestar</b><span>Pausas, salud, seguridad · gris claro</span></div></a>
-    <a class="tpl" href="plantillas/condolencia.html"><img src="plantillas/vistas/condolencia.jpg" alt="Plantilla condolencias"><div><b>condolencias</b><span>Duelo · solo negro y blanco</span></div></a>
+  <p>Siete plantillas oficiales en HTML, 1080 × 1350 px (4:5), para pantallas, WhatsApp y redes internas. Cada ficha dice qué se puede cambiar y qué no. Especificación completa para IA en <a href="plantillas/plantillas.json" style="color:var(--p-aqua)">plantillas.json</a>.</p></div>
+  <div class="alerta"><b>Regla obligatoria.</b> En una plantilla solo cambian los campos personalizables (marcados en el código con <code>data-editar</code>; si tienen <code>data-opciones</code>, solo se elige entre esas opciones). La estructura visual, el logo, los colores y las tipografías se mantienen.</div>
+  <div class="fichas">
+    <article class="ficha" id="plantilla-comunicado">
+      <a href="plantillas/comunicado.html" class="fimg"><img src="plantillas/vistas/comunicado.jpg" alt="Plantilla Comunicado" loading="lazy"><span>Abrir plantilla →</span></a>
+      <div>
+        <span class="kick" style="color:var(--p-aqua)">Categoría · Comunicado institucional</span>
+        <h4>comunicado</h4>
+        <div class="meta">
+          <div><small>Archivo</small><code>plantillas/comunicado.html</code></div>
+          <div><small>Dimensiones</small>1080 × 1350 px (4:5)</div>
+          <div><small>Colores</small>Fondo <span class="sw" style="background:#000000; border:1px solid #444;"></span>#000000<br>Texto <span class="sw" style="background:#FFFFFF;"></span>#FFFFFF<br>Acento <span class="sw" style="background:#20F9F5;"></span>#20F9F5</div>
+          <div><small>Logo</small><code>poliescol-logo-principal-blanco.svg</code><br>Abajo a la izquierda: 96 px del borde izquierdo y 80 px del borde inferior, 86 px de alto.</div>
+        </div>
+        <div class="cols">
+          <div><h5>jerarquía tipográfica</h5><ul><li><b>Etiqueta:</b> Roboto Black 26 px, MAYÚSCULAS, aqua</li><li><b>Titular:</b> Claris Sans 118 px, blanco, minúscula</li><li><b>Bajada:</b> Roboto Regular 36 px, gris #CFCFCF</li><li><b>Datos:</b> Roboto Regular 30 px negro sobre panel gris claro; etiqueta del dato en Roboto Black</li><li><b>Firma:</b> Roboto Black 20 px, MAYÚSCULAS</li></ul><h5>elementos gráficos permitidos</h5><p>Ventana de luz de 210 px arriba a la derecha. Panel gris claro con esquina mayor de 96 px.</p></div>
+          <div><h5 style="color:var(--p-naranja)">no se puede modificar</h5><ul class="x"><li>Dimensiones 1080 × 1350 px</li><li>Márgenes de 96 px</li><li>Posición, tamaño y versión del logo</li><li>Colores asignados a la categoría</li><li>Tipografías, tamaños y alineación</li><li>Orden de los elementos</li></ul><h5 style="color:var(--p-verde)">campos personalizables</h5><ul class="ok"><li><code>tipo</code> <b>Etiqueta</b> — COMUNICADO · AVISO · RECORDATORIO</li><li><code>titular</code> <b>Titular</b> — ≤ 7 palabras, minúscula</li><li><code>bajada</code> <b>Bajada</b> — ≤ 25 palabras</li><li><code>datos</code> <b>Datos</b> — 3 líneas: Desde / Turno o Hora / Dudas</li><li><code>area</code> <b>Área que firma</b> — Gestión Humana · Seguridad y Salud en el Trabajo</li></ul></div>
+        </div>
+      </div>
+    </article>
+    <article class="ficha" id="plantilla-bienvenida">
+      <a href="plantillas/bienvenida.html" class="fimg"><img src="plantillas/vistas/bienvenida.jpg" alt="Plantilla Bienvenida" loading="lazy"><span>Abrir plantilla →</span></a>
+      <div>
+        <span class="kick" style="color:var(--p-aqua)">Categoría · Bienvenida</span>
+        <h4>bienvenida</h4>
+        <div class="meta">
+          <div><small>Archivo</small><code>plantillas/bienvenida.html</code></div>
+          <div><small>Dimensiones</small>1080 × 1350 px (4:5)</div>
+          <div><small>Colores</small>Fondo <span class="sw" style="background:#20F9F5;"></span>#20F9F5<br>Texto <span class="sw" style="background:#000000; border:1px solid #444;"></span>#000000<br>Acento <span class="sw" style="background:#000000; border:1px solid #444;"></span>#000000</div>
+          <div><small>Logo</small><code>poliescol-logo-principal-negro.svg</code><br>Abajo a la izquierda: 96 px del borde izquierdo y 80 px del borde inferior, 86 px de alto.</div>
+        </div>
+        <div class="cols">
+          <div><h5>jerarquía tipográfica</h5><ul><li><b>Etiqueta:</b> Roboto Black 26 px, MAYÚSCULAS, negro</li><li><b>Titular:</b> Claris Sans 118 px, negro: “bienvenida/bienvenido, [nombre].”</li><li><b>Nombre completo:</b> Roboto Black 40 px</li><li><b>Cargo y sede:</b> Roboto Regular 30 px</li><li><b>Mensaje:</b> Roboto Regular 30 px</li></ul><h5>elementos gráficos permitidos</h5><p>Foto de 470 × 560 px con esquinas mayores (arriba-izquierda y abajo-derecha).</p></div>
+          <div><h5 style="color:var(--p-naranja)">no se puede modificar</h5><ul class="x"><li>Dimensiones 1080 × 1350 px</li><li>Márgenes de 96 px</li><li>Posición, tamaño y versión del logo</li><li>Colores asignados a la categoría</li><li>Tipografías, tamaños y alineación</li><li>Orden de los elementos</li><li>La etiqueta “NUEVO EN LA FAMILIA”</li></ul><h5 style="color:var(--p-verde)">campos personalizables</h5><ul class="ok"><li><code>titular</code> <b>Titular</b> — bienvenida/bienvenido + nombre de pila</li><li><code>foto</code> <b>Foto</b> — Foto real de la persona, de frente, fondo limpio</li><li><code>nombre</code> <b>Nombre completo</b> — Nombre y primer apellido</li><li><code>cargo</code> <b>Cargo y sede</b> — 2 líneas</li><li><code>mensaje</code> <b>Mensaje</b> — ≤ 25 palabras, invita a saludar</li></ul></div>
+        </div>
+      </div>
+    </article>
+    <article class="ficha" id="plantilla-cumpleanos">
+      <a href="plantillas/cumpleanos.html" class="fimg"><img src="plantillas/vistas/cumpleanos.jpg" alt="Plantilla Cumpleaños" loading="lazy"><span>Abrir plantilla →</span></a>
+      <div>
+        <span class="kick" style="color:var(--p-aqua)">Categoría · Cumpleaños</span>
+        <h4>cumpleaños</h4>
+        <div class="meta">
+          <div><small>Archivo</small><code>plantillas/cumpleanos.html</code></div>
+          <div><small>Dimensiones</small>1080 × 1350 px (4:5)</div>
+          <div><small>Colores</small>Fondo <span class="sw" style="background:#000000; border:1px solid #444;"></span>#000000<br>Texto <span class="sw" style="background:#FFFFFF;"></span>#FFFFFF<br>Acento <span class="sw" style="background:#FF621D;"></span>#FF621D</div>
+          <div><small>Logo</small><code>poliescol-logo-principal-blanco.svg</code><br>Abajo a la izquierda: 96 px del borde izquierdo y 80 px del borde inferior, 86 px de alto.</div>
+        </div>
+        <div class="cols">
+          <div><h5>jerarquía tipográfica</h5><ul><li><b>Fecha:</b> Roboto Black 26 px, MAYÚSCULAS, naranja</li><li><b>Titular:</b> Claris Sans 124 px, blanco; el nombre en naranja</li><li><b>Mensaje:</b> Roboto Regular 36 px, gris #D0D0D0</li><li><b>Firma:</b> Roboto Black 20 px, MAYÚSCULAS</li></ul><h5>elementos gráficos permitidos</h5><p>Ventana de luz de 560 px rotada −8°, cortada en la esquina superior derecha. Foto de 340 × 400 px arriba a la izquierda.</p></div>
+          <div><h5 style="color:var(--p-naranja)">no se puede modificar</h5><ul class="x"><li>Dimensiones 1080 × 1350 px</li><li>Márgenes de 96 px</li><li>Posición, tamaño y versión del logo</li><li>Colores asignados a la categoría</li><li>Tipografías, tamaños y alineación</li><li>Orden de los elementos</li><li>Rotación y posición de la ventana de luz</li></ul><h5 style="color:var(--p-verde)">campos personalizables</h5><ul class="ok"><li><code>foto</code> <b>Foto</b> — Foto real de la persona</li><li><code>fecha</code> <b>Fecha</b> — día + mes en letras</li><li><code>titular</code> <b>Titular</b> — “feliz cumple, [nombre].”</li><li><code>mensaje</code> <b>Mensaje</b> — ≤ 20 palabras, con gratitud</li><li><code>area</code> <b>Firma</b> — Tu familia Poliescol · Gestión Humana</li></ul></div>
+        </div>
+      </div>
+    </article>
+    <article class="ficha" id="plantilla-reconocimiento">
+      <a href="plantillas/reconocimiento.html" class="fimg"><img src="plantillas/vistas/reconocimiento.jpg" alt="Plantilla Reconocimiento" loading="lazy"><span>Abrir plantilla →</span></a>
+      <div>
+        <span class="kick" style="color:var(--p-aqua)">Categoría · Reconocimiento</span>
+        <h4>reconocimiento</h4>
+        <div class="meta">
+          <div><small>Archivo</small><code>plantillas/reconocimiento.html</code></div>
+          <div><small>Dimensiones</small>1080 × 1350 px (4:5)</div>
+          <div><small>Colores</small>Fondo <span class="sw" style="background:#B5FF04;"></span>#B5FF04<br>Texto <span class="sw" style="background:#000000; border:1px solid #444;"></span>#000000<br>Acento <span class="sw" style="background:#B5FF04;"></span>#B5FF04</div>
+          <div><small>Logo</small><code>poliescol-logo-principal-negro.svg</code><br>Abajo a la izquierda: 96 px del borde izquierdo y 80 px del borde inferior, 86 px de alto.</div>
+        </div>
+        <div class="cols">
+          <div><h5>jerarquía tipográfica</h5><ul><li><b>Etiqueta:</b> Roboto Black 26 px, MAYÚSCULAS, negro</li><li><b>Titular:</b> Claris Sans 118 px, negro</li><li><b>Cifra:</b> Claris Sans 110 px, verde sobre panel negro</li><li><b>Texto de la cifra:</b> Roboto Black 30 px, MAYÚSCULAS, verde</li><li><b>Nombre:</b> Roboto Black 44 px, blanco</li><li><b>Detalle:</b> Roboto Regular 30 px, gris #CFCFCF</li></ul><h5>elementos gráficos permitidos</h5><p>Panel negro anclado al borde derecho con esquina mayor arriba a la derecha. Foto 300 × 340 px dentro del panel.</p></div>
+          <div><h5 style="color:var(--p-naranja)">no se puede modificar</h5><ul class="x"><li>Dimensiones 1080 × 1350 px</li><li>Márgenes de 96 px</li><li>Posición, tamaño y versión del logo</li><li>Colores asignados a la categoría</li><li>Tipografías, tamaños y alineación</li><li>Orden de los elementos</li><li>El titular “lo que haces también es arte.” puede cambiarse solo por otro titular del pilar “tu trabajo es arte”</li></ul><h5 style="color:var(--p-verde)">campos personalizables</h5><ul class="ok"><li><code>tipo</code> <b>Etiqueta</b> — RECONOCIMIENTO · ANIVERSARIO · BUENA PRÁCTICA</li><li><code>titular</code> <b>Titular</b> — ≤ 7 palabras</li><li><code>foto</code> <b>Foto</b> — Foto real de la persona</li><li><code>cifra</code> <b>Cifra</b> — número (años, metas, etc.)</li><li><code>cifra_texto</code> <b>Texto de la cifra</b> — ≤ 4 palabras</li><li><code>nombre</code> <b>Nombre</b> — Nombre y primer apellido</li><li><code>detalle</code> <b>Detalle</b> — Área · línea o sede</li><li><code>area</code> <b>Firma</b> — Gracias, de corazón · Gestión Humana</li></ul></div>
+        </div>
+      </div>
+    </article>
+    <article class="ficha" id="plantilla-formacion">
+      <a href="plantillas/formacion.html" class="fimg"><img src="plantillas/vistas/formacion.jpg" alt="Plantilla Formación y eventos" loading="lazy"><span>Abrir plantilla →</span></a>
+      <div>
+        <span class="kick" style="color:var(--p-aqua)">Categoría · Formación y eventos</span>
+        <h4>formación y eventos</h4>
+        <div class="meta">
+          <div><small>Archivo</small><code>plantillas/formacion.html</code></div>
+          <div><small>Dimensiones</small>1080 × 1350 px (4:5)</div>
+          <div><small>Colores</small>Fondo <span class="sw" style="background:#741DEC;"></span>#741DEC<br>Texto <span class="sw" style="background:#FFFFFF;"></span>#FFFFFF<br>Acento <span class="sw" style="background:#B5FF04;"></span>#B5FF04</div>
+          <div><small>Logo</small><code>poliescol-logo-principal-blanco.svg</code><br>Abajo a la izquierda: 96 px del borde izquierdo y 80 px del borde inferior, 86 px de alto.</div>
+        </div>
+        <div class="cols">
+          <div><h5>jerarquía tipográfica</h5><ul><li><b>Etiqueta:</b> Roboto Black 26 px, MAYÚSCULAS, verde</li><li><b>Titular:</b> Claris Sans 92 px, blanco (hasta 3 líneas)</li><li><b>Bajada:</b> Roboto Regular 36 px, blanco 90 %</li><li><b>Día:</b> Claris Sans 150 px, verde sobre bloque negro</li><li><b>Mes:</b> Roboto Black 26 px, MAYÚSCULAS, blanco</li><li><b>Datos:</b> Roboto Regular 30 px negro sobre panel gris claro</li></ul><h5>elementos gráficos permitidos</h5><p>Bloque de fecha negro (esquina mayor arriba a la derecha) + panel gris claro de datos.</p></div>
+          <div><h5 style="color:var(--p-naranja)">no se puede modificar</h5><ul class="x"><li>Dimensiones 1080 × 1350 px</li><li>Márgenes de 96 px</li><li>Posición, tamaño y versión del logo</li><li>Colores asignados a la categoría</li><li>Tipografías, tamaños y alineación</li><li>Orden de los elementos</li></ul><h5 style="color:var(--p-verde)">campos personalizables</h5><ul class="ok"><li><code>tipo</code> <b>Etiqueta</b> — FORMACIÓN / EVENTO / CHARLA · CRECEMOS JUNTOS</li><li><code>titular</code> <b>Titular</b> — ≤ 7 palabras, máx. 3 líneas</li><li><code>bajada</code> <b>Bajada</b> — ≤ 25 palabras</li><li><code>dia</code> <b>Día</b> — número</li><li><code>mes</code> <b>Mes</b> — en letras</li><li><code>datos</code> <b>Datos</b> — Hora / Lugar / Para</li><li><code>area</code> <b>Firma</b> — Gestión Humana</li></ul></div>
+        </div>
+      </div>
+    </article>
+    <article class="ficha" id="plantilla-bienestar">
+      <a href="plantillas/bienestar.html" class="fimg"><img src="plantillas/vistas/bienestar.jpg" alt="Plantilla Bienestar" loading="lazy"><span>Abrir plantilla →</span></a>
+      <div>
+        <span class="kick" style="color:var(--p-aqua)">Categoría · Bienestar, salud y seguridad</span>
+        <h4>bienestar</h4>
+        <div class="meta">
+          <div><small>Archivo</small><code>plantillas/bienestar.html</code></div>
+          <div><small>Dimensiones</small>1080 × 1350 px (4:5)</div>
+          <div><small>Colores</small>Fondo <span class="sw" style="background:#EDEDED;"></span>#EDEDED<br>Texto <span class="sw" style="background:#000000; border:1px solid #444;"></span>#000000<br>Acento <span class="sw" style="background:#741DEC;"></span>#741DEC</div>
+          <div><small>Logo</small><code>poliescol-logo-principal-negro.svg</code><br>Abajo a la izquierda: 96 px del borde izquierdo y 80 px del borde inferior, 86 px de alto.</div>
+        </div>
+        <div class="cols">
+          <div><h5>jerarquía tipográfica</h5><ul><li><b>Etiqueta:</b> Roboto Black 26 px, MAYÚSCULAS, violeta</li><li><b>Titular:</b> Claris Sans 118 px, negro</li><li><b>Bajada:</b> Roboto Regular 36 px, gris #333333</li><li><b>Numeral de paso:</b> Claris Sans 56 px sobre verde / aqua / naranja</li><li><b>Texto de paso:</b> Roboto Regular 30 px</li></ul><h5>elementos gráficos permitidos</h5><p>Lista de 3 pasos en tarjetas blancas con numeral en bloque de color (orden fijo: verde, aqua, naranja).</p></div>
+          <div><h5 style="color:var(--p-naranja)">no se puede modificar</h5><ul class="x"><li>Dimensiones 1080 × 1350 px</li><li>Márgenes de 96 px</li><li>Posición, tamaño y versión del logo</li><li>Colores asignados a la categoría</li><li>Tipografías, tamaños y alineación</li><li>Orden de los elementos</li><li>Máximo 3 pasos</li><li>Orden de colores de los pasos</li></ul><h5 style="color:var(--p-verde)">campos personalizables</h5><ul class="ok"><li><code>tipo</code> <b>Etiqueta</b> — BIENESTAR / SEGURIDAD / SALUD · NOS CUIDAMOS</li><li><code>titular</code> <b>Titular</b> — ≤ 7 palabras</li><li><code>bajada</code> <b>Bajada</b> — ≤ 25 palabras, incluye hora si aplica</li><li><code>paso1</code> <b>Paso 1</b> — ≤ 8 palabras, verbo en imperativo</li><li><code>paso2</code> <b>Paso 2</b> — ≤ 8 palabras</li><li><code>paso3</code> <b>Paso 3</b> — ≤ 8 palabras</li><li><code>area</code> <b>Firma</b> — Seguridad y Salud en el Trabajo · Gestión Humana</li></ul></div>
+        </div>
+      </div>
+    </article>
+    <article class="ficha" id="plantilla-condolencia">
+      <a href="plantillas/condolencia.html" class="fimg"><img src="plantillas/vistas/condolencia.jpg" alt="Plantilla Condolencias" loading="lazy"><span>Abrir plantilla →</span></a>
+      <div>
+        <span class="kick" style="color:var(--p-aqua)">Categoría · Condolencias y duelo</span>
+        <h4>condolencias</h4>
+        <div class="meta">
+          <div><small>Archivo</small><code>plantillas/condolencia.html</code></div>
+          <div><small>Dimensiones</small>1080 × 1350 px (4:5)</div>
+          <div><small>Colores</small>Fondo <span class="sw" style="background:#000000; border:1px solid #444;"></span>#000000<br>Texto <span class="sw" style="background:#FFFFFF;"></span>#FFFFFF<br>Acento ninguno</div>
+          <div><small>Logo</small><code>poliescol-logo-principal-blanco.svg</code><br>Abajo al centro, 80 px del borde inferior, 60 px de alto.</div>
+        </div>
+        <div class="cols">
+          <div><h5>jerarquía tipográfica</h5><ul><li><b>Línea:</b> 84 × 2 px, blanco 50 %</li><li><b>Etiqueta:</b> Roboto Black 26 px, MAYÚSCULAS, blanco 60 %</li><li><b>Titular:</b> Claris Sans 92 px, blanco</li><li><b>Mensaje:</b> Roboto Regular 36 px, gris #BDBDBD</li><li><b>Datos:</b> Roboto Regular 30 px, gris #8A8A8A</li></ul><h5>elementos gráficos permitidos</h5><p>Solo la línea fina. Composición centrada verticalmente.</p></div>
+          <div><h5 style="color:var(--p-naranja)">no se puede modificar</h5><ul class="x"><li>Dimensiones 1080 × 1350 px</li><li>Márgenes de 96 px</li><li>Posición, tamaño y versión del logo</li><li>Colores asignados a la categoría</li><li>Tipografías, tamaños y alineación</li><li>Orden de los elementos</li><li>Sin ventana de luz ni colores complementarios</li><li>Sin exclamaciones ni emojis</li><li>La etiqueta “EN MEMORIA”</li></ul><h5 style="color:var(--p-verde)">campos personalizables</h5><ul class="ok"><li><code>titular</code> <b>Titular</b> — “acompañamos con cariño a la familia de [nombre].”</li><li><code>mensaje</code> <b>Mensaje</b> — ≤ 25 palabras, respetuoso; confirmar con la familia</li><li><code>datos</code> <b>Datos</b> — Exequias: día, hora y lugar</li></ul></div>
+        </div>
+      </div>
+    </article>
   </div>
 
   <h3>anatomía de una pieza</h3>
@@ -510,15 +792,15 @@
   </div>
   <div class="g3">
     <div class="dl"><div class="pv" style="background:#000"><img src="assets/logo-blanco.svg" alt=""></div><div class="in"><h4>principal · fondo oscuro</h4><p>Palabra en blanco. Para fondos negros, violeta y fotos oscuras.</p>
-      <div class="bs"><a href="descargas/poliescol-logo-principal-blanco-transparente.png" download>PNG transparente</a><a href="descargas/poliescol-logo-principal-fondo-negro.png" download>PNG con fondo negro</a><a href="assets/logo-blanco.svg" download="poliescol-logo-principal-blanco.svg">SVG</a></div></div></div>
+      <div class="bs"><a href="descargas/poliescol-logo-principal-blanco-transparente.png" download>PNG transparente</a><a href="descargas/poliescol-logo-principal-fondo-negro.png" download>PNG con fondo negro</a><a href="descargas/poliescol-logo-principal-blanco.svg" download>SVG</a></div></div></div>
     <div class="dl"><div class="pv chk"><img src="assets/logo-negro.svg" alt=""></div><div class="in"><h4>principal · fondo claro</h4><p>Palabra en negro. Para fondos blancos, gris claro, verde, aqua y naranja.</p>
-      <div class="bs"><a href="descargas/poliescol-logo-principal-negro-transparente.png" download>PNG transparente</a><a href="assets/logo-negro.svg" download="poliescol-logo-principal-negro.svg">SVG</a></div></div></div>
+      <div class="bs"><a href="descargas/poliescol-logo-principal-negro-transparente.png" download>PNG transparente</a><a href="descargas/poliescol-logo-principal-negro.svg" download>SVG</a></div></div></div>
     <div class="dl"><div class="pv" style="background:#000"><img src="assets/logo-horizontal-blanco.svg" alt=""></div><div class="in"><h4>horizontal · fondo oscuro</h4><p>Solo cuando el formato es muy horizontal: banners, correo, encabezados.</p>
-      <div class="bs"><a href="descargas/poliescol-logo-horizontal-blanco-transparente.png" download>PNG transparente</a><a href="descargas/poliescol-logo-horizontal-fondo-negro.png" download>PNG con fondo negro</a><a href="assets/logo-horizontal-blanco.svg" download="poliescol-logo-horizontal-blanco.svg">SVG</a></div></div></div>
+      <div class="bs"><a href="descargas/poliescol-logo-horizontal-blanco-transparente.png" download>PNG transparente</a><a href="descargas/poliescol-logo-horizontal-fondo-negro.png" download>PNG con fondo negro</a><a href="descargas/poliescol-logo-horizontal-blanco.svg" download>SVG</a></div></div></div>
     <div class="dl"><div class="pv chk"><img src="assets/logo-horizontal-negro.svg" alt=""></div><div class="in"><h4>horizontal · fondo claro</h4><p>Versión horizontal con la palabra en negro.</p>
-      <div class="bs"><a href="descargas/poliescol-logo-horizontal-negro-transparente.png" download>PNG transparente</a><a href="assets/logo-horizontal-negro.svg" download="poliescol-logo-horizontal-negro.svg">SVG</a></div></div></div>
+      <div class="bs"><a href="descargas/poliescol-logo-horizontal-negro-transparente.png" download>PNG transparente</a><a href="descargas/poliescol-logo-horizontal-negro.svg" download>SVG</a></div></div></div>
     <div class="dl"><div class="pv chk"><img src="assets/icono.svg" alt=""></div><div class="in"><h4>ícono · ventana de luz</h4><p>Avatares, favicon, sellos y como recurso gráfico ampliado.</p>
-      <div class="bs"><a href="descargas/poliescol-icono-transparente.png" download>PNG transparente</a><a href="descargas/poliescol-icono-alta-resolucion.jpg" download>JPG alta resolución</a><a href="assets/icono.svg" download="poliescol-icono.svg">SVG</a><a href="descargas/poliescol-icono-transparente-posicion-horizontal.png" download>PNG alineado a versión horizontal</a></div></div></div>
+      <div class="bs"><a href="descargas/poliescol-icono-transparente.png" download>PNG transparente</a><a href="descargas/poliescol-icono-alta-resolucion.jpg" download>JPG alta resolución</a><a href="descargas/poliescol-icono.svg" download>SVG</a><a href="descargas/poliescol-icono-transparente-posicion-horizontal.png" download>PNG alineado a versión horizontal</a></div></div></div>
     <div class="dl"><div class="pv" style="background:#111"><span style="font-family:var(--p-font-titular);font-weight:600;font-size:60px;line-height:1">Aa Ññ <span style="font-family:var(--p-font-copy);font-weight:900;font-size:52px;color:var(--p-verde)">Aa</span></span></div><div class="in"><h4>fuentes</h4><p><b style="color:#fff">Claris Sans</b> para titulares. <b style="color:#fff">Roboto</b> para copys y textos: familia completa de Thin a Black, con itálicas y versión variable. Ambas con licencia libre SIL OFL.</p>
       <div class="bs"><a href="assets/fonts/ClarisSans.ttf" download>Claris Sans .ttf</a><a href="descargas/poliescol-fuente-roboto.zip" download>Roboto .zip</a><a href="assets/fonts/ClarisSans-OFL-FAQ.txt">Licencia Claris</a><a href="assets/fonts/Roboto-OFL.txt">Licencia Roboto</a></div></div></div>
   </div>
@@ -532,10 +814,11 @@
   <div class="g2 files" id="archivos-ia">
     <a href="brand.md"><div><code>brand.md</code><br><span>Todas las reglas del manual en texto plano. Pégalo o enlázalo como instrucciones.</span></div>→</a>
     <a href="tokens.json"><div><code>tokens.json</code><br><span>Colores, fuentes, radios y tamaños exactos.</span></div>→</a>
+    <a href="plantillas/plantillas.json"><div><code>plantillas/plantillas.json</code><br><span>Ficha de cada plantilla: colores, logo, jerarquía, campos editables y bloqueados.</span></div>→</a>
     <a href="css/tokens.css"><div><code>css/tokens.css</code><br><span>Variables CSS + fuentes para piezas en HTML.</span></div>→</a>
     <a href="llms.txt"><div><code>llms.txt</code><br><span>Índice estándar para que los modelos encuentren todo.</span></div>→</a>
     <a href="#descargas"><div><code>descargas/</code><br><span>Todos los logos (PNG, SVG, PDF) y el kit completo en .zip.</span></div>→</a>
-    <a href="assets/logo-horizontal-blanco.svg" download><div><code>logo-horizontal-*.svg</code> · <code>icono.svg</code><br><span>Versión horizontal e ícono.</span></div>↓</a>
+    <a href="#logo"><div><code>biblioteca de logos</code><br><span>Cada versión con su archivo, uso, fondos y tamaño mínimo.</span></div>→</a>
     <a href="assets/fonts/ClarisSans.ttf" download><div><code>ClarisSans.ttf</code> · <code>poliescol-fuente-roboto.zip</code><br><span>Fuentes oficiales (licencia SIL OFL).</span></div>↓</a>
     <a href="assets/fonts/ClarisSans-OFL-FAQ.txt"><div><code>ClarisSans-OFL-FAQ.txt</code><br><span>Información de la licencia de la fuente.</span></div>→</a>
   </div>
@@ -548,15 +831,15 @@ https://cipreslab.github.io/poliescol/brand.md  (reglas)  y  https://cipreslab.g
 
 Resumen obligatorio:
 - Colores: negro #000000 (primario, domina). Complementarios: verde #B5FF04, aqua #20F9F5, violeta #741DEC, naranja #FF621D. Neutros: blanco, gris claro #EDEDED, gris #5F5F5F.
-- Un solo color complementario protagonista por pieza. Texto negro sobre verde, aqua, naranja y gris claro; texto blanco sobre negro y violeta.
-- Tipografía: titulares en Claris Sans (archivo: https://cipreslab.github.io/poliescol/assets/fonts/ClarisSans.ttf; respaldo: Outfit), SIEMPRE en minúscula, máx. 7 palabras. Etiquetas en Roboto Black MAYÚSCULAS espaciadas. Textos en Roboto Regular.
-- Logotipo: usar el SVG oficial (assets/logo-blanco.svg o logo-negro.svg), nunca redibujarlo, deformarlo, rotarlo ni recolorearlo. Abajo a la izquierda, mínimo 50 px de ancho.
+- El color NO se elige: usa exactamente la combinación asignada a la categoría (tabla abajo). Texto negro sobre verde, aqua, naranja y gris claro; texto blanco sobre negro y violeta.
+- Tipografía (usa los archivos, no la deduzcas de imágenes): titulares en Claris Sans https://cipreslab.github.io/poliescol/assets/fonts/ClarisSans.ttf, SIEMPRE en minúscula, máx. 7 palabras. Subtítulos, etiquetas y destacados en Roboto Black 900; textos en Roboto Regular 400 https://cipreslab.github.io/poliescol/descargas/poliescol-fuente-roboto.zip
+- Logotipo: usa SOLO los archivos oficiales de https://cipreslab.github.io/poliescol/descargas/ (poliescol-logo-principal-blanco.svg sobre fondos oscuros, poliescol-logo-principal-negro.svg sobre fondos claros). PROHIBIDO recrearlo, redibujarlo, reinterpretarlo o generarlo con IA. Abajo a la izquierda, mínimo 50 px de ancho.
 - Recursos: "ventana de luz" (4 bloques redondeados: verde y aqua arriba cortos, violeta y naranja abajo altos), contenedores con una sola esquina de radio grande, numerales "01.".
 - Sin degradados, sombras, emojis como gráfico, clipart ni tipografías decorativas.
 - Tono: cercano, genuino, sabio sin tecnicismos, inspirador, con gratitud. Tutear. Máx. 1 signo de exclamación. Nada de "recurso humano" ni lenguaje de amenaza.
-- Gestión Humana, color por mensaje: comunicado = negro + aqua; bienvenida = aqua; reconocimiento = verde; formación/eventos = violeta; cumpleaños = naranja; bienestar = gris claro; duelo = SOLO negro y blanco, sin ventana.
+- Color por categoría (fondo / texto / acento): comunicado #000000 / #FFFFFF / #20F9F5 · bienvenida #20F9F5 / #000000 / #000000 · cumpleaños #000000 / #FFFFFF / #FF621D · reconocimiento #B5FF04 / #000000 / panel negro con #B5FF04 · formación y eventos #741DEC / #FFFFFF / #B5FF04 · bienestar #EDEDED / #000000 / #741DEC · duelo #000000 / #FFFFFF / sin acento ni ventana.
 - Estructura: etiqueta → titular → bajada (≤25 palabras) → datos/foto → firma (logo + área).
-- Formato por defecto: 1080 × 1350 px. Puedes partir de las plantillas en https://cipreslab.github.io/poliescol/plantillas/
+- Formato por defecto: 1080 × 1350 px. Parte SIEMPRE de la plantilla oficial de la categoría y cambia solo sus campos personalizables: https://cipreslab.github.io/poliescol/plantillas/plantillas.json
 
 Antes de entregar, verifica la lista de chequeo del manual y dime qué reglas aplicaste.
 
@@ -564,8 +847,10 @@ La pieza que necesito es: [describe aquí: tipo de mensaje, texto, fecha, person
 
   <h3>lista de chequeo antes de publicar</h3>
   <ul class="reglas si">
-    <li>¿El logo es el archivo oficial, sin alteraciones y con su área de reserva libre?</li>
-    <li>¿Hay un solo color complementario protagonista (o ninguno, si es duelo)?</li>
+    <li>¿El logo es el archivo oficial de la biblioteca (no recreado ni generado con IA), en la versión correcta para el fondo y con su área de protección libre?</li>
+    <li>¿Las tipografías son Claris Sans y Roboto desde los archivos oficiales?</li>
+    <li>¿Los colores son exactamente los asignados a la categoría de la comunicación?</li>
+    <li>¿Se partió de la plantilla oficial y solo se cambiaron los campos personalizables?</li>
     <li>¿El texto tiene el contraste correcto según el fondo?</li>
     <li>¿El titular está en minúscula y tiene 7 palabras o menos?</li>
     <li>¿La pieza dice una sola cosa, con datos concretos (fecha, hora, lugar, contacto)?</li>

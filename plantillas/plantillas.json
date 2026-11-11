@@ -1,0 +1,637 @@
+{
+  "$descripcion": "Especificación de las plantillas oficiales de Gestión Humana de Poliescol. Solo se cambian los campos de 'campos'. Todo lo demás es fijo.",
+  "reglaGeneral": "La estructura visual, el logo, los colores y las tipografías se mantienen. Si un campo trae 'opciones', solo se elige entre ellas.",
+  "reglaLogo": "Está prohibido recrear, redibujar, reinterpretar, vectorizar de nuevo o generar versiones del logotipo mediante inteligencia artificial o cualquier otra herramienta. Siempre se debe utilizar el archivo oficial suministrado en esta biblioteca.",
+  "reglaColor": "La IA (y cualquier persona) no puede elegir libremente colores de la paleta: debe usar exactamente la combinación asignada a la categoría de la comunicación. Si la categoría no está en la tabla, se usa la de Comunicado institucional.",
+  "dimensiones": {
+    "ancho": 1080,
+    "alto": 1350,
+    "proporcion": "4:5",
+    "margen": 96
+  },
+  "noModificableEnTodas": [
+    "Dimensiones 1080 × 1350 px",
+    "Márgenes de 96 px",
+    "Posición, tamaño y versión del logo",
+    "Colores asignados a la categoría",
+    "Tipografías, tamaños y alineación",
+    "Orden de los elementos"
+  ],
+  "plantillas": [
+    {
+      "id": "comunicado",
+      "nombre": "Comunicado",
+      "categoria": "Comunicado institucional",
+      "archivo": "plantillas/comunicado.html",
+      "url": "https://cipreslab.github.io/poliescol/plantillas/comunicado.html",
+      "imagenReferencia": "https://cipreslab.github.io/poliescol/plantillas/vistas/comunicado.jpg",
+      "colores": {
+        "fondo": "#000000",
+        "texto": "#FFFFFF",
+        "acento": "#20F9F5",
+        "complementos": "Panel gris claro #EDEDED con texto negro; ventana de luz pequeña.",
+        "prohibido": "Verde, violeta o naranja como acento."
+      },
+      "logo": {
+        "archivo": "descargas/poliescol-logo-principal-blanco.svg",
+        "ubicacion": "Abajo a la izquierda: 96 px del borde izquierdo y 80 px del borde inferior, 86 px de alto."
+      },
+      "jerarquiaTipografica": [
+        {
+          "elemento": "Etiqueta",
+          "especificacion": "Roboto Black 26 px, MAYÚSCULAS, aqua"
+        },
+        {
+          "elemento": "Titular",
+          "especificacion": "Claris Sans 118 px, blanco, minúscula"
+        },
+        {
+          "elemento": "Bajada",
+          "especificacion": "Roboto Regular 36 px, gris #CFCFCF"
+        },
+        {
+          "elemento": "Datos",
+          "especificacion": "Roboto Regular 30 px negro sobre panel gris claro; etiqueta del dato en Roboto Black"
+        },
+        {
+          "elemento": "Firma",
+          "especificacion": "Roboto Black 20 px, MAYÚSCULAS"
+        }
+      ],
+      "elementosGraficosPermitidos": "Ventana de luz de 210 px arriba a la derecha. Panel gris claro con esquina mayor de 96 px.",
+      "noModificable": [
+        "Dimensiones 1080 × 1350 px",
+        "Márgenes de 96 px",
+        "Posición, tamaño y versión del logo",
+        "Colores asignados a la categoría",
+        "Tipografías, tamaños y alineación",
+        "Orden de los elementos"
+      ],
+      "camposPersonalizables": [
+        {
+          "campo": "tipo",
+          "nombre": "Etiqueta",
+          "regla": "COMUNICADO · AVISO · RECORDATORIO",
+          "opciones": [
+            "COMUNICADO",
+            "AVISO",
+            "RECORDATORIO"
+          ]
+        },
+        {
+          "campo": "titular",
+          "nombre": "Titular",
+          "regla": "≤ 7 palabras, minúscula"
+        },
+        {
+          "campo": "bajada",
+          "nombre": "Bajada",
+          "regla": "≤ 25 palabras"
+        },
+        {
+          "campo": "datos",
+          "nombre": "Datos",
+          "regla": "3 líneas: Desde / Turno o Hora / Dudas"
+        },
+        {
+          "campo": "area",
+          "nombre": "Área que firma",
+          "regla": "Gestión Humana · Seguridad y Salud en el Trabajo",
+          "opciones": [
+            "Gestión Humana",
+            "Seguridad y Salud en el Trabajo"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bienvenida",
+      "nombre": "Bienvenida",
+      "categoria": "Bienvenida",
+      "archivo": "plantillas/bienvenida.html",
+      "url": "https://cipreslab.github.io/poliescol/plantillas/bienvenida.html",
+      "imagenReferencia": "https://cipreslab.github.io/poliescol/plantillas/vistas/bienvenida.jpg",
+      "colores": {
+        "fondo": "#20F9F5",
+        "texto": "#000000",
+        "acento": "#000000",
+        "complementos": "Foto de la persona.",
+        "prohibido": "Cualquier otro complementario."
+      },
+      "logo": {
+        "archivo": "descargas/poliescol-logo-principal-negro.svg",
+        "ubicacion": "Abajo a la izquierda: 96 px del borde izquierdo y 80 px del borde inferior, 86 px de alto."
+      },
+      "jerarquiaTipografica": [
+        {
+          "elemento": "Etiqueta",
+          "especificacion": "Roboto Black 26 px, MAYÚSCULAS, negro"
+        },
+        {
+          "elemento": "Titular",
+          "especificacion": "Claris Sans 118 px, negro: “bienvenida/bienvenido, [nombre].”"
+        },
+        {
+          "elemento": "Nombre completo",
+          "especificacion": "Roboto Black 40 px"
+        },
+        {
+          "elemento": "Cargo y sede",
+          "especificacion": "Roboto Regular 30 px"
+        },
+        {
+          "elemento": "Mensaje",
+          "especificacion": "Roboto Regular 30 px"
+        }
+      ],
+      "elementosGraficosPermitidos": "Foto de 470 × 560 px con esquinas mayores (arriba-izquierda y abajo-derecha).",
+      "noModificable": [
+        "Dimensiones 1080 × 1350 px",
+        "Márgenes de 96 px",
+        "Posición, tamaño y versión del logo",
+        "Colores asignados a la categoría",
+        "Tipografías, tamaños y alineación",
+        "Orden de los elementos",
+        "La etiqueta “NUEVO EN LA FAMILIA”"
+      ],
+      "camposPersonalizables": [
+        {
+          "campo": "titular",
+          "nombre": "Titular",
+          "regla": "bienvenida/bienvenido + nombre de pila"
+        },
+        {
+          "campo": "foto",
+          "nombre": "Foto",
+          "regla": "Foto real de la persona, de frente, fondo limpio"
+        },
+        {
+          "campo": "nombre",
+          "nombre": "Nombre completo",
+          "regla": "Nombre y primer apellido"
+        },
+        {
+          "campo": "cargo",
+          "nombre": "Cargo y sede",
+          "regla": "2 líneas"
+        },
+        {
+          "campo": "mensaje",
+          "nombre": "Mensaje",
+          "regla": "≤ 25 palabras, invita a saludar"
+        }
+      ]
+    },
+    {
+      "id": "cumpleanos",
+      "nombre": "Cumpleaños",
+      "categoria": "Cumpleaños",
+      "archivo": "plantillas/cumpleanos.html",
+      "url": "https://cipreslab.github.io/poliescol/plantillas/cumpleanos.html",
+      "imagenReferencia": "https://cipreslab.github.io/poliescol/plantillas/vistas/cumpleanos.jpg",
+      "colores": {
+        "fondo": "#000000",
+        "texto": "#FFFFFF",
+        "acento": "#FF621D",
+        "complementos": "Ventana de luz grande rotada −8°; nombre en naranja.",
+        "prohibido": "Fondos de color; otro color para el nombre."
+      },
+      "logo": {
+        "archivo": "descargas/poliescol-logo-principal-blanco.svg",
+        "ubicacion": "Abajo a la izquierda: 96 px del borde izquierdo y 80 px del borde inferior, 86 px de alto."
+      },
+      "jerarquiaTipografica": [
+        {
+          "elemento": "Fecha",
+          "especificacion": "Roboto Black 26 px, MAYÚSCULAS, naranja"
+        },
+        {
+          "elemento": "Titular",
+          "especificacion": "Claris Sans 124 px, blanco; el nombre en naranja"
+        },
+        {
+          "elemento": "Mensaje",
+          "especificacion": "Roboto Regular 36 px, gris #D0D0D0"
+        },
+        {
+          "elemento": "Firma",
+          "especificacion": "Roboto Black 20 px, MAYÚSCULAS"
+        }
+      ],
+      "elementosGraficosPermitidos": "Ventana de luz de 560 px rotada −8°, cortada en la esquina superior derecha. Foto de 340 × 400 px arriba a la izquierda.",
+      "noModificable": [
+        "Dimensiones 1080 × 1350 px",
+        "Márgenes de 96 px",
+        "Posición, tamaño y versión del logo",
+        "Colores asignados a la categoría",
+        "Tipografías, tamaños y alineación",
+        "Orden de los elementos",
+        "Rotación y posición de la ventana de luz"
+      ],
+      "camposPersonalizables": [
+        {
+          "campo": "foto",
+          "nombre": "Foto",
+          "regla": "Foto real de la persona"
+        },
+        {
+          "campo": "fecha",
+          "nombre": "Fecha",
+          "regla": "día + mes en letras"
+        },
+        {
+          "campo": "titular",
+          "nombre": "Titular",
+          "regla": "“feliz cumple, [nombre].”"
+        },
+        {
+          "campo": "mensaje",
+          "nombre": "Mensaje",
+          "regla": "≤ 20 palabras, con gratitud"
+        },
+        {
+          "campo": "area",
+          "nombre": "Firma",
+          "regla": "Tu familia Poliescol · Gestión Humana",
+          "opciones": [
+            "Tu familia Poliescol",
+            "Gestión Humana"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reconocimiento",
+      "nombre": "Reconocimiento",
+      "categoria": "Reconocimiento",
+      "archivo": "plantillas/reconocimiento.html",
+      "url": "https://cipreslab.github.io/poliescol/plantillas/reconocimiento.html",
+      "imagenReferencia": "https://cipreslab.github.io/poliescol/plantillas/vistas/reconocimiento.jpg",
+      "colores": {
+        "fondo": "#B5FF04",
+        "texto": "#000000",
+        "acento": "#B5FF04",
+        "complementos": "Panel negro #000000 con texto blanco.",
+        "prohibido": "Aqua, violeta o naranja."
+      },
+      "logo": {
+        "archivo": "descargas/poliescol-logo-principal-negro.svg",
+        "ubicacion": "Abajo a la izquierda: 96 px del borde izquierdo y 80 px del borde inferior, 86 px de alto."
+      },
+      "jerarquiaTipografica": [
+        {
+          "elemento": "Etiqueta",
+          "especificacion": "Roboto Black 26 px, MAYÚSCULAS, negro"
+        },
+        {
+          "elemento": "Titular",
+          "especificacion": "Claris Sans 118 px, negro"
+        },
+        {
+          "elemento": "Cifra",
+          "especificacion": "Claris Sans 110 px, verde sobre panel negro"
+        },
+        {
+          "elemento": "Texto de la cifra",
+          "especificacion": "Roboto Black 30 px, MAYÚSCULAS, verde"
+        },
+        {
+          "elemento": "Nombre",
+          "especificacion": "Roboto Black 44 px, blanco"
+        },
+        {
+          "elemento": "Detalle",
+          "especificacion": "Roboto Regular 30 px, gris #CFCFCF"
+        }
+      ],
+      "elementosGraficosPermitidos": "Panel negro anclado al borde derecho con esquina mayor arriba a la derecha. Foto 300 × 340 px dentro del panel.",
+      "noModificable": [
+        "Dimensiones 1080 × 1350 px",
+        "Márgenes de 96 px",
+        "Posición, tamaño y versión del logo",
+        "Colores asignados a la categoría",
+        "Tipografías, tamaños y alineación",
+        "Orden de los elementos",
+        "El titular “lo que haces también es arte.” puede cambiarse solo por otro titular del pilar “tu trabajo es arte”"
+      ],
+      "camposPersonalizables": [
+        {
+          "campo": "tipo",
+          "nombre": "Etiqueta",
+          "regla": "RECONOCIMIENTO · ANIVERSARIO · BUENA PRÁCTICA",
+          "opciones": [
+            "RECONOCIMIENTO",
+            "ANIVERSARIO",
+            "BUENA PRÁCTICA"
+          ]
+        },
+        {
+          "campo": "titular",
+          "nombre": "Titular",
+          "regla": "≤ 7 palabras"
+        },
+        {
+          "campo": "foto",
+          "nombre": "Foto",
+          "regla": "Foto real de la persona"
+        },
+        {
+          "campo": "cifra",
+          "nombre": "Cifra",
+          "regla": "número (años, metas, etc.)"
+        },
+        {
+          "campo": "cifra_texto",
+          "nombre": "Texto de la cifra",
+          "regla": "≤ 4 palabras"
+        },
+        {
+          "campo": "nombre",
+          "nombre": "Nombre",
+          "regla": "Nombre y primer apellido"
+        },
+        {
+          "campo": "detalle",
+          "nombre": "Detalle",
+          "regla": "Área · línea o sede"
+        },
+        {
+          "campo": "area",
+          "nombre": "Firma",
+          "regla": "Gracias, de corazón · Gestión Humana",
+          "opciones": [
+            "Gracias, de corazón",
+            "Gestión Humana"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "formacion",
+      "nombre": "Formación y eventos",
+      "categoria": "Formación y eventos",
+      "archivo": "plantillas/formacion.html",
+      "url": "https://cipreslab.github.io/poliescol/plantillas/formacion.html",
+      "imagenReferencia": "https://cipreslab.github.io/poliescol/plantillas/vistas/formacion.jpg",
+      "colores": {
+        "fondo": "#741DEC",
+        "texto": "#FFFFFF",
+        "acento": "#B5FF04",
+        "complementos": "Bloque de fecha negro; panel de datos gris claro con texto negro.",
+        "prohibido": "Aqua o naranja."
+      },
+      "logo": {
+        "archivo": "descargas/poliescol-logo-principal-blanco.svg",
+        "ubicacion": "Abajo a la izquierda: 96 px del borde izquierdo y 80 px del borde inferior, 86 px de alto."
+      },
+      "jerarquiaTipografica": [
+        {
+          "elemento": "Etiqueta",
+          "especificacion": "Roboto Black 26 px, MAYÚSCULAS, verde"
+        },
+        {
+          "elemento": "Titular",
+          "especificacion": "Claris Sans 92 px, blanco (hasta 3 líneas)"
+        },
+        {
+          "elemento": "Bajada",
+          "especificacion": "Roboto Regular 36 px, blanco 90 %"
+        },
+        {
+          "elemento": "Día",
+          "especificacion": "Claris Sans 150 px, verde sobre bloque negro"
+        },
+        {
+          "elemento": "Mes",
+          "especificacion": "Roboto Black 26 px, MAYÚSCULAS, blanco"
+        },
+        {
+          "elemento": "Datos",
+          "especificacion": "Roboto Regular 30 px negro sobre panel gris claro"
+        }
+      ],
+      "elementosGraficosPermitidos": "Bloque de fecha negro (esquina mayor arriba a la derecha) + panel gris claro de datos.",
+      "noModificable": [
+        "Dimensiones 1080 × 1350 px",
+        "Márgenes de 96 px",
+        "Posición, tamaño y versión del logo",
+        "Colores asignados a la categoría",
+        "Tipografías, tamaños y alineación",
+        "Orden de los elementos"
+      ],
+      "camposPersonalizables": [
+        {
+          "campo": "tipo",
+          "nombre": "Etiqueta",
+          "regla": "FORMACIÓN / EVENTO / CHARLA · CRECEMOS JUNTOS",
+          "opciones": [
+            "FORMACIÓN · CRECEMOS JUNTOS",
+            "EVENTO · CRECEMOS JUNTOS",
+            "CHARLA · CRECEMOS JUNTOS"
+          ]
+        },
+        {
+          "campo": "titular",
+          "nombre": "Titular",
+          "regla": "≤ 7 palabras, máx. 3 líneas"
+        },
+        {
+          "campo": "bajada",
+          "nombre": "Bajada",
+          "regla": "≤ 25 palabras"
+        },
+        {
+          "campo": "dia",
+          "nombre": "Día",
+          "regla": "número"
+        },
+        {
+          "campo": "mes",
+          "nombre": "Mes",
+          "regla": "en letras"
+        },
+        {
+          "campo": "datos",
+          "nombre": "Datos",
+          "regla": "Hora / Lugar / Para"
+        },
+        {
+          "campo": "area",
+          "nombre": "Firma",
+          "regla": "Gestión Humana",
+          "opciones": [
+            "Gestión Humana"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bienestar",
+      "nombre": "Bienestar",
+      "categoria": "Bienestar, salud y seguridad",
+      "archivo": "plantillas/bienestar.html",
+      "url": "https://cipreslab.github.io/poliescol/plantillas/bienestar.html",
+      "imagenReferencia": "https://cipreslab.github.io/poliescol/plantillas/vistas/bienestar.jpg",
+      "colores": {
+        "fondo": "#EDEDED",
+        "texto": "#000000",
+        "acento": "#741DEC",
+        "complementos": "Pasos numerados en verde, aqua y naranja (en ese orden).",
+        "prohibido": "Fondo negro o de color."
+      },
+      "logo": {
+        "archivo": "descargas/poliescol-logo-principal-negro.svg",
+        "ubicacion": "Abajo a la izquierda: 96 px del borde izquierdo y 80 px del borde inferior, 86 px de alto."
+      },
+      "jerarquiaTipografica": [
+        {
+          "elemento": "Etiqueta",
+          "especificacion": "Roboto Black 26 px, MAYÚSCULAS, violeta"
+        },
+        {
+          "elemento": "Titular",
+          "especificacion": "Claris Sans 118 px, negro"
+        },
+        {
+          "elemento": "Bajada",
+          "especificacion": "Roboto Regular 36 px, gris #333333"
+        },
+        {
+          "elemento": "Numeral de paso",
+          "especificacion": "Claris Sans 56 px sobre verde / aqua / naranja"
+        },
+        {
+          "elemento": "Texto de paso",
+          "especificacion": "Roboto Regular 30 px"
+        }
+      ],
+      "elementosGraficosPermitidos": "Lista de 3 pasos en tarjetas blancas con numeral en bloque de color (orden fijo: verde, aqua, naranja).",
+      "noModificable": [
+        "Dimensiones 1080 × 1350 px",
+        "Márgenes de 96 px",
+        "Posición, tamaño y versión del logo",
+        "Colores asignados a la categoría",
+        "Tipografías, tamaños y alineación",
+        "Orden de los elementos",
+        "Máximo 3 pasos",
+        "Orden de colores de los pasos"
+      ],
+      "camposPersonalizables": [
+        {
+          "campo": "tipo",
+          "nombre": "Etiqueta",
+          "regla": "BIENESTAR / SEGURIDAD / SALUD · NOS CUIDAMOS",
+          "opciones": [
+            "BIENESTAR · NOS CUIDAMOS",
+            "SEGURIDAD · NOS CUIDAMOS",
+            "SALUD · NOS CUIDAMOS"
+          ]
+        },
+        {
+          "campo": "titular",
+          "nombre": "Titular",
+          "regla": "≤ 7 palabras"
+        },
+        {
+          "campo": "bajada",
+          "nombre": "Bajada",
+          "regla": "≤ 25 palabras, incluye hora si aplica"
+        },
+        {
+          "campo": "paso1",
+          "nombre": "Paso 1",
+          "regla": "≤ 8 palabras, verbo en imperativo"
+        },
+        {
+          "campo": "paso2",
+          "nombre": "Paso 2",
+          "regla": "≤ 8 palabras"
+        },
+        {
+          "campo": "paso3",
+          "nombre": "Paso 3",
+          "regla": "≤ 8 palabras"
+        },
+        {
+          "campo": "area",
+          "nombre": "Firma",
+          "regla": "Seguridad y Salud en el Trabajo · Gestión Humana",
+          "opciones": [
+            "Seguridad y Salud en el Trabajo",
+            "Gestión Humana"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "condolencia",
+      "nombre": "Condolencias",
+      "categoria": "Condolencias y duelo",
+      "archivo": "plantillas/condolencia.html",
+      "url": "https://cipreslab.github.io/poliescol/plantillas/condolencia.html",
+      "imagenReferencia": "https://cipreslab.github.io/poliescol/plantillas/vistas/condolencia.jpg",
+      "colores": {
+        "fondo": "#000000",
+        "texto": "#FFFFFF",
+        "acento": "—",
+        "complementos": "Grises #BDBDBD y #8A8A8A para textos secundarios.",
+        "prohibido": "Cualquier color complementario, ventana de luz, emojis."
+      },
+      "logo": {
+        "archivo": "descargas/poliescol-logo-principal-blanco.svg",
+        "ubicacion": "Abajo al centro, 80 px del borde inferior, 60 px de alto."
+      },
+      "jerarquiaTipografica": [
+        {
+          "elemento": "Línea",
+          "especificacion": "84 × 2 px, blanco 50 %"
+        },
+        {
+          "elemento": "Etiqueta",
+          "especificacion": "Roboto Black 26 px, MAYÚSCULAS, blanco 60 %"
+        },
+        {
+          "elemento": "Titular",
+          "especificacion": "Claris Sans 92 px, blanco"
+        },
+        {
+          "elemento": "Mensaje",
+          "especificacion": "Roboto Regular 36 px, gris #BDBDBD"
+        },
+        {
+          "elemento": "Datos",
+          "especificacion": "Roboto Regular 30 px, gris #8A8A8A"
+        }
+      ],
+      "elementosGraficosPermitidos": "Solo la línea fina. Composición centrada verticalmente.",
+      "noModificable": [
+        "Dimensiones 1080 × 1350 px",
+        "Márgenes de 96 px",
+        "Posición, tamaño y versión del logo",
+        "Colores asignados a la categoría",
+        "Tipografías, tamaños y alineación",
+        "Orden de los elementos",
+        "Sin ventana de luz ni colores complementarios",
+        "Sin exclamaciones ni emojis",
+        "La etiqueta “EN MEMORIA”"
+      ],
+      "camposPersonalizables": [
+        {
+          "campo": "titular",
+          "nombre": "Titular",
+          "regla": "“acompañamos con cariño a la familia de [nombre].”"
+        },
+        {
+          "campo": "mensaje",
+          "nombre": "Mensaje",
+          "regla": "≤ 25 palabras, respetuoso; confirmar con la familia"
+        },
+        {
+          "campo": "datos",
+          "nombre": "Datos",
+          "regla": "Exequias: día, hora y lugar"
+        }
+      ]
+    }
+  ]
+}
