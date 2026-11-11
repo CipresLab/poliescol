@@ -69,6 +69,7 @@
 - **Versión principal** (ícono arriba, palabra abajo): `assets/logo-blanco.svg` (fondos oscuros) · `assets/logo-negro.svg` (fondos claros). Uso preferente.
 - **Versión secundaria horizontal** (ícono a la izquierda): `assets/logo-horizontal-blanco.svg` · `assets/logo-horizontal-negro.svg`. Solo cuando el formato es muy horizontal (banners, firmas de correo, encabezados).
 - **Ícono solo:** `assets/icono.svg` (favicon, avatar, sello).
+- **Descargas oficiales** (carpeta `descargas/`): PNG transparentes de cada versión, PNG con fondo negro, `poliescol-icono-alta-resolucion.jpg`, `poliescol-logos-vectorial.pdf` (original de Illustrator) y `poliescol-kit-de-marca.zip` con todo. Usa SVG para web, PNG transparente para Office/Canva/redes y PDF para imprenta.
 - **Significado del ícono ("ventana de luz"):** personas que, a través de su trabajo, encuentran a Dios. Representa una relación con el otro, una admiración infinita, las diferentes líneas de negocio y que somos una ventana de luz; detrás de todo está Dios.
 - **Colores del ícono (fijos):** arriba izquierda verde #B5FF04, arriba derecha aqua #20F9F5, abajo izquierda violeta #741DEC, abajo derecha naranja #FF621D. La palabra "poliescol" va en blanco (fondo oscuro) o negro (fondo claro).
 - **Área de reserva:** manual impreso: 1 cm arriba/abajo, 1,5 cm a los lados. Regla digital: ≥ 10 % del ancho del logo arriba/abajo y ≥ 15 % a los lados.

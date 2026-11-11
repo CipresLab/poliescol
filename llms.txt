@@ -26,5 +26,14 @@
 - [Horizontal, fondo claro](https://cipreslab.github.io/poliescol/assets/logo-horizontal-negro.svg)
 - [Ícono](https://cipreslab.github.io/poliescol/assets/icono.svg)
 
+## Descargas oficiales (PNG, PDF, ZIP)
+- [Kit de marca completo (.zip)](https://cipreslab.github.io/poliescol/descargas/poliescol-kit-de-marca.zip)
+- [Logo principal blanco, PNG transparente](https://cipreslab.github.io/poliescol/descargas/poliescol-logo-principal-blanco-transparente.png)
+- [Logo principal negro, PNG transparente](https://cipreslab.github.io/poliescol/descargas/poliescol-logo-principal-negro-transparente.png)
+- [Logo horizontal blanco, PNG transparente](https://cipreslab.github.io/poliescol/descargas/poliescol-logo-horizontal-blanco-transparente.png)
+- [Logo horizontal negro, PNG transparente](https://cipreslab.github.io/poliescol/descargas/poliescol-logo-horizontal-negro-transparente.png)
+- [Ícono, PNG transparente](https://cipreslab.github.io/poliescol/descargas/poliescol-icono-transparente.png)
+- [Logos vectorial, PDF](https://cipreslab.github.io/poliescol/descargas/poliescol-logos-vectorial.pdf)
+
 ## Opcional
 - [Manual visual](https://cipreslab.github.io/poliescol/): versión navegable para personas.

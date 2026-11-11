@@ -12,6 +12,7 @@ Manual de marca vivo de Poliescol, pensado para que **cualquier persona o IA** p
 | `llms.txt` | Índice estándar para modelos de lenguaje |
 | `css/tokens.css` | Variables CSS + fuentes |
 | `plantillas/*.html` | Plantillas 1080×1350 de Gestión Humana (editar los elementos con `data-editar`) |
+| `descargas/` | Logos oficiales en PNG, PDF vectorial y el kit completo en .zip |
 | `assets/` | Logos SVG oficiales, íconos de categoría, fuentes, aplicaciones |
 
 ## Cómo crear una pieza nueva desde una plantilla

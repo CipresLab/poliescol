@@ -135,6 +135,20 @@
   .gal img{border-radius:16px;aspect-ratio:16/9;object-fit:cover;width:100%}
   @media (max-width:760px){.gal{grid-template-columns:1fr 1fr}}
 
+  .dl{border:1.5px solid #222;border-radius:22px;overflow:hidden;display:flex;flex-direction:column;background:#0b0b0b}
+  .dl .pv{height:190px;display:grid;place-items:center;padding:28px}
+  .dl .pv img{height:120px;width:100%;object-fit:contain}
+  .dl .pv.chk{background:repeating-conic-gradient(#e9e9e9 0 25%,#fff 0 50%) 0 0/20px 20px}
+  .dl .in{padding:20px 22px 22px;display:flex;flex-direction:column;gap:12px;flex:1}
+  .dl h4{font-size:22px}
+  .dl .in p{font-size:13.5px;color:#aaa}
+  .dl .bs{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+  .dl .bs a{font:900 12px var(--p-font-copy);letter-spacing:.04em;text-decoration:none;padding:9px 13px;border-radius:999px;border:1.5px solid #333}
+  .dl .bs a:hover{border-color:#fff}
+  .kit{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;background:var(--p-verde);color:#000;border-radius:0 var(--p-radio-mayor) 0 0;padding:36px 40px;margin-bottom:28px}
+  .kit h3{margin:0;font-size:38px}
+  .kit p{font-size:15px;margin-top:6px;max-width:560px}
+  .kit .btn{background:#000;color:#fff;padding:16px 24px;font-size:14px}
   /* IA */
   pre{background:#0d0d0d;border:1.5px solid #252525;border-radius:18px;padding:24px;overflow:auto;font-size:13.5px;line-height:1.55;color:#e6e6e6;white-space:pre-wrap}
   .pre-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
@@ -163,7 +177,8 @@
       <li><a href="#recursos"><span>07</span>recursos gráficos</a></li>
       <li><a href="#gh"><span>08</span>gestión humana</a></li>
       <li><a href="#aplicaciones"><span>09</span>aplicaciones</a></li>
-      <li><a href="#ia"><span>10</span>para IA</a></li>
+      <li><a href="#descargas"><span>10</span>descargas</a></li>
+      <li><a href="#ia"><span>11</span>para IA</a></li>
     </ol>
   </nav>
   <div class="ia"><b>¿Eres una IA?</b><br>Lee <a href="brand.md">brand.md</a> (todas las reglas en texto) y <a href="tokens.json">tokens.json</a> (valores exactos). Plantillas editables en <a href="#gh">/plantillas</a>.</div>
@@ -191,7 +206,7 @@
   <div class="g3">
     <div class="card"><h4>si vas a diseñar</h4><p>Empieza por la sección <b>08 · gestión humana</b>: elige el tipo de mensaje, toma la plantilla y cambia solo los textos e imágenes. Si creas algo nuevo, revisa color (04) y recursos gráficos (07).</p></div>
     <div class="card"><h4>si vas a escribir</h4><p>Lee <b>02 · tono de voz</b>. Ahí están las palabras de la marca, lo que nunca decimos y ejemplos de antes y después.</p></div>
-    <div class="card"><h4>si eres una IA</h4><p>Usa <code>brand.md</code> como instrucciones, <code>tokens.json</code> para los valores exactos y las plantillas HTML como punto de partida. El prompt base está en la sección <b>10</b>.</p></div>
+    <div class="card"><h4>si eres una IA</h4><p>Usa <code>brand.md</code> como instrucciones, <code>tokens.json</code> para los valores exactos y las plantillas HTML como punto de partida. El prompt base está en la sección <b>11</b>.</p></div>
   </div>
   <h3>las 7 reglas que no se negocian</h3>
   <ol class="reglas si" style="counter-reset:r">
@@ -485,16 +500,41 @@
   </div>
 </section>
 
-<!-- ============ 10 IA ============ -->
+<!-- ============ 10 DESCARGAS ============ -->
+<section id="descargas">
+  <div class="sec-h"><span class="n">10.</span><h2>descargas</h2>
+  <p>Archivos oficiales del logo y la fuente. Usa siempre estos archivos: nunca redibujes ni captures el logo de otra pieza.</p></div>
+  <div class="kit">
+    <div><h3>kit de marca completo</h3><p>Logos en PNG, SVG y PDF vectorial, la fuente Claris Sans, los tokens y las reglas para IA, todo en un solo .zip.</p></div>
+    <a class="btn" href="descargas/poliescol-kit-de-marca.zip" download>Descargar kit (.zip · 0,7 MB) ↓</a>
+  </div>
+  <div class="g3">
+    <div class="dl"><div class="pv" style="background:#000"><img src="assets/logo-blanco.svg" alt=""></div><div class="in"><h4>principal · fondo oscuro</h4><p>Palabra en blanco. Para fondos negros, violeta y fotos oscuras.</p>
+      <div class="bs"><a href="descargas/poliescol-logo-principal-blanco-transparente.png" download>PNG transparente</a><a href="descargas/poliescol-logo-principal-fondo-negro.png" download>PNG con fondo negro</a><a href="assets/logo-blanco.svg" download="poliescol-logo-principal-blanco.svg">SVG</a></div></div></div>
+    <div class="dl"><div class="pv chk"><img src="assets/logo-negro.svg" alt=""></div><div class="in"><h4>principal · fondo claro</h4><p>Palabra en negro. Para fondos blancos, gris claro, verde, aqua y naranja.</p>
+      <div class="bs"><a href="descargas/poliescol-logo-principal-negro-transparente.png" download>PNG transparente</a><a href="assets/logo-negro.svg" download="poliescol-logo-principal-negro.svg">SVG</a></div></div></div>
+    <div class="dl"><div class="pv" style="background:#000"><img src="assets/logo-horizontal-blanco.svg" alt=""></div><div class="in"><h4>horizontal · fondo oscuro</h4><p>Solo cuando el formato es muy horizontal: banners, correo, encabezados.</p>
+      <div class="bs"><a href="descargas/poliescol-logo-horizontal-blanco-transparente.png" download>PNG transparente</a><a href="descargas/poliescol-logo-horizontal-fondo-negro.png" download>PNG con fondo negro</a><a href="assets/logo-horizontal-blanco.svg" download="poliescol-logo-horizontal-blanco.svg">SVG</a></div></div></div>
+    <div class="dl"><div class="pv chk"><img src="assets/logo-horizontal-negro.svg" alt=""></div><div class="in"><h4>horizontal · fondo claro</h4><p>Versión horizontal con la palabra en negro.</p>
+      <div class="bs"><a href="descargas/poliescol-logo-horizontal-negro-transparente.png" download>PNG transparente</a><a href="assets/logo-horizontal-negro.svg" download="poliescol-logo-horizontal-negro.svg">SVG</a></div></div></div>
+    <div class="dl"><div class="pv chk"><img src="assets/icono.svg" alt=""></div><div class="in"><h4>ícono · ventana de luz</h4><p>Avatares, favicon, sellos y como recurso gráfico ampliado.</p>
+      <div class="bs"><a href="descargas/poliescol-icono-transparente.png" download>PNG transparente</a><a href="descargas/poliescol-icono-alta-resolucion.jpg" download>JPG alta resolución</a><a href="assets/icono.svg" download="poliescol-icono.svg">SVG</a><a href="descargas/poliescol-icono-transparente-posicion-horizontal.png" download>PNG alineado a versión horizontal</a></div></div></div>
+    <div class="dl"><div class="pv" style="background:#111"><span style="font-family:var(--p-font-titular);font-weight:600;font-size:64px;line-height:1">Aa Ññ</span></div><div class="in"><h4>vectorial y fuente</h4><p>PDF vectorial original (Illustrator) para imprenta, y Claris Sans con su licencia OFL.</p>
+      <div class="bs"><a href="descargas/poliescol-logos-vectorial.pdf" download>PDF vectorial</a><a href="assets/fonts/ClarisSans.ttf" download>Claris Sans .ttf</a><a href="assets/fonts/ClarisSans-OFL-FAQ.txt">Licencia (FAQ OFL)</a></div></div></div>
+  </div>
+  <p class="muted" style="margin-top:18px">¿Qué formato uso? <b style="color:#fff">SVG</b> para web y presentaciones · <b style="color:#fff">PNG transparente</b> para Word, PowerPoint, Canva y redes · <b style="color:#fff">PDF vectorial</b> para imprenta, bordados y señalética.</p>
+</section>
+
+<!-- ============ 11 IA ============ -->
 <section id="ia">
-  <div class="sec-h"><span class="n">10.</span><h2>para IA</h2>
+  <div class="sec-h"><span class="n">11.</span><h2>para IA</h2>
   <p>Este manual también está escrito para máquinas. Cualquier asistente (Claude, ChatGPT, Gemini, Canva, Figma AI…) puede leer estos archivos y diseñar piezas alineadas con la marca.</p></div>
-  <div class="g2 files" id="descargas">
+  <div class="g2 files" id="archivos-ia">
     <a href="brand.md"><div><code>brand.md</code><br><span>Todas las reglas del manual en texto plano. Pégalo o enlázalo como instrucciones.</span></div>→</a>
     <a href="tokens.json"><div><code>tokens.json</code><br><span>Colores, fuentes, radios y tamaños exactos.</span></div>→</a>
     <a href="css/tokens.css"><div><code>css/tokens.css</code><br><span>Variables CSS + fuentes para piezas en HTML.</span></div>→</a>
     <a href="llms.txt"><div><code>llms.txt</code><br><span>Índice estándar para que los modelos encuentren todo.</span></div>→</a>
-    <a href="assets/logo-blanco.svg" download><div><code>logo-blanco.svg</code> · <code>logo-negro.svg</code><br><span>Logo principal vectorial.</span></div>↓</a>
+    <a href="#descargas"><div><code>descargas/</code><br><span>Todos los logos (PNG, SVG, PDF) y el kit completo en .zip.</span></div>→</a>
     <a href="assets/logo-horizontal-blanco.svg" download><div><code>logo-horizontal-*.svg</code> · <code>icono.svg</code><br><span>Versión horizontal e ícono.</span></div>↓</a>
     <a href="assets/fonts/ClarisSans.ttf" download><div><code>ClarisSans.ttf</code><br><span>Fuente oficial de titulares (licencia SIL OFL).</span></div>↓</a>
     <a href="assets/fonts/ClarisSans-OFL-FAQ.txt"><div><code>ClarisSans-OFL-FAQ.txt</code><br><span>Información de la licencia de la fuente.</span></div>→</a>
