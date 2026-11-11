@@ -1,0 +1,57 @@
+/* =========================================================
+   POLIESCOL · Sistema de plantillas (Gestión Humana)
+   Lienzo base 1080 × 1350 px (4:5) para pantallas, redes internas y WhatsApp.
+   Todo texto editable lleva el atributo data-editar="campo".
+   ========================================================= */
+@import url("../css/tokens.css");
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#1b1b1b}
+body{display:grid;place-items:center;min-height:100vh;font-family:var(--p-font-body)}
+
+.lienzo{position:relative;width:1080px;height:1350px;overflow:hidden;padding:96px;display:flex;flex-direction:column;
+  font-family:var(--p-font-body);color:#fff;background:var(--p-negro)}
+.lienzo.f-negro{background:var(--p-negro);color:#fff}
+.lienzo.f-claro{background:var(--p-gris-claro);color:#000}
+.lienzo.f-verde{background:var(--p-verde);color:#000}
+.lienzo.f-aqua{background:var(--p-aqua);color:#000}
+.lienzo.f-violeta{background:var(--p-violeta);color:#fff}
+.lienzo.f-naranja{background:var(--p-naranja);color:#000}
+
+/* ---- Tipografía ---- */
+.kicker{font-family:var(--p-font-copy);font-weight:900;font-size:26px;letter-spacing:.2em;text-transform:uppercase}
+.numeral{font-family:var(--p-font-titular);font-weight:600;font-size:64px;color:var(--p-gris);line-height:1}
+.titular{font-family:var(--p-font-titular);font-weight:600;text-transform:lowercase;line-height:.98;letter-spacing:-.015em;font-size:118px}
+.titular.xl{font-size:150px}
+.titular.m{font-size:92px}
+.bajada{font-size:36px;line-height:1.35;max-width:820px}
+.destacado{font-family:var(--p-font-copy);font-weight:900}
+.texto{font-size:30px;line-height:1.45}
+
+/* ---- Ventana de luz (el ícono como recurso gráfico) ---- */
+.ventana{position:absolute;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 2.2fr;gap:calc(var(--s,300px)*.06)}
+.ventana{width:var(--s,300px);height:calc(var(--s,300px)*1.47)}
+.ventana i{border-radius:calc(var(--s,300px)*.09)}
+.ventana i:nth-child(1){background:var(--p-verde)}
+.ventana i:nth-child(2){background:var(--p-aqua)}
+.ventana i:nth-child(3){background:var(--p-violeta)}
+.ventana i:nth-child(4){background:var(--p-naranja)}
+/* Sobre fondos de color, el bloque del mismo color se convierte en negro para no desaparecer */
+.f-verde .ventana i:nth-child(1),.f-aqua .ventana i:nth-child(2),
+.f-violeta .ventana i:nth-child(3),.f-naranja .ventana i:nth-child(4){background:#000}
+
+/* ---- Contenedores ---- */
+.panel{border-radius:0 var(--p-radio-mayor) 0 0;padding:56px 64px}
+.panel.claro{background:var(--p-gris-claro);color:#000}
+.panel.negro{background:#000;color:#fff}
+.panel.blanco{background:#fff;color:#000}
+.foto{background:repeating-linear-gradient(135deg,rgba(127,127,127,.18) 0 18px,rgba(127,127,127,.08) 18px 36px);
+  display:grid;place-items:center;font-family:var(--p-font-copy);font-weight:900;font-size:22px;letter-spacing:.2em;opacity:.9;
+  border-radius:var(--p-radio-mayor) 0 var(--p-radio-mayor) 0;background-size:cover;background-position:center}
+.chip{display:inline-block;font-family:var(--p-font-copy);font-weight:900;font-size:22px;letter-spacing:.16em;text-transform:uppercase;
+  padding:14px 26px;border-radius:999px}
+
+/* ---- Firma ---- */
+.firma{position:absolute;left:96px;right:96px;bottom:80px;display:flex;align-items:flex-end;justify-content:space-between;font-size:24px}
+.firma img{height:86px;width:auto}
+.firma span{font-family:var(--p-font-copy);font-weight:900;letter-spacing:.14em;text-transform:uppercase;font-size:20px;opacity:.8;text-align:right}

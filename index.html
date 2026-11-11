@@ -3,325 +3,552 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Poliescol · Recubrimientos para pintores que son artistas</title>
-<meta name="description" content="Poliescol desarrolla y comercializa recubrimientos —masillas, impermeabilizantes y complementarios— para los sectores automotriz, metalmecánico, arquitectónico y madera.">
-<meta property="og:title" content="Poliescol · Recubrimientos">
-<meta property="og:description" content="Masillas, impermeabilizantes y productos complementarios para pintores que son artistas.">
+<title>Poliescol · Manual de marca</title>
+<meta name="description" content="Manual de marca de Poliescol en línea: logotipo, color, tipografía, iconografía, tono de voz y plantillas de Gestión Humana. Pensado para personas y para IA.">
+<meta name="robots" content="noindex">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="assets/icono.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Titulares: el manual define Claris Sans. Mientras se carga la licencia web, se usa Fredoka como sustituto (redondeada, geométrica). -->
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+<link rel="alternate" type="text/markdown" href="brand.md" title="Manual de marca en Markdown (para IA)">
+<link rel="stylesheet" href="css/tokens.css">
 <style>
-  :root{
-    --negro:#000000;          /* Process Black C */
-    --verde:#B5FF04;          /* Pantone 389C */
-    --aqua:#20F9F5;           /* Pantone 319C */
-    --violeta:#741DEC;        /* Pantone 814C */
-    --naranja:#FF621D;        /* Pantone 1585C */
-    --gris:#EDEDED;
-    --gris-texto:#A6A6A6;
-    --titular:"Claris Sans","Fredoka",system-ui,sans-serif;
-    --cuerpo:"Roboto",system-ui,sans-serif;
-    --r:28px;
-    --max:1200px;
-  }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:var(--cuerpo);background:var(--negro);color:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
-  img{display:block;max-width:100%}
+  html{scroll-behavior:smooth;scroll-padding-top:24px}
+  body{font-family:var(--p-font-body);background:#000;color:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
   a{color:inherit}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-  h1,h2,h3{font-family:var(--titular);font-weight:600;line-height:1.02;letter-spacing:-.01em;text-transform:lowercase}
-  .kicker{font-family:var(--cuerpo);font-weight:900;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+  img{display:block;max-width:100%}
+  h1,h2,h3,h4{font-family:var(--p-font-titular);font-weight:600;text-transform:lowercase;letter-spacing:-.01em;line-height:1.02}
+  code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.88em}
+  .kick{font-family:var(--p-font-copy);font-weight:900;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
 
-  /* ---------- NAV ---------- */
-  header{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.86);backdrop-filter:blur(10px);border-bottom:1px solid #1a1a1a}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-  .nav img{height:40px;width:auto}
-  .nav ul{display:flex;gap:32px;list-style:none;font-weight:500;font-size:15px}
-  .nav ul a{text-decoration:none;opacity:.8;transition:opacity .2s}
-  .nav ul a:hover{opacity:1}
-  .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--cuerpo);font-weight:900;font-size:15px;text-decoration:none;padding:14px 26px;border-radius:999px;transition:transform .2s, box-shadow .2s}
-  .btn:hover{transform:translateY(-2px)}
-  .btn-verde{background:var(--verde);color:#000}
-  .btn-verde:hover{box-shadow:0 10px 30px -10px var(--verde)}
-  .btn-linea{border:2px solid #fff;color:#fff}
-  .nav .btn{padding:10px 20px;font-size:14px}
-  @media (max-width:860px){.nav ul{display:none}}
+  /* ---------- layout ---------- */
+  .app{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+  aside{position:sticky;top:0;height:100vh;overflow:auto;border-right:1px solid #1d1d1d;padding:32px 26px;display:flex;flex-direction:column;gap:28px}
+  aside img{width:150px}
+  aside nav ol{list-style:none;display:grid;gap:2px}
+  aside nav a{display:flex;gap:12px;text-decoration:none;padding:7px 10px;border-radius:10px;font-size:14.5px;color:#bbb;transition:.15s}
+  aside nav a span{color:#555;font-family:var(--p-font-titular);font-weight:600;min-width:24px}
+  aside nav a:hover,aside nav a.act{background:#141414;color:#fff}
+  aside nav a.act span{color:var(--p-verde)}
+  aside .ia{margin-top:auto;font-size:13px;color:#999;border:1px solid #262626;border-radius:16px;padding:16px}
+  aside .ia b{color:#fff}
+  aside .ia a{color:var(--p-aqua)}
+  main{min-width:0}
+  section{padding:96px clamp(24px,6vw,96px);border-bottom:1px solid #161616;max-width:1240px}
+  .sec-h{margin-bottom:48px}
+  .sec-h .n{font-family:var(--p-font-titular);font-weight:600;font-size:44px;color:var(--p-gris);display:block;line-height:1}
+  .sec-h h2{font-size:clamp(46px,6vw,84px);margin-top:4px}
+  .sec-h p{max-width:680px;color:#bdbdbd;font-size:18px;margin-top:18px}
+  h3{font-size:34px;margin:56px 0 18px}
+  h3:first-child{margin-top:0}
+  p.lead{font-size:20px;color:#e5e5e5;max-width:760px}
+  .muted{color:#9a9a9a}
+  .g2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+  .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  @media (max-width:1100px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.g4{grid-template-columns:1fr}.hero h1{font-size:56px}}
+  .g2>*,.g3>*,.g4>*{min-width:0}
+  @media (max-width:860px){.app{grid-template-columns:1fr}aside{position:static;height:auto;border-right:0;border-bottom:1px solid #1d1d1d}aside nav ol{grid-template-columns:1fr 1fr}aside .ia{display:none}.g2,.g3{grid-template-columns:1fr}}
+  .card{border:1.5px solid #252525;border-radius:22px;padding:28px}
+  .card h4{font-size:24px;margin-bottom:10px}
+  .card p,.card li{color:#cfcfcf;font-size:15.5px}
+  .card ul{padding-left:18px}
+  .card ul.valores li{font-family:var(--p-font-titular);font-weight:600;font-size:30px;line-height:1.25;list-style:none}
 
-  /* ---------- HERO ---------- */
-  .hero{position:relative;overflow:hidden;padding:110px 0 140px}
-  .hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
-  .hero h1{font-size:clamp(52px,8vw,112px)}
-  .hero h1 em{font-style:normal;color:var(--verde)}
-  .hero p{font-size:20px;color:#d7d7d7;max-width:520px;margin:28px 0 40px}
-  .hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
-  /* la "ventana de luz": el ícono como composición */
-  .ventana{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 2.2fr;gap:18px;aspect-ratio:1/1.15;max-width:440px;justify-self:end;width:100%}
-  .ventana span{border-radius:26px;animation:sube .9s cubic-bezier(.2,.8,.2,1) both}
-  .ventana span:nth-child(1){background:var(--verde)}
-  .ventana span:nth-child(2){background:var(--aqua);animation-delay:.08s}
-  .ventana span:nth-child(3){background:var(--violeta);animation-delay:.16s}
-  .ventana span:nth-child(4){background:var(--naranja);animation-delay:.24s}
-  @keyframes sube{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
-  @media (max-width:860px){
-    .hero{padding:64px 0 90px}
-    .hero .wrap{grid-template-columns:1fr}
-    .ventana{max-width:240px;justify-self:start;order:-1}
-  }
+  /* hero */
+  .hero{padding-top:72px;padding-bottom:110px;position:relative;overflow:hidden}
+  .hero h1{font-size:clamp(64px,10vw,150px);line-height:.92;margin-top:26px}
+  .hero h1 em{font-style:normal;color:var(--p-verde)}
+  .hero p{max-width:620px;font-size:20px;color:#d2d2d2;margin-top:30px}
+  .hero .v{position:absolute;right:-60px;top:40px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 2.2fr;gap:16px;width:300px;height:440px;opacity:.95}
+  .hero .v i{border-radius:26px}
+  .hero .v i:nth-child(1){background:var(--p-verde)}.hero .v i:nth-child(2){background:var(--p-aqua)}
+  .hero .v i:nth-child(3){background:var(--p-violeta)}.hero .v i:nth-child(4){background:var(--p-naranja)}
+  @media (max-width:1100px){.hero .v{display:none}}
+  .pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:36px}
+  .pill{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;font-weight:700;font-size:14px;text-decoration:none;border:1.5px solid #333}
+  .pill:hover{border-color:#fff}
+  .pill.on{background:var(--p-verde);color:#000;border-color:var(--p-verde)}
 
-  /* ---------- SECCIONES ---------- */
-  section{padding:110px 0}
-  .tit-sec{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:56px;flex-wrap:wrap}
-  .tit-sec h2{font-size:clamp(40px,5.5vw,72px)}
-  .tit-sec .num{font-family:var(--titular);font-size:28px;color:#555;display:block;margin-bottom:6px}
-  .tit-sec p{max-width:440px;color:#bdbdbd}
+  /* reglas sí / no */
+  .reglas{list-style:none;display:grid;gap:10px}
+  .reglas li{padding:14px 18px 14px 50px;border-radius:14px;background:#0f0f0f;position:relative;font-size:15.5px;color:#ddd}
+  .reglas li::before{position:absolute;left:18px;top:13px;font-weight:900;font-family:var(--p-font-copy)}
+  .si li::before{content:"✓";color:var(--p-verde)}
+  .no li::before{content:"✕";color:var(--p-naranja)}
 
-  /* Categorías */
-  .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-  .cat{border-radius:var(--r) var(--r) var(--r) 6px;padding:34px 28px 30px;color:#000;min-height:330px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .25s}
-  .cat:hover{transform:translateY(-6px) rotate(-.5deg)}
-  .cat img{height:96px;width:auto;object-fit:contain;object-position:left}
-  .cat h3{font-size:32px;margin-top:28px}
-  .cat p{font-size:15px;margin-top:8px;opacity:.85}
-  .cat.metal{color:#fff}.cat.metal img{filter:invert(1)}
-  .c-verde{background:var(--verde)}.c-aqua{background:var(--aqua)}.c-violeta{background:var(--violeta)}.c-naranja{background:var(--naranja)}
-  @media (max-width:980px){.cats{grid-template-columns:repeat(2,1fr)}}
-  @media (max-width:520px){.cats{grid-template-columns:1fr}.cat{min-height:250px}}
+  /* tabla */
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th{text-align:left;font-family:var(--p-font-copy);font-weight:900;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:#888;padding:12px 14px;border-bottom:1.5px solid #2a2a2a}
+  td{padding:16px 14px;border-bottom:1px solid #1d1d1d;vertical-align:top;color:#ddd}
+  td b{color:#fff}
+  .tw{overflow-x:auto;border:1.5px solid #222;border-radius:20px}
+  .sw{display:inline-block;width:14px;height:14px;border-radius:4px;vertical-align:-2px;margin-right:8px}
 
-  /* Manifiesto */
-  .manifiesto{background:var(--violeta);border-radius:0 80px 0 0}
-  .manifiesto blockquote{font-family:var(--titular);font-weight:600;font-size:clamp(34px,5vw,68px);line-height:1.05;text-transform:lowercase;max-width:1000px}
-  .manifiesto blockquote b{color:var(--verde);font-weight:600}
-  .manifiesto .firma{margin-top:36px;font-size:18px;max-width:640px;opacity:.9}
+  /* logo */
+  .logo-box{border-radius:22px;display:grid;place-items:center;padding:56px 40px;min-height:260px;position:relative}
+  .logo-box img{max-height:120px;width:auto}
+  .logo-box small{position:absolute;left:18px;bottom:14px;font-size:12px;opacity:.6;font-weight:700}
+  .bx-negro{background:#0b0b0b;border:1.5px solid #222}.bx-blanco{background:#fff;color:#000}.bx-claro{background:var(--p-gris-claro);color:#000}
+  .reserva{position:relative;display:inline-block;padding:9% 14%;outline:2px dashed var(--p-aqua);outline-offset:-1px;border-radius:6px}
+  .reserva img{height:96px;width:auto;max-width:none}
+  .mal{position:relative;overflow:hidden}
+  .mal::after{content:"";position:absolute;inset:auto 14px 14px auto;width:28px;height:28px;border-radius:50%;background:var(--p-naranja) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="black" stroke-width="3" stroke-linecap="round"/></svg>') center/16px no-repeat}
+  .mal p{position:absolute;left:18px;bottom:16px;font-size:13px;color:#aaa;font-weight:500}
 
-  /* Cercanía */
-  .cercania{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#262626;border-radius:var(--r);overflow:hidden}
-  .cercania div{background:#0d0d0d;padding:36px 30px}
-  .cercania i{display:block;width:14px;height:14px;border-radius:4px;margin-bottom:22px}
-  .cercania h3{font-size:28px}
-  .cercania p{color:#bdbdbd;margin-top:8px;font-size:15px}
-  @media (max-width:860px){.cercania{grid-template-columns:1fr 1fr}}
-  @media (max-width:520px){.cercania{grid-template-columns:1fr}}
+  /* color */
+  .swatch{border-radius:22px;overflow:hidden;border:1.5px solid #222;display:flex;flex-direction:column}
+  .swatch .c{height:170px;padding:20px;display:flex;align-items:flex-end;font-family:var(--p-font-titular);font-weight:600;font-size:28px;text-transform:lowercase}
+  .swatch .d{padding:18px 20px;font-size:13.5px;color:#cfcfcf;display:block;line-height:1.75;background:#0b0b0b;flex:1}
+  .swatch .d b,.swatch .d span{display:block}
+  .swatch .d b{color:#fff}
+  .copy{cursor:pointer;border:0;background:#1b1b1b;color:#fff;border-radius:8px;padding:4px 9px;font:700 12px var(--p-font-copy);margin-left:6px}
+  .copy:hover{background:#2a2a2a}
+  .prop{display:flex;height:64px;border-radius:16px;overflow:hidden;margin-top:12px}
+  .prop div{display:grid;place-items:center;font-weight:900;font-size:13px}
 
-  /* Productos */
-  .prods{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .prod{background:var(--gris);color:#000;border-radius:var(--r);padding:32px;display:flex;flex-direction:column}
-  .prod .tag{align-self:flex-start;font-family:var(--cuerpo);font-weight:900;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:7px 12px;border-radius:999px;margin-bottom:26px}
-  .prod h3{font-size:34px}
-  .prod p{margin:12px 0 20px;color:#333}
-  .prod ul{list-style:none;margin-top:auto;border-top:1px solid #cfcfcf;padding-top:16px;font-size:14px}
-  .prod li{padding:4px 0}
-  .prod li::before{content:"■";font-size:9px;margin-right:10px;vertical-align:2px}
-  @media (max-width:900px){.prods{grid-template-columns:1fr}}
+  /* tipografía */
+  .spec{border:1.5px solid #222;border-radius:22px;padding:32px;display:grid;grid-template-columns:220px 1fr;gap:24px;align-items:center}
+  .spec+.spec{margin-top:14px}
+  .spec .lbl{font-size:13px;color:#999}
+  .spec .lbl b{display:block;color:#fff;font-size:15px;margin-bottom:4px}
+  @media (max-width:760px){.spec{grid-template-columns:1fr}}
 
-  /* Nosotros */
-  .nos{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
-  .nos article{border:1.5px solid #2a2a2a;border-radius:var(--r);padding:36px 30px}
-  .nos .kicker{display:inline-block;margin-bottom:18px}
-  .nos p{font-size:18px;color:#e2e2e2}
-  .valores{list-style:none;font-family:var(--titular);font-size:34px;line-height:1.25;text-transform:lowercase;font-weight:600}
-  .valores li:nth-child(1){color:var(--verde)}.valores li:nth-child(2){color:var(--aqua)}
-  .valores li:nth-child(3){color:#a675ff}.valores li:nth-child(4){color:var(--naranja)}
-  @media (max-width:900px){.nos{grid-template-columns:1fr}}
+  /* iconos */
+  .ico{border-radius:26px 26px 26px 6px;padding:28px;color:#000;min-height:230px;display:flex;flex-direction:column;justify-content:space-between}
+  .ico img{height:84px;width:auto;object-fit:contain;object-position:left}
+  .ico h4{font-size:26px}
+  .ico p{font-size:13.5px;opacity:.8;margin-top:4px}
+  .ico.inv{color:#fff}.ico.inv img{filter:invert(1)}
 
-  /* Contacto */
-  .contacto{background:var(--verde);color:#000;border-radius:80px 0 0 0}
-  .contacto .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
-  .contacto h2{font-size:clamp(46px,6.5vw,88px)}
-  .contacto .lead{font-size:20px;margin:22px 0 34px;max-width:480px}
-  .contacto .btn-negro{background:#000;color:#fff}
-  .datos{list-style:none;font-size:17px}
-  .datos li{padding:18px 0;border-bottom:1.5px solid rgba(0,0,0,.18)}
-  .datos small{display:block;font-weight:900;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;opacity:.65}
-  .datos a{text-decoration:none;font-weight:500}
-  @media (max-width:860px){.contacto .wrap{grid-template-columns:1fr}.contacto{border-radius:48px 0 0 0}}
+  /* plantillas */
+  .tpl{display:block;text-decoration:none;border-radius:20px;overflow:hidden;border:1.5px solid #222;background:#0b0b0b;transition:transform .2s}
+  .tpl:hover{transform:translateY(-4px)}
+  .tpl img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .tpl div{padding:16px 18px}
+  .tpl b{display:block;font-size:16px}
+  .tpl span{font-size:13px;color:#999}
 
-  footer{padding:56px 0 40px}
-  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;color:#8a8a8a;font-size:14px}
-  footer img{height:34px;width:auto}
+  /* aplicaciones */
+  .gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .gal img{border-radius:16px;aspect-ratio:16/9;object-fit:cover;width:100%}
+  @media (max-width:760px){.gal{grid-template-columns:1fr 1fr}}
 
-  .wa{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--verde);display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(181,255,4,.6);transition:transform .2s}
-  .wa:hover{transform:scale(1.08)}
-  .wa svg{width:30px;height:30px}
-
-  .js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
-  .reveal.on{opacity:1;transform:none}
-  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.ventana span{animation:none}}
+  /* IA */
+  pre{background:#0d0d0d;border:1.5px solid #252525;border-radius:18px;padding:24px;overflow:auto;font-size:13.5px;line-height:1.55;color:#e6e6e6;white-space:pre-wrap}
+  .pre-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font:900 13px var(--p-font-copy);text-decoration:none;padding:11px 18px;border-radius:999px;background:var(--p-verde);color:#000;border:0;cursor:pointer}
+  .files a{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:18px 20px;border:1.5px solid #222;border-radius:16px;text-decoration:none}
+  .files a:hover{border-color:#555}
+  .files code{color:var(--p-aqua)}
+  .files span{font-size:14px;color:#aaa}
+  footer.pie{padding:56px clamp(24px,6vw,96px);color:#777;font-size:13.5px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
 </style>
 </head>
 <body>
+<div class="app">
 
-<header>
-  <nav class="wrap nav" aria-label="Principal">
-    <a href="#inicio" aria-label="Poliescol, inicio"><img src="assets/logo-blanco.svg" alt="Poliescol"></a>
-    <ul>
-      <li><a href="#categorias">Categorías</a></li>
-      <li><a href="#productos">Productos</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-    <a class="btn btn-verde" href="#contacto">Hablemos</a>
+<aside>
+  <a href="#inicio"><img src="assets/logo-blanco.svg" alt="Poliescol"></a>
+  <nav aria-label="Contenido del manual">
+    <ol>
+      <li><a href="#uso"><span>00</span>cómo usar</a></li>
+      <li><a href="#esencia"><span>01</span>esencia</a></li>
+      <li><a href="#voz"><span>02</span>tono de voz</a></li>
+      <li><a href="#logo"><span>03</span>logotipo</a></li>
+      <li><a href="#color"><span>04</span>color</a></li>
+      <li><a href="#tipo"><span>05</span>tipografía</a></li>
+      <li><a href="#iconos"><span>06</span>iconografía</a></li>
+      <li><a href="#recursos"><span>07</span>recursos gráficos</a></li>
+      <li><a href="#gh"><span>08</span>gestión humana</a></li>
+      <li><a href="#aplicaciones"><span>09</span>aplicaciones</a></li>
+      <li><a href="#ia"><span>10</span>para IA</a></li>
+    </ol>
   </nav>
-</header>
+  <div class="ia"><b>¿Eres una IA?</b><br>Lee <a href="brand.md">brand.md</a> (todas las reglas en texto) y <a href="tokens.json">tokens.json</a> (valores exactos). Plantillas editables en <a href="#gh">/plantillas</a>.</div>
+</aside>
 
 <main id="inicio">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap">
-      <div>
-        <span class="kicker" style="color:var(--aqua)">Recubrimientos · Hecho en Colombia</span>
-        <h1 style="margin-top:20px">todo pintor<br>es un <em>artista.</em></h1>
-        <p>Masillas, impermeabilizantes y productos complementarios para quienes no se pueden dar el lujo de quedarle mal a un cliente.</p>
-        <div class="ctas">
-          <a class="btn btn-verde" href="#productos">Ver productos</a>
-          <a class="btn btn-linea" href="#categorias">Encuentra tu línea</a>
-        </div>
-      </div>
-      <div class="ventana" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-    </div>
-  </section>
+<!-- ============ PORTADA ============ -->
+<section class="hero">
+  <div class="v" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <span class="kick" style="color:var(--p-aqua)">Manual de marca · versión web 1.0</span>
+  <h1>diseña como<br><em>poliescol.</em></h1>
+  <p>Esta es la guía viva de la marca. Aquí está todo lo que una persona —o una inteligencia artificial— necesita para crear piezas coherentes: logo, color, tipografía, tono de voz y plantillas listas para Gestión Humana.</p>
+  <div class="pills">
+    <a class="pill on" href="#gh">Ir a plantillas de Gestión Humana</a>
+    <a class="pill" href="#ia">Usar con IA</a>
+    <a class="pill" href="#descargas">Descargar logos</a>
+  </div>
+</section>
 
-  <!-- CATEGORÍAS -->
-  <section id="categorias" style="padding-top:40px">
-    <div class="wrap">
-      <div class="tit-sec reveal">
-        <div><span class="num">01.</span><h2>¿en qué<br>estás trabajando?</h2></div>
-        <p>Cada línea tiene su color y su ícono para que encuentres tu producto de un vistazo, en el punto de venta o aquí.</p>
-      </div>
-      <div class="cats">
-        <article class="cat c-verde reveal">
-          <img src="assets/ic-automotriz.png" alt="">
-          <div><h3>automotriz</h3><p>Latonería y pintura: masillas poliéster para resanar, rellenar y dejar la lámina lista.</p></div>
-        </article>
-        <article class="cat c-aqua reveal">
-          <img src="assets/ic-arquitectonico.png" alt="">
-          <div><h3>arquitectónico</h3><p>Impermeabilizantes y complementarios para proteger muros, cubiertas y fachadas.</p></div>
-        </article>
-        <article class="cat c-violeta metal reveal">
-          <img src="assets/ic-metalmecanico.png" alt="">
-          <div><h3>metalmecánico</h3><p>Recubrimientos para estructuras, carrocerías y cerrajería que trabajan duro.</p></div>
-        </article>
-        <article class="cat c-naranja reveal">
-          <img src="assets/ic-madera.png" alt="">
-          <div><h3>madera</h3><p>Productos para preparar, proteger y darle el mejor acabado a la madera.</p></div>
-        </article>
-      </div>
-    </div>
-  </section>
+<!-- ============ 00 USO ============ -->
+<section id="uso">
+  <div class="sec-h"><span class="n">00.</span><h2>cómo usar esta guía</h2>
+  <p>La marca es un sistema: cada pieza que lleva la firma de Poliescol debe sentirse parte de la misma familia. Esta guía no busca restringir, sino darte una base sólida para acertar.</p></div>
+  <div class="g3">
+    <div class="card"><h4>si vas a diseñar</h4><p>Empieza por la sección <b>08 · gestión humana</b>: elige el tipo de mensaje, toma la plantilla y cambia solo los textos e imágenes. Si creas algo nuevo, revisa color (04) y recursos gráficos (07).</p></div>
+    <div class="card"><h4>si vas a escribir</h4><p>Lee <b>02 · tono de voz</b>. Ahí están las palabras de la marca, lo que nunca decimos y ejemplos de antes y después.</p></div>
+    <div class="card"><h4>si eres una IA</h4><p>Usa <code>brand.md</code> como instrucciones, <code>tokens.json</code> para los valores exactos y las plantillas HTML como punto de partida. El prompt base está en la sección <b>10</b>.</p></div>
+  </div>
+  <h3>las 7 reglas que no se negocian</h3>
+  <ol class="reglas si" style="counter-reset:r">
+    <li>El logotipo se usa tal cual: sin deformar, rotar, recolorear ni separar el ícono de la palabra.</li>
+    <li>El negro manda. Los cuatro colores complementarios acompañan; en cada pieza domina uno solo.</li>
+    <li>Titulares en minúscula, con la tipografía de titulares (Claris Sans / Outfit).</li>
+    <li>Sobre verde, aqua y naranja el texto va en negro. Sobre violeta y negro, en blanco.</li>
+    <li>Un mensaje por pieza. Titular corto, bajada breve, datos concretos.</li>
+    <li>Hablamos de tú, con cercanía, gratitud y sin tecnicismos innecesarios.</li>
+    <li>Los momentos de duelo se comunican solo en negro y blanco.</li>
+  </ol>
+</section>
 
-  <!-- MANIFIESTO -->
-  <section class="manifiesto">
-    <div class="wrap reveal">
-      <span class="kicker" style="color:var(--verde)">Lo que nos mueve</span>
-      <blockquote style="margin-top:24px">queremos un mundo donde los pintores sean <b>reconocidos como artistas</b> y crezcan integralmente.</blockquote>
-      <p class="firma">Por eso no solo vendemos recubrimientos: te acompañamos con asesoría cercana, para que cada trabajo que entregas hable bien de ti.</p>
-    </div>
-  </section>
+<!-- ============ 01 ESENCIA ============ -->
+<section id="esencia">
+  <div class="sec-h"><span class="n">01.</span><h2>esencia</h2>
+  <p>Si comunicamos desde nuestra esencia, con coherencia, sin forzar nada y cuidando el detalle, dejamos una huella. El branding emocional no es rápido: es una carrera de fondo para despertar confianza y crecer juntos.</p></div>
+  <p class="lead">Poliescol es una compañía multilatina que desarrolla y comercializa recubrimientos —masillas, impermeabilizantes y productos complementarios— para los sectores automotriz, metalmecánico, arquitectónico y de madera.</p>
+  <div class="g3" style="margin-top:40px">
+    <div class="card"><span class="kick" style="color:var(--p-verde)">Visión</span><p style="margin-top:12px;font-size:17px;color:#e5e5e5">Queremos un mundo donde los pintores sean reconocidos como artistas y crezcan integralmente; por eso les brindamos una asesoría cercana que los haga sentir valiosos.</p></div>
+    <div class="card"><span class="kick" style="color:var(--p-aqua)">Misión</span><p style="margin-top:12px;font-size:17px;color:#e5e5e5">Que los pintores usen y recomienden los recubrimientos que fabricamos y comercializamos. Somos una familia integral, comprometida, y nuestra gran labor es inspirarlos a todos.</p></div>
+    <div class="card"><span class="kick" style="color:var(--p-naranja)">Valores</span>
+      <ul class="valores" style="list-style:none;margin-top:12px;padding:0">
+        <li style="color:var(--p-verde)">espiritualidad</li><li style="color:var(--p-aqua)">genuinidad</li><li style="color:#a675ff">disciplina</li><li style="color:var(--p-naranja)">empatía</li></ul></div>
+  </div>
+  <h3>la idea que lo sostiene todo</h3>
+  <p class="lead">Todo pintor es un artista. Hacia afuera, honramos el oficio de quien usa nuestros productos. Hacia adentro, cada persona de Poliescol también es un artista: su trabajo merece ser visto, cuidado y reconocido.</p>
+  <h3>pilares de mensaje</h3>
+  <p class="muted" style="margin-bottom:20px">Toda comunicación —y especialmente la interna— debería poder conectarse con al menos uno de estos pilares.</p>
+  <div class="g4">
+    <div class="card" style="border-color:var(--p-verde)"><h4>tu trabajo es arte</h4><p>Reconocer el oficio, el detalle y el esfuerzo de cada persona.</p></div>
+    <div class="card" style="border-color:var(--p-aqua)"><h4>somos familia</h4><p>Pertenencia, cercanía, bienvenida, celebrar juntos.</p></div>
+    <div class="card" style="border-color:var(--p-violeta)"><h4>crecer integralmente</h4><p>Formación, bienestar, propósito: cuerpo, mente y espíritu.</p></div>
+    <div class="card" style="border-color:var(--p-naranja)"><h4>nos cuidamos</h4><p>Seguridad, salud, acompañamiento en los momentos difíciles.</p></div>
+  </div>
+</section>
 
-  <!-- CERCANÍA -->
-  <section>
-    <div class="wrap">
-      <div class="tit-sec reveal">
-        <div><span class="num">02.</span><h2>cercanía,<br>en serio.</h2></div>
-        <p>Sabemos lo que está en juego en cada entrega. Así es como estamos contigo.</p>
-      </div>
-      <div class="cercania reveal">
-        <div><i style="background:var(--verde)"></i><h3>variedad</h3><p>Un portafolio completo para automotriz, metalmecánica, arquitectura y madera.</p></div>
-        <div><i style="background:var(--aqua)"></i><h3>entrega a tiempo</h3><p>Despachos rápidos y puntuales, porque tu obra no puede esperar.</p></div>
-        <div><i style="background:var(--violeta)"></i><h3>servicio</h3><p>Asesoría técnica de gente que conoce el oficio y habla tu idioma.</p></div>
-        <div><i style="background:var(--naranja)"></i><h3>personalización</h3><p>Soluciones ajustadas a lo que tu proyecto realmente necesita.</p></div>
-        <div><i style="background:var(--aqua)"></i><h3>innovación</h3><p>Desarrollamos nuestros propios productos y los mejoramos todo el tiempo.</p></div>
-        <div><i style="background:var(--verde)"></i><h3>calidad</h3><p>Fórmulas confiables para que el resultado sea igual de bueno cada vez.</p></div>
-      </div>
-    </div>
-  </section>
+<!-- ============ 02 VOZ ============ -->
+<section id="voz">
+  <div class="sec-h"><span class="n">02.</span><h2>tono de voz</h2>
+  <p>Hablamos como habla alguien que conoce el oficio y quiere verte crecer: cerca, claro y con el corazón. Nunca desde arriba.</p></div>
+  <div class="tw"><table>
+    <thead><tr><th>Somos</th><th>Pero no</th><th>Así se nota</th></tr></thead>
+    <tbody>
+      <tr><td><b>Cercanos</b></td><td>confianzudos ni informales de más</td><td>Tuteamos, usamos el nombre de la persona, frases como “cuenta con nosotros”.</td></tr>
+      <tr><td><b>Genuinos</b></td><td>exagerados ni vendedores</td><td>Decimos lo que es. Sin superlativos vacíos (“el mejor”, “increíble”, “único”).</td></tr>
+      <tr><td><b>Sabios</b></td><td>técnicos ni fríos</td><td>Explicamos con ejemplos del taller y la obra. Si usamos un término técnico, lo aclaramos.</td></tr>
+      <tr><td><b>Inspiradores</b></td><td>cursis ni solemnes</td><td>Una idea poderosa por pieza. Celebramos el oficio como arte.</td></tr>
+      <tr><td><b>Espirituales</b></td><td>doctrinarios</td><td>Gratitud, propósito, esperanza. Las referencias explícitas a Dios, solo cuando el momento lo pide y con respeto por todas las creencias.</td></tr>
+    </tbody></table></div>
 
-  <!-- PRODUCTOS -->
-  <section id="productos" style="padding-top:20px">
-    <div class="wrap">
-      <div class="tit-sec reveal">
-        <div><span class="num">03.</span><h2>productos<br>destacados</h2></div>
-        <p>Algunos de los favoritos del taller y la obra. Pregúntanos por el portafolio completo y las fichas técnicas.</p>
-      </div>
-      <div class="prods">
-        <article class="prod reveal">
-          <span class="tag c-verde">Automotriz</span>
-          <h3>masilla poliéster rosada</h3>
-          <p>Masilla flexible que soporta la vibración del metal. Para resanar grietas, hendiduras e imperfecciones en latonería, carrocerías y fibra de vidrio.</p>
-          <ul><li>Alto poder de relleno</li><li>Secado rápido</li><li>Buena lijabilidad</li></ul>
-        </article>
-        <article class="prod reveal">
-          <span class="tag c-verde">Automotriz</span>
-          <h3>poliflex</h3>
-          <p>Masilla plástica que extiende y rellena grandes áreas, dejando una capa uniforme y lisa, lista para lijar y pintar.</p>
-          <ul><li>Fácil de extender</li><li>Adhiere a metal y fibra</li><li>Acabado uniforme</li></ul>
-        </article>
-        <article class="prod reveal">
-          <span class="tag c-aqua">Arquitectónico</span>
-          <h3>impercryl p-7</h3>
-          <p>Impermeabilizante para proteger superficies de la humedad y el clima, con un acabado limpio.</p>
-          <ul><li>Protección contra el agua</li><li>Fácil aplicación</li><li>Pídelo en tu ferretería</li></ul>
-        </article>
-      </div>
-    </div>
-  </section>
+  <h3>reglas de escritura</h3>
+  <div class="g2">
+    <ul class="reglas si">
+      <li>Titulares de máximo 7 palabras, en minúscula y terminados en punto cuando son afirmaciones.</li>
+      <li>Bajadas de máximo 25 palabras. Una idea por frase.</li>
+      <li>Verbos activos y en presente: “celebramos”, “te esperamos”, “crecemos”.</li>
+      <li>Datos concretos: fecha, hora, lugar, a quién va dirigido, a quién preguntar.</li>
+      <li>Nombrar a las personas por su nombre (y su área) cuando se las reconoce o se les da la bienvenida.</li>
+      <li>Cerrar con gratitud o con una invitación clara.</li>
+    </ul>
+    <ul class="reglas no">
+      <li>MAYÚSCULAS SOSTENIDAS en frases (solo en etiquetas cortas tipo “COMUNICADO”).</li>
+      <li>Más de un signo de exclamación por pieza. Nunca “!!!”.</li>
+      <li>Lenguaje de miedo, culpa o amenaza (“es obligatorio so pena de…”).</li>
+      <li>Jerga corporativa: “recurso humano”, “capital humano”, “sinergia”, “empoderar”.</li>
+      <li>Promesas o cifras que no estén confirmadas por la empresa.</li>
+      <li>Chistes a costa de alguien, temas políticos o religiosos polémicos.</li>
+    </ul>
+  </div>
 
-  <!-- NOSOTROS -->
-  <section id="nosotros">
-    <div class="wrap">
-      <div class="tit-sec reveal">
-        <div><span class="num">04.</span><h2>somos una<br>familia.</h2></div>
-        <p>Poliescol es una compañía multilatina que desarrolla y comercializa recubrimientos para los sectores de pintura automotriz, metalmecánico y arquitectónico.</p>
-      </div>
-      <div class="nos">
-        <article class="reveal"><span class="kicker" style="color:var(--verde)">Visión</span><p>Un mundo donde los pintores sean reconocidos como artistas y crezcan integralmente, acompañados por una asesoría cercana que los haga sentir valiosos.</p></article>
-        <article class="reveal"><span class="kicker" style="color:var(--aqua)">Misión</span><p>Que los pintores usen y recomienden los recubrimientos que fabricamos y comercializamos. Somos una familia integral y comprometida, y nuestra gran labor es inspirarlos a todos.</p></article>
-        <article class="reveal"><span class="kicker" style="color:var(--naranja)">Valores</span>
-          <ul class="valores"><li>espiritualidad</li><li>genuinidad</li><li>disciplina</li><li>empatía</li></ul>
-        </article>
-      </div>
-    </div>
-  </section>
+  <h3>palabras de la casa</h3>
+  <div class="g2">
+    <div class="card"><span class="kick" style="color:var(--p-verde)">Preferimos</span><p style="margin-top:12px;font-size:17px;color:#eee">familia · personas · equipo · oficio · arte · crecer · juntos · cuidarnos · gracias · valioso · integral · cercanía · acompañar · huella</p></div>
+    <div class="card"><span class="kick" style="color:var(--p-naranja)">Evitamos</span><p style="margin-top:12px;font-size:17px;color:#eee">recurso humano · colaboradores como “activos” · se informa que · se les recuerda que · por medio de la presente · favor abstenerse</p></div>
+  </div>
 
-  <!-- CONTACTO -->
-  <section id="contacto" class="contacto">
-    <div class="wrap">
-      <div class="reveal">
-        <span class="kicker">Contacto</span>
-        <h2 style="margin-top:16px">¿tienes una obra entre manos?</h2>
-        <p class="lead">Cuéntanos qué estás pintando y te ayudamos a elegir el producto correcto. Respondemos rápido.</p>
-        <a class="btn btn-negro" href="https://wa.me/573168340926?text=Hola%20Poliescol%2C%20quiero%20asesor%C3%ADa%20sobre%20sus%20productos" target="_blank" rel="noopener">Escríbenos por WhatsApp →</a>
-      </div>
-      <ul class="datos reveal">
-        <li><small>Servicio al cliente</small><a href="tel:+573168340926">316 834 09 26</a></li>
-        <li><small>Teléfono</small><a href="tel:+576043223822">604 322 38 22</a></li>
-        <li><small>Correo</small><a href="mailto:induresinas@gmail.com">induresinas@gmail.com</a></li>
-        <li><small>Planta</small>Calle 79 B Sur 50-150, Bodega 131<br>Parque Empresarial Promisión · La Estrella, Antioquia</li>
+  <h3>antes y después</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Así no</th><th>Así sí</th></tr></thead>
+    <tbody>
+      <tr><td class="muted">Se informa a todo el personal que a partir del lunes se modifica el horario laboral.</td><td><b>nuevo horario de planta.</b><br>Para que todos podamos descansar mejor, desde el lunes ajustamos la jornada.</td></tr>
+      <tr><td class="muted">¡¡¡FELIZ CUMPLEAÑOS!!! 🎉🎂🎈</td><td><b>feliz cumple, andrés.</b><br>Gracias por todo lo que pones en cada día. Que este año crezcas en todo sentido.</td></tr>
+      <tr><td class="muted">Es obligatoria la asistencia a la capacitación. La inasistencia será reportada.</td><td><b>crecemos juntos.</b><br>Te esperamos el jueves a las 2:00 p. m. Si no puedes asistir, avísale a tu líder.</td></tr>
+      <tr><td class="muted">Damos la bienvenida al nuevo recurso del área de calidad.</td><td><b>bienvenida, laura.</b><br>Llega a Calidad a sumar su talento. Salúdala y hagámosla sentir en casa.</td></tr>
+    </tbody></table></div>
+</section>
+
+<!-- ============ 03 LOGO ============ -->
+<section id="logo">
+  <div class="sec-h"><span class="n">03.</span><h2>logotipo</h2>
+  <p>El logotipo es la base de la identidad: es nuestra firma y debe reflejar fielmente nuestra esencia. Tiene dos versiones oficiales.</p></div>
+  <h3>versión principal</h3>
+  <div class="g2">
+    <div class="logo-box bx-negro"><img src="assets/logo-blanco.svg" alt="Logo principal sobre negro"><small>Sobre negro · logo-blanco.svg</small></div>
+    <div class="logo-box bx-blanco"><img src="assets/logo-negro.svg" alt="Logo principal sobre blanco"><small>Sobre blanco · logo-negro.svg</small></div>
+  </div>
+  <p class="muted" style="margin-top:14px">Úsala siempre que el espacio lo permita: formatos verticales, cuadrados, cierres de video, piezas de Gestión Humana.</p>
+  <h3>versión secundaria (horizontal)</h3>
+  <div class="g2">
+    <div class="logo-box bx-negro"><img src="assets/logo-horizontal-blanco.svg" alt="Logo horizontal sobre negro" style="max-height:80px"><small>logo-horizontal-blanco.svg</small></div>
+    <div class="logo-box bx-blanco"><img src="assets/logo-horizontal-negro.svg" alt="Logo horizontal sobre blanco" style="max-height:80px"><small>logo-horizontal-negro.svg</small></div>
+  </div>
+  <p class="muted" style="margin-top:14px">Solo cuando el área de aplicación lo exija: banners muy horizontales, firmas de correo, encabezados, bordados pequeños.</p>
+
+  <h3>el ícono: una ventana de luz</h3>
+  <div class="g2" style="align-items:center">
+    <div class="logo-box bx-negro"><img src="assets/icono.svg" alt="Ícono Poliescol" style="max-height:170px"></div>
+    <div>
+      <p class="lead">Nace de una idea: <b>personas</b> que, <b>a través de su trabajo</b>, <b>encuentran a Dios</b>. Sus cuatro piezas significan:</p>
+      <ul class="reglas si" style="margin-top:18px">
+        <li>Una relación con el otro.</li><li>Una admiración infinita.</li><li>Nuestras diferentes líneas de negocio.</li><li>Somos una ventana de luz; detrás de todo está Dios.</li>
       </ul>
     </div>
-  </section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <img src="assets/logo-blanco.svg" alt="Poliescol">
-    <span>© <span id="y">2026</span> Poliescol · Industria de Resinas S.A.S.</span>
   </div>
-</footer>
 
-<a class="wa" href="https://wa.me/573168340926" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" fill="#000"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
-</a>
+  <h3>área de reserva y tamaños mínimos</h3>
+  <div class="g2">
+    <div class="logo-box bx-negro" style="min-height:300px"><div class="reserva"><img src="assets/logo-blanco.svg" alt="Área de reserva"></div><small>Manual: 1 cm arriba/abajo · 1,5 cm a los lados</small></div>
+    <div class="card">
+      <h4>espacio libre</h4>
+      <p>Ningún texto, foto o elemento gráfico puede invadir el área de reserva. En el manual impreso se define en <b>1 cm</b> arriba y abajo y <b>1,5 cm</b> a los lados.</p>
+      <p style="margin-top:10px"><b>Regla práctica digital:</b> deja libre al menos el 10 % del ancho del logo arriba y abajo, y el 15 % a cada lado.</p>
+      <h4 style="margin-top:26px">tamaño mínimo</h4>
+      <p><b>Impreso:</b> 20 mm de ancho.<br><b>Digital:</b> 50 px de ancho.</p>
+    </div>
+  </div>
+
+  <h3>usos incorrectos</h3>
+  <div class="g4">
+    <div class="logo-box bx-negro mal"><img src="assets/logo-blanco.svg" alt="" style="transform:scaleX(1.5);max-height:80px"><p>No deformar</p></div>
+    <div class="logo-box bx-negro mal"><img src="assets/logo-blanco.svg" alt="" style="transform:rotate(-14deg);max-height:90px"><p>No rotar</p></div>
+    <div class="logo-box bx-negro mal"><img src="assets/logo-blanco.svg" alt="" style="filter:hue-rotate(140deg);max-height:90px"><p>No cambiar colores del ícono</p></div>
+    <div class="logo-box bx-negro mal"><div style="display:flex;align-items:center;gap:6px"><div style="width:150px;height:30px;background:url(assets/logo-horizontal-blanco.svg) right center/auto 30px no-repeat"></div><img src="assets/icono.svg" alt="" style="height:30px;width:auto"></div><p>No mover el ícono</p></div>
+    <div class="logo-box mal" style="background:var(--p-naranja)"><img src="assets/logo-blanco.svg" alt="" style="max-height:90px"><p style="color:#000">No usar sobre color sin contraste</p></div>
+    <div class="logo-box mal" style="background:url(assets/aplicaciones/fachada.jpg) center/cover"><img src="assets/logo-blanco.svg" alt="" style="max-height:90px"><p style="color:#fff">No usar sobre fotos recargadas</p></div>
+    <div class="logo-box bx-negro mal"><img src="assets/logo-blanco.svg" alt="" style="max-height:90px;filter:drop-shadow(8px 8px 0 #741DEC)"><p>No agregar sombras ni efectos</p></div>
+    <div class="logo-box bx-negro mal"><span style="font:700 52px Georgia,serif;color:#fff">Poliescol</span><p>No reescribir con otra letra</p></div>
+  </div>
+</section>
+
+<!-- ============ 04 COLOR ============ -->
+<section id="color">
+  <div class="sec-h"><span class="n">04.</span><h2>color</h2>
+  <p>El negro es el color primario: neutro, combina con todo y transmite autoridad, liderazgo y elegancia. Los cuatro complementarios aportan energía y además ayudan a que cada persona encuentre su línea de producto.</p></div>
+  <div class="g3">
+    <div class="swatch"><div class="c" style="background:#000;color:#fff;border-bottom:1px solid #222">negro</div><div class="d"><b>Primario</b>HEX #000000 <button class="copy" data-c="#000000">copiar</button>RGB 0 · 0 · 0<br>CMYK 0 · 0 · 0 · 100<br>Pantone Process Black C<span class="muted">Autoridad, liderazgo, elegancia.</span></div></div>
+    <div class="swatch"><div class="c" style="background:var(--p-verde);color:#000">verde limón</div><div class="d"><b>Complementario 1 · Automotriz</b>HEX #B5FF04 <button class="copy" data-c="#B5FF04">copiar</button>RGB 181 · 255 · 4<br>CMYK 38 · 0 · 100 · 0<br>Pantone 389 C<span class="muted">Autenticidad y creatividad.</span></div></div>
+    <div class="swatch"><div class="c" style="background:var(--p-aqua);color:#000">azul agua marina</div><div class="d"><b>Complementario 2 · Arquitectónico</b>HEX #20F9F5 <button class="copy" data-c="#20F9F5">copiar</button>RGB 32 · 249 · 245<br>CMYK 58 · 0 · 18 · 0<br>Pantone 319 C<span class="muted">Armonía, confianza, comunicación clara; lo celestial.</span></div></div>
+    <div class="swatch"><div class="c" style="background:var(--p-violeta);color:#fff">violeta</div><div class="d"><b>Complementario 3 · Metalmecánico</b>HEX #741DEC <button class="copy" data-c="#741DEC">copiar</button>RGB 116 · 29 · 236<br>CMYK 80 · 80 · 0 · 0<br>Pantone 814 C<span class="muted">Sabiduría y espiritualidad.</span></div></div>
+    <div class="swatch"><div class="c" style="background:var(--p-naranja);color:#000">naranja</div><div class="d"><b>Complementario 4 · Madera</b>HEX #FF621D <button class="copy" data-c="#FF621D">copiar</button>RGB 255 · 98 · 29<br>CMYK 0 · 72 · 87 · 0<br>Pantone 1585 C<span class="muted">Entusiasmo, fuego y pasión.</span></div></div>
+    <div class="swatch"><div class="c" style="background:var(--p-gris-claro);color:#000">neutros de apoyo</div><div class="d"><b>Usados en el manual</b>Blanco #FFFFFF<br>Gris claro #EDEDED <button class="copy" data-c="#EDEDED">copiar</button>Gris medio #5F5F5F <button class="copy" data-c="#5F5F5F">copiar</button><span class="muted">Fondos claros, numerales, textos secundarios.</span></div></div>
+  </div>
+
+  <h3>proporción</h3>
+  <p class="muted">En una pieza típica: el negro (o el gris claro como fondo alterno) domina, el blanco da aire y <b style="color:#fff">un solo</b> complementario lleva el protagonismo. Los cuatro juntos aparecen solo en la ventana de luz o en sistemas de categorías.</p>
+  <div class="prop"><div style="flex:60;background:#000;border:1.5px solid #333;border-right:0;color:#fff;border-radius:16px 0 0 16px">negro 60 %</div><div style="flex:25;background:#fff;color:#000">blanco 25 %</div><div style="flex:15;background:var(--p-verde);color:#000">1 color 15 %</div></div>
+
+  <h3>contraste: qué texto va sobre cada color</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Fondo</th><th>Texto</th><th>Contraste</th><th>Nota</th></tr></thead>
+    <tbody>
+      <tr><td><span class="sw" style="background:#000;border:1px solid #444"></span>Negro</td><td>Blanco o cualquier complementario</td><td>21 : 1</td><td>Fondo por defecto.</td></tr>
+      <tr><td><span class="sw" style="background:var(--p-verde)"></span>Verde</td><td><b>Negro</b></td><td>17,3 : 1</td><td>Nunca blanco (1,2 : 1).</td></tr>
+      <tr><td><span class="sw" style="background:var(--p-aqua)"></span>Aqua</td><td><b>Negro</b></td><td>15,9 : 1</td><td>Nunca blanco (1,3 : 1).</td></tr>
+      <tr><td><span class="sw" style="background:var(--p-violeta)"></span>Violeta</td><td><b>Blanco</b> (acentos en verde)</td><td>6,7 : 1</td><td>Negro solo en titulares muy grandes.</td></tr>
+      <tr><td><span class="sw" style="background:var(--p-naranja)"></span>Naranja</td><td><b>Negro</b></td><td>7,0 : 1</td><td>Blanco solo en titulares de más de 40 px (3 : 1).</td></tr>
+      <tr><td><span class="sw" style="background:#EDEDED"></span>Gris claro</td><td><b>Negro</b>, acentos en violeta</td><td>18 : 1</td><td>Verde y aqua no sirven como texto sobre claro.</td></tr>
+    </tbody></table></div>
+
+  <h3>color según el mensaje (Gestión Humana)</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Tipo de mensaje</th><th>Color protagonista</th><th>Por qué</th></tr></thead>
+    <tbody>
+      <tr><td><b>Comunicados e informativos</b></td><td><span class="sw" style="background:#000;border:1px solid #444"></span>Negro + acento aqua</td><td>Claridad y confianza.</td></tr>
+      <tr><td><b>Bienvenidas</b></td><td><span class="sw" style="background:var(--p-aqua)"></span>Aqua</td><td>Comunicación clara, armonía.</td></tr>
+      <tr><td><b>Reconocimientos y aniversarios</b></td><td><span class="sw" style="background:var(--p-verde)"></span>Verde</td><td>Autenticidad y creatividad: “tu trabajo es arte”.</td></tr>
+      <tr><td><b>Formación, charlas y eventos</b></td><td><span class="sw" style="background:var(--p-violeta)"></span>Violeta</td><td>Sabiduría.</td></tr>
+      <tr><td><b>Cumpleaños y celebraciones</b></td><td><span class="sw" style="background:var(--p-naranja)"></span>Naranja</td><td>Entusiasmo y pasión.</td></tr>
+      <tr><td><b>Bienestar, salud y seguridad</b></td><td><span class="sw" style="background:#EDEDED"></span>Gris claro + los cuatro en pasos</td><td>Calma y orden.</td></tr>
+      <tr><td><b>Fechas espirituales y de gratitud</b></td><td><span class="sw" style="background:var(--p-violeta)"></span>Violeta o negro</td><td>Espiritualidad.</td></tr>
+      <tr><td><b>Duelo y condolencias</b></td><td><span class="sw" style="background:#000;border:1px solid #444"></span>Solo negro y blanco</td><td>Respeto. Sin colores ni ventana.</td></tr>
+    </tbody></table></div>
+</section>
+
+<!-- ============ 05 TIPOGRAFÍA ============ -->
+<section id="tipo">
+  <div class="sec-h"><span class="n">05.</span><h2>tipografía</h2>
+  <p>Tres niveles. Todos los titulares van en minúscula, como en el manual.</p></div>
+  <div class="spec"><div class="lbl"><b>Titulares</b>Claris Sans<br>Web y apps: <b style="display:inline;font-size:13px">Outfit SemiBold (600)</b></div>
+    <div style="font-family:var(--p-font-titular);font-weight:600;font-size:clamp(40px,5vw,72px);line-height:1;text-transform:lowercase">todo pintor es un artista.</div></div>
+  <div class="spec"><div class="lbl"><b>Copys y destacados</b>Roboto Black (900)</div>
+    <div style="font-family:var(--p-font-copy);font-weight:900;font-size:28px;line-height:1.2">Te esperamos el jueves a las 2:00 p. m.<br><span class="kick" style="font-size:14px;color:var(--p-aqua)">Etiqueta · mayúsculas espaciadas</span></div></div>
+  <div class="spec"><div class="lbl"><b>Textos</b>Roboto Regular (400)</div>
+    <div style="font-size:18px;color:#ddd;max-width:640px">Para que todos podamos descansar mejor, ajustamos la jornada a partir del próximo lunes. Si tienes dudas, habla con tu líder o con Gestión Humana.</div></div>
+  <h3>jerarquía en una pieza</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Nivel</th><th>Fuente</th><th>Tamaño en lienzo 1080 px</th><th>Reglas</th></tr></thead>
+    <tbody>
+      <tr><td><b>Etiqueta</b></td><td>Roboto Black</td><td>20–26 px · tracking 0,2 em</td><td>MAYÚSCULAS, máx. 4 palabras, en color de acento.</td></tr>
+      <tr><td><b>Numeral</b></td><td>Claris / Outfit 600</td><td>56–110 px</td><td>Formato “01.” en gris #5F5F5F o en el color de acento.</td></tr>
+      <tr><td><b>Titular</b></td><td>Claris / Outfit 600</td><td>90–150 px · interlineado 0,98</td><td>minúscula, máx. 7 palabras, 2–4 líneas.</td></tr>
+      <tr><td><b>Bajada</b></td><td>Roboto Regular</td><td>32–38 px · interlineado 1,35</td><td>Máx. 25 palabras.</td></tr>
+      <tr><td><b>Datos</b></td><td>Roboto Regular + Black en la etiqueta del dato</td><td>28–32 px</td><td>“Hora: 2:00 p. m.” — formato 12 h con “a. m.” / “p. m.”.</td></tr>
+    </tbody></table></div>
+</section>
+
+<!-- ============ 06 ICONOS ============ -->
+<section id="iconos">
+  <div class="sec-h"><span class="n">06.</span><h2>iconografía</h2>
+  <p>Cada categoría de producto tiene un ícono y un color. Así se identifica de un vistazo si un producto es automotriz, metalmecánico, arquitectónico o de madera, y se agiliza la decisión de compra.</p></div>
+  <div class="g4">
+    <div class="ico" style="background:var(--p-verde)"><img src="assets/ic-automotriz.png" alt=""><div><h4>automotriz</h4><p>Verde limón · ícono carro</p></div></div>
+    <div class="ico" style="background:var(--p-aqua)"><img src="assets/ic-arquitectonico.png" alt=""><div><h4>arquitectónico</h4><p>Agua marina · ícono brocha</p></div></div>
+    <div class="ico inv" style="background:var(--p-violeta)"><img src="assets/ic-metalmecanico.png" alt=""><div><h4>metalmecánico</h4><p>Violeta · ícono engranaje y llave</p></div></div>
+    <div class="ico" style="background:var(--p-naranja)"><img src="assets/ic-madera.png" alt=""><div><h4>madera</h4><p>Naranja · ícono tronco</p></div></div>
+  </div>
+  <p class="muted" style="margin-top:18px">Los íconos son pictogramas sólidos, sin contorno, en negro sobre el color de su categoría. El contenedor tiene tres esquinas redondeadas y una casi recta. No se mezclan ícono y color de categorías distintas.</p>
+</section>
+
+<!-- ============ 07 RECURSOS ============ -->
+<section id="recursos">
+  <div class="sec-h"><span class="n">07.</span><h2>recursos gráficos</h2>
+  <p>Pocos elementos, usados con disciplina. Son los que hacen que una pieza se reconozca como Poliescol incluso sin ver el logo.</p></div>
+  <div class="g2">
+    <div class="card"><h4>1 · la ventana de luz</h4><p>El ícono ampliado como composición: dos bloques cortos arriba (verde, aqua) y dos altos abajo (violeta, naranja). Puede crecer, rotar levemente (máx. 10°) y salirse del borde del formato.</p>
+      <ul style="margin-top:10px"><li>Siempre en ese orden y proporción.</li><li>Una sola ventana por pieza.</li><li>Sobre un fondo de color, el bloque de ese mismo color pasa a negro.</li><li>Nunca en piezas de duelo.</li></ul></div>
+    <div class="card"><h4>2 · la esquina mayor</h4><p>Contenedores, paneles y fotos llevan una esquina con un radio grande (96 px en lienzo de 1080) y las otras rectas o con radio pequeño (24 px). Es el gesto de las pestañas del manual.</p></div>
+    <div class="card"><h4>3 · numerales</h4><p>Para ordenar contenido: “01.”, “02.”, “03.” con la tipografía de titulares, en gris #5F5F5F sobre negro o dentro de un bloque de color.</p></div>
+    <div class="card"><h4>4 · fotografía</h4><p>Personas reales de Poliescol, en su lugar de trabajo, con luz natural. Manos, herramientas y producto en uso. Nada de fotos de banco genéricas ni filtros de color. Recorte con la esquina mayor.</p></div>
+  </div>
+  <h3>siempre / nunca</h3>
+  <div class="g2">
+    <ul class="reglas si"><li>Mucho espacio negro o gris claro; deja respirar.</li><li>Alinear todo a la izquierda, con márgenes de 96 px en lienzos de 1080.</li><li>Un color protagonista por pieza.</li><li>Logo abajo a la izquierda, área de Gestión Humana abajo a la derecha.</li></ul>
+    <ul class="reglas no"><li>Degradados, sombras, brillos, biseles o texturas.</li><li>Clipart, emojis como gráfico principal o íconos de otros estilos.</li><li>Más de dos colores complementarios fuera de la ventana.</li><li>Tipografías decorativas, script o con serifa.</li></ul>
+  </div>
+</section>
+
+<!-- ============ 08 GH ============ -->
+<section id="gh">
+  <div class="sec-h"><span class="n">08.</span><h2>piezas para gestión humana</h2>
+  <p>Plantillas reales en HTML, en formato 1080 × 1350 px (4:5) para pantallas, WhatsApp y redes internas. Ábrelas, cambia los textos marcados con <code>data-editar</code> y exporta. Cada una sigue todas las reglas de este manual.</p></div>
+  <div class="g4">
+    <a class="tpl" href="plantillas/comunicado.html"><img src="plantillas/vistas/comunicado.jpg" alt="Plantilla comunicado"><div><b>comunicado</b><span>Avisos, cambios, procesos · negro + aqua</span></div></a>
+    <a class="tpl" href="plantillas/bienvenida.html"><img src="plantillas/vistas/bienvenida.jpg" alt="Plantilla bienvenida"><div><b>bienvenida</b><span>Persona nueva · aqua</span></div></a>
+    <a class="tpl" href="plantillas/cumpleanos.html"><img src="plantillas/vistas/cumpleanos.jpg" alt="Plantilla cumpleaños"><div><b>cumpleaños</b><span>Celebraciones · negro + naranja</span></div></a>
+    <a class="tpl" href="plantillas/reconocimiento.html"><img src="plantillas/vistas/reconocimiento.jpg" alt="Plantilla reconocimiento"><div><b>reconocimiento</b><span>Logros, aniversarios · verde</span></div></a>
+    <a class="tpl" href="plantillas/formacion.html"><img src="plantillas/vistas/formacion.jpg" alt="Plantilla formación"><div><b>formación y eventos</b><span>Charlas, jornadas · violeta</span></div></a>
+    <a class="tpl" href="plantillas/bienestar.html"><img src="plantillas/vistas/bienestar.jpg" alt="Plantilla bienestar"><div><b>bienestar</b><span>Pausas, salud, seguridad · gris claro</span></div></a>
+    <a class="tpl" href="plantillas/condolencia.html"><img src="plantillas/vistas/condolencia.jpg" alt="Plantilla condolencias"><div><b>condolencias</b><span>Duelo · solo negro y blanco</span></div></a>
+  </div>
+
+  <h3>anatomía de una pieza</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Orden</th><th>Elemento</th><th>Contenido</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><b>Etiqueta</b></td><td>Tipo de mensaje: COMUNICADO, NUEVO EN LA FAMILIA, RECONOCIMIENTO, FORMACIÓN…</td></tr>
+      <tr><td>2</td><td><b>Titular</b></td><td>La idea en máx. 7 palabras, en minúscula. Si hay una persona, su nombre va aquí.</td></tr>
+      <tr><td>3</td><td><b>Bajada</b></td><td>Por qué importa, en una o dos frases.</td></tr>
+      <tr><td>4</td><td><b>Datos o foto</b></td><td>Fecha, hora, lugar, a quién va dirigido / foto real de la persona.</td></tr>
+      <tr><td>5</td><td><b>Firma</b></td><td>Logo principal abajo a la izquierda + área que firma abajo a la derecha (Gestión Humana, SST, Tu familia Poliescol).</td></tr>
+    </tbody></table></div>
+
+  <h3>otros formatos</h3>
+  <div class="tw"><table>
+    <thead><tr><th>Formato</th><th>Medida</th><th>Cómo adaptar</th></tr></thead>
+    <tbody>
+      <tr><td><b>Post / pantalla / WhatsApp</b></td><td>1080 × 1350 px</td><td>Formato base de las plantillas.</td></tr>
+      <tr><td><b>Historia / estado</b></td><td>1080 × 1920 px</td><td>Mismo diseño, deja 250 px libres arriba y abajo para la interfaz.</td></tr>
+      <tr><td><b>Cartelera impresa</b></td><td>Carta (21,6 × 27,9 cm)</td><td>Proporción casi igual a 4:5. Márgenes de 2 cm. Logo mínimo 20 mm.</td></tr>
+      <tr><td><b>Encabezado de correo</b></td><td>600 × 200 px</td><td>Logo horizontal + etiqueta + titular corto. Fondo negro.</td></tr>
+      <tr><td><b>Fondo de videollamada</b></td><td>1920 × 1080 px</td><td>Negro, ventana de luz a la derecha cortada por el borde, logo horizontal abajo a la izquierda.</td></tr>
+      <tr><td><b>Presentación</b></td><td>1920 × 1080 px</td><td>Portadillas como el manual: numeral “01.” + título en minúscula + ventana a la izquierda.</td></tr>
+    </tbody></table></div>
+</section>
+
+<!-- ============ 09 APLICACIONES ============ -->
+<section id="aplicaciones">
+  <div class="sec-h"><span class="n">09.</span><h2>aplicaciones</h2>
+  <p>Así vive la marca en el mundo físico. Referencia para dotación, papelería, señalética y vehículos.</p></div>
+  <div class="gal">
+    <img src="assets/aplicaciones/fachada.jpg" alt="Fachada" loading="lazy">
+    <img src="assets/aplicaciones/aviso.jpg" alt="Aviso" loading="lazy">
+    <img src="assets/aplicaciones/camioneta.jpg" alt="Vehículo" loading="lazy">
+    <img src="assets/aplicaciones/tarjetas.jpg" alt="Tarjetas de presentación" loading="lazy">
+    <img src="assets/aplicaciones/delantal.jpg" alt="Delantal" loading="lazy">
+    <img src="assets/aplicaciones/gorra.jpg" alt="Gorra" loading="lazy">
+    <img src="assets/aplicaciones/mug.jpg" alt="Mug" loading="lazy">
+    <img src="assets/aplicaciones/bolsa.jpg" alt="Bolsa" loading="lazy">
+    <img src="assets/aplicaciones/portatil.jpg" alt="Portátil" loading="lazy">
+  </div>
+</section>
+
+<!-- ============ 10 IA ============ -->
+<section id="ia">
+  <div class="sec-h"><span class="n">10.</span><h2>para IA</h2>
+  <p>Este manual también está escrito para máquinas. Cualquier asistente (Claude, ChatGPT, Gemini, Canva, Figma AI…) puede leer estos archivos y diseñar piezas alineadas con la marca.</p></div>
+  <div class="g2 files" id="descargas">
+    <a href="brand.md"><div><code>brand.md</code><br><span>Todas las reglas del manual en texto plano. Pégalo o enlázalo como instrucciones.</span></div>→</a>
+    <a href="tokens.json"><div><code>tokens.json</code><br><span>Colores, fuentes, radios y tamaños exactos.</span></div>→</a>
+    <a href="css/tokens.css"><div><code>css/tokens.css</code><br><span>Variables CSS + fuentes para piezas en HTML.</span></div>→</a>
+    <a href="llms.txt"><div><code>llms.txt</code><br><span>Índice estándar para que los modelos encuentren todo.</span></div>→</a>
+    <a href="assets/logo-blanco.svg" download><div><code>logo-blanco.svg</code> · <code>logo-negro.svg</code><br><span>Logo principal vectorial.</span></div>↓</a>
+    <a href="assets/logo-horizontal-blanco.svg" download><div><code>logo-horizontal-*.svg</code> · <code>icono.svg</code><br><span>Versión horizontal e ícono.</span></div>↓</a>
+  </div>
+
+  <h3>prompt base</h3>
+  <p class="muted" style="margin-bottom:14px">Cópialo al inicio de cualquier conversación con una IA y luego describe la pieza que necesitas.</p>
+  <div class="pre-h"><span class="kick" style="color:var(--p-verde)">Prompt · copiar y pegar</span><button class="btn" id="copiarPrompt">Copiar prompt</button></div>
+<pre id="prompt">Actúa como diseñador de la marca POLIESCOL. Sigue estrictamente su manual de marca:
+https://cipreslab.github.io/poliescol/brand.md  (reglas)  y  https://cipreslab.github.io/poliescol/tokens.json  (valores).
+
+Resumen obligatorio:
+- Colores: negro #000000 (primario, domina). Complementarios: verde #B5FF04, aqua #20F9F5, violeta #741DEC, naranja #FF621D. Neutros: blanco, gris claro #EDEDED, gris #5F5F5F.
+- Un solo color complementario protagonista por pieza. Texto negro sobre verde, aqua, naranja y gris claro; texto blanco sobre negro y violeta.
+- Tipografía: titulares en Claris Sans (o Outfit SemiBold), SIEMPRE en minúscula, máx. 7 palabras. Etiquetas en Roboto Black MAYÚSCULAS espaciadas. Textos en Roboto Regular.
+- Logotipo: usar el SVG oficial (assets/logo-blanco.svg o logo-negro.svg), nunca redibujarlo, deformarlo, rotarlo ni recolorearlo. Abajo a la izquierda, mínimo 50 px de ancho.
+- Recursos: "ventana de luz" (4 bloques redondeados: verde y aqua arriba cortos, violeta y naranja abajo altos), contenedores con una sola esquina de radio grande, numerales "01.".
+- Sin degradados, sombras, emojis como gráfico, clipart ni tipografías decorativas.
+- Tono: cercano, genuino, sabio sin tecnicismos, inspirador, con gratitud. Tutear. Máx. 1 signo de exclamación. Nada de "recurso humano" ni lenguaje de amenaza.
+- Gestión Humana, color por mensaje: comunicado = negro + aqua; bienvenida = aqua; reconocimiento = verde; formación/eventos = violeta; cumpleaños = naranja; bienestar = gris claro; duelo = SOLO negro y blanco, sin ventana.
+- Estructura: etiqueta → titular → bajada (≤25 palabras) → datos/foto → firma (logo + área).
+- Formato por defecto: 1080 × 1350 px. Puedes partir de las plantillas en https://cipreslab.github.io/poliescol/plantillas/
+
+Antes de entregar, verifica la lista de chequeo del manual y dime qué reglas aplicaste.
+
+La pieza que necesito es: [describe aquí: tipo de mensaje, texto, fecha, personas, formato]</pre>
+
+  <h3>lista de chequeo antes de publicar</h3>
+  <ul class="reglas si">
+    <li>¿El logo es el archivo oficial, sin alteraciones y con su área de reserva libre?</li>
+    <li>¿Hay un solo color complementario protagonista (o ninguno, si es duelo)?</li>
+    <li>¿El texto tiene el contraste correcto según el fondo?</li>
+    <li>¿El titular está en minúscula y tiene 7 palabras o menos?</li>
+    <li>¿La pieza dice una sola cosa, con datos concretos (fecha, hora, lugar, contacto)?</li>
+    <li>¿El tono es cercano, genuino y sin jerga corporativa?</li>
+    <li>¿Nombres, cargos, fechas y cifras están confirmados por Gestión Humana?</li>
+    <li>¿La foto es real, de buena calidad y con permiso de la persona?</li>
+  </ul>
+</section>
+
+<footer class="pie">
+  <span>Poliescol · Manual de marca, versión web. Basado en el Manual de Marca 2024.</span>
+  <span>Dudas sobre la aplicación de la marca: equipo de comunicaciones de Poliescol.</span>
+</footer>
+</main>
+</div>
 
 <script>
-  document.documentElement.classList.add('js');
-  document.getElementById('y').textContent = new Date().getFullYear();
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), {threshold:.12});
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // copiar códigos de color
+  document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{navigator.clipboard?.writeText(b.dataset.c);const t=b.textContent;b.textContent='copiado';setTimeout(()=>b.textContent=t,1200)}));
+  // copiar prompt
+  const bp=document.getElementById('copiarPrompt');
+  bp.addEventListener('click',()=>{navigator.clipboard?.writeText(document.getElementById('prompt').innerText);bp.textContent='¡Copiado!';setTimeout(()=>bp.textContent='Copiar prompt',1500)});
+  // índice activo
+  const links=[...document.querySelectorAll('aside nav a')];
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle('act',l.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-40% 0px -55% 0px'});
+  document.querySelectorAll('main section[id]').forEach(s=>io.observe(s));
 </script>
 </body>
 </html>

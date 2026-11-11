@@ -1,0 +1,27 @@
+# Poliescol · Manual de marca
+
+> Manual de marca de Poliescol (recubrimientos: masillas, impermeabilizantes y complementarios para los sectores automotriz, metalmecánico, arquitectónico y de madera). Contiene las reglas obligatorias de logotipo, color, tipografía, iconografía, tono de voz y plantillas de comunicación interna (Gestión Humana). Úsalo para diseñar o redactar cualquier pieza de la marca.
+
+## Reglas
+- [brand.md](https://cipreslab.github.io/poliescol/brand.md): todas las reglas en Markdown. Léelo completo antes de diseñar.
+- [tokens.json](https://cipreslab.github.io/poliescol/tokens.json): colores, tipografías, tamaños, radios y formatos exactos.
+- [css/tokens.css](https://cipreslab.github.io/poliescol/css/tokens.css): variables CSS y fuentes para piezas HTML.
+
+## Plantillas (HTML 1080x1350, editar elementos con data-editar)
+- [Comunicado](https://cipreslab.github.io/poliescol/plantillas/comunicado.html)
+- [Bienvenida](https://cipreslab.github.io/poliescol/plantillas/bienvenida.html)
+- [Cumpleaños](https://cipreslab.github.io/poliescol/plantillas/cumpleanos.html)
+- [Reconocimiento](https://cipreslab.github.io/poliescol/plantillas/reconocimiento.html)
+- [Formación y eventos](https://cipreslab.github.io/poliescol/plantillas/formacion.html)
+- [Bienestar](https://cipreslab.github.io/poliescol/plantillas/bienestar.html)
+- [Condolencias](https://cipreslab.github.io/poliescol/plantillas/condolencia.html)
+
+## Logos (SVG oficiales; nunca redibujar)
+- [Principal, fondo oscuro](https://cipreslab.github.io/poliescol/assets/logo-blanco.svg)
+- [Principal, fondo claro](https://cipreslab.github.io/poliescol/assets/logo-negro.svg)
+- [Horizontal, fondo oscuro](https://cipreslab.github.io/poliescol/assets/logo-horizontal-blanco.svg)
+- [Horizontal, fondo claro](https://cipreslab.github.io/poliescol/assets/logo-horizontal-negro.svg)
+- [Ícono](https://cipreslab.github.io/poliescol/assets/icono.svg)
+
+## Opcional
+- [Manual visual](https://cipreslab.github.io/poliescol/): versión navegable para personas.
