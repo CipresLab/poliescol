@@ -20,7 +20,7 @@ Manual de marca vivo de Poliescol, pensado para que **cualquier persona o IA** p
 3. Exporta como imagen con una captura del área de 1080×1350 px, o pídele a una IA que lo haga.
 
 ## Tipografía
-El manual define **Claris Sans** para titulares. Para web se usa **Outfit** (licencia SIL OFL, incluida en `assets/fonts`), su equivalente geométrico más cercano. Si Claris Sans está instalada en el equipo, se usa primero.
+Titulares en **Claris Sans**, la fuente oficial del manual (licencia SIL OFL). Se sirve el archivo `.ttf` original sin modificar (`assets/fonts/ClarisSans.ttf`), como permite la sección 2.1 del FAQ de la OFL. **Outfit** queda solo como respaldo. Textos en **Roboto**.
 
 ## Alcance
 Esta versión pública contiene solo la identidad visual, el tono de voz y las plantillas. La estrategia interna del manual impreso (ADN, propuesta de valor) no se publica aquí.

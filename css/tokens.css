@@ -5,9 +5,10 @@
    colores, tipografías y radios oficiales.
    ========================================================= */
 
-/* Titulares: el manual define Claris Sans. Para web se usa Outfit (OFL),
-   su equivalente geométrico más cercano. Si tienes Claris Sans instalada
-   localmente, el navegador la usará primero. */
+/* Titulares: Claris Sans, la fuente oficial del manual (licencia SIL OFL).
+   Se sirve el archivo .ttf original sin modificar. Outfit queda solo como respaldo. */
+@font-face{font-family:"Claris Sans";font-weight:100 900;font-style:normal;font-display:swap;
+  src:url("../assets/fonts/ClarisSans.ttf") format("truetype")}
 @font-face{font-family:"Outfit";font-weight:400;font-display:swap;src:url("../assets/fonts/outfit-latin-400-normal.woff2") format("woff2")}
 @font-face{font-family:"Outfit";font-weight:500;font-display:swap;src:url("../assets/fonts/outfit-latin-500-normal.woff2") format("woff2")}
 @font-face{font-family:"Outfit";font-weight:600;font-display:swap;src:url("../assets/fonts/outfit-latin-600-normal.woff2") format("woff2")}
@@ -18,6 +19,7 @@
 @font-face{font-family:"Roboto";font-weight:900;font-display:swap;src:url("../assets/fonts/roboto-latin-900-normal.woff2") format("woff2")}
 
 :root{
+  font-synthesis-weight:none;
   /* Color primario */
   --p-negro:#000000;     /* CMYK 0/0/0/100 · RGB 0/0/0 · Pantone Process Black C */
   /* Complementarios */
@@ -31,7 +33,7 @@
   --p-gris:#5F5F5F;        /* numerales "01." y textos secundarios sobre negro */
 
   /* Tipografía */
-  --p-font-titular:"Claris Sans","Claris_sans","Outfit",system-ui,sans-serif;
+  --p-font-titular:"Claris Sans","Outfit",system-ui,sans-serif;
   --p-font-copy:"Roboto",system-ui,sans-serif;   /* Roboto Black (900) para copys/destacados */
   --p-font-body:"Roboto",system-ui,sans-serif;   /* Roboto Regular (400) para textos */
 

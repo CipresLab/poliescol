@@ -7,7 +7,7 @@
 
 1. El logotipo se usa tal cual (archivo SVG oficial): sin deformar, rotar, recolorear, añadir efectos ni separar el ícono de la palabra.
 2. El negro es el color primario y domina. De los cuatro complementarios, **uno solo** es protagonista por pieza.
-3. Titulares **en minúscula**, con la tipografía de titulares (Claris Sans; en web, Outfit SemiBold 600).
+3. Titulares **en minúscula**, con la tipografía de titulares (Claris Sans, archivo `assets/fonts/ClarisSans.ttf`).
 4. Texto **negro** sobre verde, aqua, naranja y gris claro. Texto **blanco** sobre negro y violeta.
 5. Un mensaje por pieza: titular ≤ 7 palabras, bajada ≤ 25 palabras, datos concretos.
 6. Tono cercano: tutear, gratitud, sin tecnicismos innecesarios ni jerga corporativa.
@@ -116,14 +116,14 @@
 
 | Nivel | Fuente oficial | Sustituto web libre | Uso |
 |---|---|---|---|
-| Titulares | Claris Sans | Outfit SemiBold 600 | siempre en minúscula |
+| Titulares | Claris Sans (`assets/fonts/ClarisSans.ttf`, licencia SIL OFL) | Outfit, solo si Claris no está disponible | siempre en minúscula |
 | Copys / destacados | Roboto Black 900 | — | etiquetas en MAYÚSCULAS con tracking 0,2 em, datos destacados |
 | Textos | Roboto Regular 400 | — | bajadas y párrafos |
 
 **Jerarquía en lienzo de 1080 px de ancho:**
 - Etiqueta: Roboto Black 20–26 px, MAYÚSCULAS, tracking 0,2 em, color de acento, ≤ 4 palabras.
-- Numeral: Outfit 600, 56–110 px, formato "01.", gris #5F5F5F o color de acento.
-- Titular: Outfit 600, 90–150 px, interlineado 0,98, minúscula, ≤ 7 palabras, 2–4 líneas.
+- Numeral: Claris Sans, 56–110 px, formato "01.", gris #5F5F5F o color de acento.
+- Titular: Claris Sans, 90–150 px, interlineado 0,98, minúscula, ≤ 7 palabras, 2–4 líneas.
 - Bajada: Roboto 400, 32–38 px, interlineado 1,35, ≤ 25 palabras.
 - Datos: Roboto 400 28–32 px; la etiqueta del dato ("Hora:") en Roboto Black.
 

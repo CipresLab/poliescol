@@ -16,6 +16,9 @@
 - [Bienestar](https://cipreslab.github.io/poliescol/plantillas/bienestar.html)
 - [Condolencias](https://cipreslab.github.io/poliescol/plantillas/condolencia.html)
 
+## Fuente de titulares
+- [Claris Sans (TTF, licencia SIL OFL)](https://cipreslab.github.io/poliescol/assets/fonts/ClarisSans.ttf)
+
 ## Logos (SVG oficiales; nunca redibujar)
 - [Principal, fondo oscuro](https://cipreslab.github.io/poliescol/assets/logo-blanco.svg)
 - [Principal, fondo claro](https://cipreslab.github.io/poliescol/assets/logo-negro.svg)

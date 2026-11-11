@@ -57,7 +57,8 @@
 
   /* hero */
   .hero{padding-top:72px;padding-bottom:110px;position:relative;overflow:hidden}
-  .hero h1{font-size:clamp(64px,10vw,150px);line-height:.92;margin-top:26px}
+  .hero h1{font-size:clamp(56px,8vw,124px);line-height:.95;margin-top:26px;max-width:calc(100% - 300px)}
+  @media (max-width:1100px){.hero h1{max-width:none}}
   .hero h1 em{font-style:normal;color:var(--p-verde)}
   .hero p{max-width:620px;font-size:20px;color:#d2d2d2;margin-top:30px}
   .hero .v{position:absolute;right:-60px;top:40px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 2.2fr;gap:16px;width:300px;height:440px;opacity:.95}
@@ -179,7 +180,7 @@
   <div class="pills">
     <a class="pill on" href="#gh">Ir a plantillas de Gestión Humana</a>
     <a class="pill" href="#ia">Usar con IA</a>
-    <a class="pill" href="#descargas">Descargar logos</a>
+    <a class="pill" href="#descargas">Descargar logos y fuente</a>
   </div>
 </section>
 
@@ -196,7 +197,7 @@
   <ol class="reglas si" style="counter-reset:r">
     <li>El logotipo se usa tal cual: sin deformar, rotar, recolorear ni separar el ícono de la palabra.</li>
     <li>El negro manda. Los cuatro colores complementarios acompañan; en cada pieza domina uno solo.</li>
-    <li>Titulares en minúscula, con la tipografía de titulares (Claris Sans / Outfit).</li>
+    <li>Titulares en minúscula, con la tipografía de titulares (Claris Sans).</li>
     <li>Sobre verde, aqua y naranja el texto va en negro. Sobre violeta y negro, en blanco.</li>
     <li>Un mensaje por pieza. Titular corto, bajada breve, datos concretos.</li>
     <li>Hablamos de tú, con cercanía, gratitud y sin tecnicismos innecesarios.</li>
@@ -380,7 +381,7 @@
 <section id="tipo">
   <div class="sec-h"><span class="n">05.</span><h2>tipografía</h2>
   <p>Tres niveles. Todos los titulares van en minúscula, como en el manual.</p></div>
-  <div class="spec"><div class="lbl"><b>Titulares</b>Claris Sans<br>Web y apps: <b style="display:inline;font-size:13px">Outfit SemiBold (600)</b></div>
+  <div class="spec"><div class="lbl"><b>Titulares</b>Claris Sans<br>Archivo: <a href="assets/fonts/ClarisSans.ttf" download style="color:var(--p-aqua)">ClarisSans.ttf</a> · licencia OFL<br>Respaldo: Outfit</div>
     <div style="font-family:var(--p-font-titular);font-weight:600;font-size:clamp(40px,5vw,72px);line-height:1;text-transform:lowercase">todo pintor es un artista.</div></div>
   <div class="spec"><div class="lbl"><b>Copys y destacados</b>Roboto Black (900)</div>
     <div style="font-family:var(--p-font-copy);font-weight:900;font-size:28px;line-height:1.2">Te esperamos el jueves a las 2:00 p. m.<br><span class="kick" style="font-size:14px;color:var(--p-aqua)">Etiqueta · mayúsculas espaciadas</span></div></div>
@@ -391,8 +392,8 @@
     <thead><tr><th>Nivel</th><th>Fuente</th><th>Tamaño en lienzo 1080 px</th><th>Reglas</th></tr></thead>
     <tbody>
       <tr><td><b>Etiqueta</b></td><td>Roboto Black</td><td>20–26 px · tracking 0,2 em</td><td>MAYÚSCULAS, máx. 4 palabras, en color de acento.</td></tr>
-      <tr><td><b>Numeral</b></td><td>Claris / Outfit 600</td><td>56–110 px</td><td>Formato “01.” en gris #5F5F5F o en el color de acento.</td></tr>
-      <tr><td><b>Titular</b></td><td>Claris / Outfit 600</td><td>90–150 px · interlineado 0,98</td><td>minúscula, máx. 7 palabras, 2–4 líneas.</td></tr>
+      <tr><td><b>Numeral</b></td><td>Claris Sans</td><td>56–110 px</td><td>Formato “01.” en gris #5F5F5F o en el color de acento.</td></tr>
+      <tr><td><b>Titular</b></td><td>Claris Sans</td><td>90–150 px · interlineado 0,98</td><td>minúscula, máx. 7 palabras, 2–4 líneas.</td></tr>
       <tr><td><b>Bajada</b></td><td>Roboto Regular</td><td>32–38 px · interlineado 1,35</td><td>Máx. 25 palabras.</td></tr>
       <tr><td><b>Datos</b></td><td>Roboto Regular + Black en la etiqueta del dato</td><td>28–32 px</td><td>“Hora: 2:00 p. m.” — formato 12 h con “a. m.” / “p. m.”.</td></tr>
     </tbody></table></div>
@@ -495,6 +496,8 @@
     <a href="llms.txt"><div><code>llms.txt</code><br><span>Índice estándar para que los modelos encuentren todo.</span></div>→</a>
     <a href="assets/logo-blanco.svg" download><div><code>logo-blanco.svg</code> · <code>logo-negro.svg</code><br><span>Logo principal vectorial.</span></div>↓</a>
     <a href="assets/logo-horizontal-blanco.svg" download><div><code>logo-horizontal-*.svg</code> · <code>icono.svg</code><br><span>Versión horizontal e ícono.</span></div>↓</a>
+    <a href="assets/fonts/ClarisSans.ttf" download><div><code>ClarisSans.ttf</code><br><span>Fuente oficial de titulares (licencia SIL OFL).</span></div>↓</a>
+    <a href="assets/fonts/ClarisSans-OFL-FAQ.txt"><div><code>ClarisSans-OFL-FAQ.txt</code><br><span>Información de la licencia de la fuente.</span></div>→</a>
   </div>
 
   <h3>prompt base</h3>
@@ -506,7 +509,7 @@ https://cipreslab.github.io/poliescol/brand.md  (reglas)  y  https://cipreslab.g
 Resumen obligatorio:
 - Colores: negro #000000 (primario, domina). Complementarios: verde #B5FF04, aqua #20F9F5, violeta #741DEC, naranja #FF621D. Neutros: blanco, gris claro #EDEDED, gris #5F5F5F.
 - Un solo color complementario protagonista por pieza. Texto negro sobre verde, aqua, naranja y gris claro; texto blanco sobre negro y violeta.
-- Tipografía: titulares en Claris Sans (o Outfit SemiBold), SIEMPRE en minúscula, máx. 7 palabras. Etiquetas en Roboto Black MAYÚSCULAS espaciadas. Textos en Roboto Regular.
+- Tipografía: titulares en Claris Sans (archivo: https://cipreslab.github.io/poliescol/assets/fonts/ClarisSans.ttf; respaldo: Outfit), SIEMPRE en minúscula, máx. 7 palabras. Etiquetas en Roboto Black MAYÚSCULAS espaciadas. Textos en Roboto Regular.
 - Logotipo: usar el SVG oficial (assets/logo-blanco.svg o logo-negro.svg), nunca redibujarlo, deformarlo, rotarlo ni recolorearlo. Abajo a la izquierda, mínimo 50 px de ancho.
 - Recursos: "ventana de luz" (4 bloques redondeados: verde y aqua arriba cortos, violeta y naranja abajo altos), contenedores con una sola esquina de radio grande, numerales "01.".
 - Sin degradados, sombras, emojis como gráfico, clipart ni tipografías decorativas.
