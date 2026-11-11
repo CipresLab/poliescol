@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poliescol · Recubrimientos para pintores que son artistas</title>
+<meta name="description" content="Poliescol desarrolla y comercializa recubrimientos —masillas, impermeabilizantes y complementarios— para los sectores automotriz, metalmecánico, arquitectónico y madera.">
+<meta property="og:title" content="Poliescol · Recubrimientos">
+<meta property="og:description" content="Masillas, impermeabilizantes y productos complementarios para pintores que son artistas.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="assets/icono.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Titulares: el manual define Claris Sans. Mientras se carga la licencia web, se usa Fredoka como sustituto (redondeada, geométrica). -->
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --negro:#000000;          /* Process Black C */
+    --verde:#B5FF04;          /* Pantone 389C */
+    --aqua:#20F9F5;           /* Pantone 319C */
+    --violeta:#741DEC;        /* Pantone 814C */
+    --naranja:#FF621D;        /* Pantone 1585C */
+    --gris:#EDEDED;
+    --gris-texto:#A6A6A6;
+    --titular:"Claris Sans","Fredoka",system-ui,sans-serif;
+    --cuerpo:"Roboto",system-ui,sans-serif;
+    --r:28px;
+    --max:1200px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--cuerpo);background:var(--negro);color:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+  img{display:block;max-width:100%}
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  h1,h2,h3{font-family:var(--titular);font-weight:600;line-height:1.02;letter-spacing:-.01em;text-transform:lowercase}
+  .kicker{font-family:var(--cuerpo);font-weight:900;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+
+  /* ---------- NAV ---------- */
+  header{position:sticky;top:0;z-index:50;background:rgba(0,0,0,.86);backdrop-filter:blur(10px);border-bottom:1px solid #1a1a1a}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .nav img{height:40px;width:auto}
+  .nav ul{display:flex;gap:32px;list-style:none;font-weight:500;font-size:15px}
+  .nav ul a{text-decoration:none;opacity:.8;transition:opacity .2s}
+  .nav ul a:hover{opacity:1}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--cuerpo);font-weight:900;font-size:15px;text-decoration:none;padding:14px 26px;border-radius:999px;transition:transform .2s, box-shadow .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-verde{background:var(--verde);color:#000}
+  .btn-verde:hover{box-shadow:0 10px 30px -10px var(--verde)}
+  .btn-linea{border:2px solid #fff;color:#fff}
+  .nav .btn{padding:10px 20px;font-size:14px}
+  @media (max-width:860px){.nav ul{display:none}}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;overflow:hidden;padding:110px 0 140px}
+  .hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+  .hero h1{font-size:clamp(52px,8vw,112px)}
+  .hero h1 em{font-style:normal;color:var(--verde)}
+  .hero p{font-size:20px;color:#d7d7d7;max-width:520px;margin:28px 0 40px}
+  .hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+  /* la "ventana de luz": el ícono como composición */
+  .ventana{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 2.2fr;gap:18px;aspect-ratio:1/1.15;max-width:440px;justify-self:end;width:100%}
+  .ventana span{border-radius:26px;animation:sube .9s cubic-bezier(.2,.8,.2,1) both}
+  .ventana span:nth-child(1){background:var(--verde)}
+  .ventana span:nth-child(2){background:var(--aqua);animation-delay:.08s}
+  .ventana span:nth-child(3){background:var(--violeta);animation-delay:.16s}
+  .ventana span:nth-child(4){background:var(--naranja);animation-delay:.24s}
+  @keyframes sube{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+  @media (max-width:860px){
+    .hero{padding:64px 0 90px}
+    .hero .wrap{grid-template-columns:1fr}
+    .ventana{max-width:240px;justify-self:start;order:-1}
+  }
+
+  /* ---------- SECCIONES ---------- */
+  section{padding:110px 0}
+  .tit-sec{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:56px;flex-wrap:wrap}
+  .tit-sec h2{font-size:clamp(40px,5.5vw,72px)}
+  .tit-sec .num{font-family:var(--titular);font-size:28px;color:#555;display:block;margin-bottom:6px}
+  .tit-sec p{max-width:440px;color:#bdbdbd}
+
+  /* Categorías */
+  .cats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .cat{border-radius:var(--r) var(--r) var(--r) 6px;padding:34px 28px 30px;color:#000;min-height:330px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .25s}
+  .cat:hover{transform:translateY(-6px) rotate(-.5deg)}
+  .cat img{height:96px;width:auto;object-fit:contain;object-position:left}
+  .cat h3{font-size:32px;margin-top:28px}
+  .cat p{font-size:15px;margin-top:8px;opacity:.85}
+  .cat.metal{color:#fff}.cat.metal img{filter:invert(1)}
+  .c-verde{background:var(--verde)}.c-aqua{background:var(--aqua)}.c-violeta{background:var(--violeta)}.c-naranja{background:var(--naranja)}
+  @media (max-width:980px){.cats{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.cats{grid-template-columns:1fr}.cat{min-height:250px}}
+
+  /* Manifiesto */
+  .manifiesto{background:var(--violeta);border-radius:0 80px 0 0}
+  .manifiesto blockquote{font-family:var(--titular);font-weight:600;font-size:clamp(34px,5vw,68px);line-height:1.05;text-transform:lowercase;max-width:1000px}
+  .manifiesto blockquote b{color:var(--verde);font-weight:600}
+  .manifiesto .firma{margin-top:36px;font-size:18px;max-width:640px;opacity:.9}
+
+  /* Cercanía */
+  .cercania{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#262626;border-radius:var(--r);overflow:hidden}
+  .cercania div{background:#0d0d0d;padding:36px 30px}
+  .cercania i{display:block;width:14px;height:14px;border-radius:4px;margin-bottom:22px}
+  .cercania h3{font-size:28px}
+  .cercania p{color:#bdbdbd;margin-top:8px;font-size:15px}
+  @media (max-width:860px){.cercania{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.cercania{grid-template-columns:1fr}}
+
+  /* Productos */
+  .prods{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .prod{background:var(--gris);color:#000;border-radius:var(--r);padding:32px;display:flex;flex-direction:column}
+  .prod .tag{align-self:flex-start;font-family:var(--cuerpo);font-weight:900;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:7px 12px;border-radius:999px;margin-bottom:26px}
+  .prod h3{font-size:34px}
+  .prod p{margin:12px 0 20px;color:#333}
+  .prod ul{list-style:none;margin-top:auto;border-top:1px solid #cfcfcf;padding-top:16px;font-size:14px}
+  .prod li{padding:4px 0}
+  .prod li::before{content:"■";font-size:9px;margin-right:10px;vertical-align:2px}
+  @media (max-width:900px){.prods{grid-template-columns:1fr}}
+
+  /* Nosotros */
+  .nos{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+  .nos article{border:1.5px solid #2a2a2a;border-radius:var(--r);padding:36px 30px}
+  .nos .kicker{display:inline-block;margin-bottom:18px}
+  .nos p{font-size:18px;color:#e2e2e2}
+  .valores{list-style:none;font-family:var(--titular);font-size:34px;line-height:1.25;text-transform:lowercase;font-weight:600}
+  .valores li:nth-child(1){color:var(--verde)}.valores li:nth-child(2){color:var(--aqua)}
+  .valores li:nth-child(3){color:#a675ff}.valores li:nth-child(4){color:var(--naranja)}
+  @media (max-width:900px){.nos{grid-template-columns:1fr}}
+
+  /* Contacto */
+  .contacto{background:var(--verde);color:#000;border-radius:80px 0 0 0}
+  .contacto .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
+  .contacto h2{font-size:clamp(46px,6.5vw,88px)}
+  .contacto .lead{font-size:20px;margin:22px 0 34px;max-width:480px}
+  .contacto .btn-negro{background:#000;color:#fff}
+  .datos{list-style:none;font-size:17px}
+  .datos li{padding:18px 0;border-bottom:1.5px solid rgba(0,0,0,.18)}
+  .datos small{display:block;font-weight:900;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;opacity:.65}
+  .datos a{text-decoration:none;font-weight:500}
+  @media (max-width:860px){.contacto .wrap{grid-template-columns:1fr}.contacto{border-radius:48px 0 0 0}}
+
+  footer{padding:56px 0 40px}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;color:#8a8a8a;font-size:14px}
+  footer img{height:34px;width:auto}
+
+  .wa{position:fixed;right:22px;bottom:22px;z-index:60;width:60px;height:60px;border-radius:50%;background:var(--verde);display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(181,255,4,.6);transition:transform .2s}
+  .wa:hover{transform:scale(1.08)}
+  .wa svg{width:30px;height:30px}
+
+  .js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease}
+  .reveal.on{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.ventana span{animation:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap nav" aria-label="Principal">
+    <a href="#inicio" aria-label="Poliescol, inicio"><img src="assets/logo-blanco.svg" alt="Poliescol"></a>
+    <ul>
+      <li><a href="#categorias">Categorías</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a class="btn btn-verde" href="#contacto">Hablemos</a>
+  </nav>
+</header>
+
+<main id="inicio">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="kicker" style="color:var(--aqua)">Recubrimientos · Hecho en Colombia</span>
+        <h1 style="margin-top:20px">todo pintor<br>es un <em>artista.</em></h1>
+        <p>Masillas, impermeabilizantes y productos complementarios para quienes no se pueden dar el lujo de quedarle mal a un cliente.</p>
+        <div class="ctas">
+          <a class="btn btn-verde" href="#productos">Ver productos</a>
+          <a class="btn btn-linea" href="#categorias">Encuentra tu línea</a>
+        </div>
+      </div>
+      <div class="ventana" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    </div>
+  </section>
+
+  <!-- CATEGORÍAS -->
+  <section id="categorias" style="padding-top:40px">
+    <div class="wrap">
+      <div class="tit-sec reveal">
+        <div><span class="num">01.</span><h2>¿en qué<br>estás trabajando?</h2></div>
+        <p>Cada línea tiene su color y su ícono para que encuentres tu producto de un vistazo, en el punto de venta o aquí.</p>
+      </div>
+      <div class="cats">
+        <article class="cat c-verde reveal">
+          <img src="assets/ic-automotriz.png" alt="">
+          <div><h3>automotriz</h3><p>Latonería y pintura: masillas poliéster para resanar, rellenar y dejar la lámina lista.</p></div>
+        </article>
+        <article class="cat c-aqua reveal">
+          <img src="assets/ic-arquitectonico.png" alt="">
+          <div><h3>arquitectónico</h3><p>Impermeabilizantes y complementarios para proteger muros, cubiertas y fachadas.</p></div>
+        </article>
+        <article class="cat c-violeta metal reveal">
+          <img src="assets/ic-metalmecanico.png" alt="">
+          <div><h3>metalmecánico</h3><p>Recubrimientos para estructuras, carrocerías y cerrajería que trabajan duro.</p></div>
+        </article>
+        <article class="cat c-naranja reveal">
+          <img src="assets/ic-madera.png" alt="">
+          <div><h3>madera</h3><p>Productos para preparar, proteger y darle el mejor acabado a la madera.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MANIFIESTO -->
+  <section class="manifiesto">
+    <div class="wrap reveal">
+      <span class="kicker" style="color:var(--verde)">Lo que nos mueve</span>
+      <blockquote style="margin-top:24px">queremos un mundo donde los pintores sean <b>reconocidos como artistas</b> y crezcan integralmente.</blockquote>
+      <p class="firma">Por eso no solo vendemos recubrimientos: te acompañamos con asesoría cercana, para que cada trabajo que entregas hable bien de ti.</p>
+    </div>
+  </section>
+
+  <!-- CERCANÍA -->
+  <section>
+    <div class="wrap">
+      <div class="tit-sec reveal">
+        <div><span class="num">02.</span><h2>cercanía,<br>en serio.</h2></div>
+        <p>Sabemos lo que está en juego en cada entrega. Así es como estamos contigo.</p>
+      </div>
+      <div class="cercania reveal">
+        <div><i style="background:var(--verde)"></i><h3>variedad</h3><p>Un portafolio completo para automotriz, metalmecánica, arquitectura y madera.</p></div>
+        <div><i style="background:var(--aqua)"></i><h3>entrega a tiempo</h3><p>Despachos rápidos y puntuales, porque tu obra no puede esperar.</p></div>
+        <div><i style="background:var(--violeta)"></i><h3>servicio</h3><p>Asesoría técnica de gente que conoce el oficio y habla tu idioma.</p></div>
+        <div><i style="background:var(--naranja)"></i><h3>personalización</h3><p>Soluciones ajustadas a lo que tu proyecto realmente necesita.</p></div>
+        <div><i style="background:var(--aqua)"></i><h3>innovación</h3><p>Desarrollamos nuestros propios productos y los mejoramos todo el tiempo.</p></div>
+        <div><i style="background:var(--verde)"></i><h3>calidad</h3><p>Fórmulas confiables para que el resultado sea igual de bueno cada vez.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTOS -->
+  <section id="productos" style="padding-top:20px">
+    <div class="wrap">
+      <div class="tit-sec reveal">
+        <div><span class="num">03.</span><h2>productos<br>destacados</h2></div>
+        <p>Algunos de los favoritos del taller y la obra. Pregúntanos por el portafolio completo y las fichas técnicas.</p>
+      </div>
+      <div class="prods">
+        <article class="prod reveal">
+          <span class="tag c-verde">Automotriz</span>
+          <h3>masilla poliéster rosada</h3>
+          <p>Masilla flexible que soporta la vibración del metal. Para resanar grietas, hendiduras e imperfecciones en latonería, carrocerías y fibra de vidrio.</p>
+          <ul><li>Alto poder de relleno</li><li>Secado rápido</li><li>Buena lijabilidad</li></ul>
+        </article>
+        <article class="prod reveal">
+          <span class="tag c-verde">Automotriz</span>
+          <h3>poliflex</h3>
+          <p>Masilla plástica que extiende y rellena grandes áreas, dejando una capa uniforme y lisa, lista para lijar y pintar.</p>
+          <ul><li>Fácil de extender</li><li>Adhiere a metal y fibra</li><li>Acabado uniforme</li></ul>
+        </article>
+        <article class="prod reveal">
+          <span class="tag c-aqua">Arquitectónico</span>
+          <h3>impercryl p-7</h3>
+          <p>Impermeabilizante para proteger superficies de la humedad y el clima, con un acabado limpio.</p>
+          <ul><li>Protección contra el agua</li><li>Fácil aplicación</li><li>Pídelo en tu ferretería</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTROS -->
+  <section id="nosotros">
+    <div class="wrap">
+      <div class="tit-sec reveal">
+        <div><span class="num">04.</span><h2>somos una<br>familia.</h2></div>
+        <p>Poliescol es una compañía multilatina que desarrolla y comercializa recubrimientos para los sectores de pintura automotriz, metalmecánico y arquitectónico.</p>
+      </div>
+      <div class="nos">
+        <article class="reveal"><span class="kicker" style="color:var(--verde)">Visión</span><p>Un mundo donde los pintores sean reconocidos como artistas y crezcan integralmente, acompañados por una asesoría cercana que los haga sentir valiosos.</p></article>
+        <article class="reveal"><span class="kicker" style="color:var(--aqua)">Misión</span><p>Que los pintores usen y recomienden los recubrimientos que fabricamos y comercializamos. Somos una familia integral y comprometida, y nuestra gran labor es inspirarlos a todos.</p></article>
+        <article class="reveal"><span class="kicker" style="color:var(--naranja)">Valores</span>
+          <ul class="valores"><li>espiritualidad</li><li>genuinidad</li><li>disciplina</li><li>empatía</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="contacto">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="kicker">Contacto</span>
+        <h2 style="margin-top:16px">¿tienes una obra entre manos?</h2>
+        <p class="lead">Cuéntanos qué estás pintando y te ayudamos a elegir el producto correcto. Respondemos rápido.</p>
+        <a class="btn btn-negro" href="https://wa.me/573168340926?text=Hola%20Poliescol%2C%20quiero%20asesor%C3%ADa%20sobre%20sus%20productos" target="_blank" rel="noopener">Escríbenos por WhatsApp →</a>
+      </div>
+      <ul class="datos reveal">
+        <li><small>Servicio al cliente</small><a href="tel:+573168340926">316 834 09 26</a></li>
+        <li><small>Teléfono</small><a href="tel:+576043223822">604 322 38 22</a></li>
+        <li><small>Correo</small><a href="mailto:induresinas@gmail.com">induresinas@gmail.com</a></li>
+        <li><small>Planta</small>Calle 79 B Sur 50-150, Bodega 131<br>Parque Empresarial Promisión · La Estrella, Antioquia</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo-blanco.svg" alt="Poliescol">
+    <span>© <span id="y">2026</span> Poliescol · Industria de Resinas S.A.S.</span>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/573168340926" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#000"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
+
+<script>
+  document.documentElement.classList.add('js');
+  document.getElementById('y').textContent = new Date().getFullYear();
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
