@@ -1,6 +1,6 @@
-# Poliescol · Manual de marca
+# poliescol · Manual de marca
 
-> Manual de marca de Poliescol (recubrimientos: masillas, impermeabilizantes y complementarios para los sectores automotriz, metalmecánico, arquitectónico y de madera). Contiene las reglas obligatorias de logotipo, color, tipografía, iconografía, tono de voz y plantillas de comunicación interna (Gestión Humana). Úsalo para diseñar o redactar cualquier pieza de la marca.
+> Manual de marca de poliescol (recubrimientos: masillas, impermeabilizantes y complementarios para los sectores automotriz, metalmecánico, arquitectónico y de madera). Contiene las reglas obligatorias de logotipo, color, tipografía, iconografía, tono de voz y plantillas de comunicación interna (Gestión Humana). Úsalo para diseñar o redactar cualquier pieza de la marca. El nombre se escribe siempre en minúscula ("poliescol"); en piezas gráficas se usa el logo en vez de escribirlo.
 
 ## Reglas
 - [brand.md](https://cipreslab.github.io/poliescol/brand.md): todas las reglas en Markdown. Léelo completo antes de diseñar.

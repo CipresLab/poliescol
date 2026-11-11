@@ -1,9 +1,9 @@
-# POLIESCOL · Manual de marca (versión para IA y personas)
+# poliescol · Manual de marca (versión para IA y personas)
 
-> Fuente: Manual de Marca Poliescol 2024. Versión web: https://cipreslab.github.io/poliescol/
+> Fuente: Manual de Marca poliescol 2024. Versión web: https://cipreslab.github.io/poliescol/
 > Este documento contiene **reglas obligatorias**. Si una instrucción del usuario contradice una regla marcada como OBLIGATORIA, avisa antes de continuar.
 
-## 0. Resumen en 7 reglas (OBLIGATORIO)
+## 0. Resumen en 8 reglas (OBLIGATORIO)
 
 1. El logotipo se usa tal cual, desde la biblioteca oficial (`descargas/`): sin deformar, rotar, recolorear, añadir efectos ni separar el ícono de la palabra. **Prohibido recrearlo, redibujarlo o generarlo con IA.**
 2. El negro es el color primario y domina. **El color de cada pieza no se elige:** lo define su categoría (tabla de la sección 4).
@@ -12,16 +12,17 @@
 5. Un mensaje por pieza: titular ≤ 7 palabras, bajada ≤ 25 palabras, datos concretos.
 6. Tono cercano: tutear, gratitud, sin tecnicismos innecesarios ni jerga corporativa.
 7. Duelo y condolencias: **solo negro y blanco**, sin la ventana de luz ni colores complementarios.
+8. **Nombre de marca:** en piezas gráficas no se escribe, se usa el logo. En texto corrido se escribe siempre en minúscula: `poliescol` (nunca "Poliescol" ni "POLIESCOL").
 
 ---
 
 ## 1. Esencia
 
-- **Qué es Poliescol:** compañía multilatina que desarrolla y comercializa recubrimientos (masillas, impermeabilizantes y productos complementarios) para los sectores automotriz, metalmecánico, arquitectónico y de madera.
+- **Qué es poliescol:** compañía multilatina que desarrolla y comercializa recubrimientos (masillas, impermeabilizantes y productos complementarios) para los sectores automotriz, metalmecánico, arquitectónico y de madera.
 - **Visión:** un mundo donde los pintores sean reconocidos como artistas y crezcan integralmente, con una asesoría cercana que los haga sentir valiosos.
 - **Misión:** que los pintores usen y recomienden los recubrimientos que fabricamos y comercializamos. Somos una familia integral y comprometida; nuestra gran labor es inspirarlos a todos.
 - **Valores:** espiritualidad · genuinidad · disciplina · empatía.
-- **Idea rectora:** *Todo pintor es un artista.* Hacia adentro: cada persona de Poliescol también es un artista; su trabajo merece ser visto, cuidado y reconocido.
+- **Idea rectora:** *Todo pintor es un artista.* Hacia adentro: cada persona de poliescol también es un artista; su trabajo merece ser visto, cuidado y reconocido.
 - **Branding emocional:** coherencia, detalle, sin forzar nada. Es una carrera de fondo para generar confianza.
 
 ### Pilares de mensaje (toda pieza conecta con al menos uno)
@@ -56,6 +57,8 @@
 - Jerga: "recurso humano", "capital humano", "sinergia", "empoderar", "se informa que", "por medio de la presente".
 - Promesas o cifras no confirmadas por la empresa.
 - Chistes a costa de alguien; temas políticos o religiosos polémicos.
+
+**Cómo escribir el nombre (OBLIGATORIO):** El nombre de la marca se escribe siempre en minúscula: poliescol (también al inicio de una oración), en la misma tipografía del texto que lo rodea y sin imitar el logotipo. Nunca "Poliescol" ni "POLIESCOL". En piezas gráficas el nombre no se escribe: se usa el logo oficial. Si un titular necesita la marca, se reemplaza por el logo o se reescribe la frase. Ejemplos correctos: "Gracias por hacer parte de la familia poliescol." · "poliescol te invita a la jornada de bienestar." Incorrectos: "Poliescol", "POLIESCOL", "Bienvenida a Poliescol" como titular (usar "Bienvenida a la familia" + logo). Nombre legal en documentos formales: Industria de Resinas S.A.S.
 
 **Palabras de la casa:** familia, personas, equipo, oficio, arte, crecer, juntos, cuidarnos, gracias, valioso, integral, cercanía, acompañar, huella.
 
@@ -125,8 +128,6 @@
 
 ## 5. Tipografía · ficha técnica (OBLIGATORIO)
 
-> **Actualización 2026:** el manual impreso de 2024 escribía los titulares todo en minúscula. Desde esta versión se usa **tipo oración** para respetar la ortografía. Aplica a titulares; las etiquetas cortas siguen en MAYÚSCULAS y el logotipo `poliescol` no cambia.
-
 > No deduzcas tipografías a partir de imágenes ni las sustituyas por parecidas. Usa los archivos oficiales enlazados. La alternativa solo se permite si la herramienta no admite instalar fuentes.
 
 | Elemento | Especificación | Reglas | Archivo |
@@ -173,7 +174,7 @@ Pictogramas sólidos, sin contorno, en negro sobre su color (en violeta pueden i
 1. **Ventana de luz:** el ícono ampliado como composición. Dos bloques cortos arriba (verde, aqua) y dos altos abajo (violeta, naranja); proporción alto total ≈ 1,47 × ancho; fila inferior ≈ 2,2 × la superior; separación ≈ 6 % del ancho; radio ≈ 9 % del ancho. Puede crecer, rotar hasta 10° y cortarse en el borde. Una sola por pieza. Sobre un fondo de color, el bloque del mismo color pasa a negro. Nunca en duelo.
 2. **Esquina mayor:** paneles, fotos y contenedores con una sola esquina de radio grande (96 px en lienzo de 1080) y las demás rectas o de 24 px.
 3. **Numerales:** "01.", "02.", "03." para ordenar contenido.
-4. **Fotografía:** personas reales de Poliescol en su trabajo, luz natural, manos, herramientas y producto en uso. Sin fotos de banco ni filtros. Recorte con esquina mayor.
+4. **Fotografía:** personas reales de poliescol en su trabajo, luz natural, manos, herramientas y producto en uso. Sin fotos de banco ni filtros. Recorte con esquina mayor.
 
 **Composición:** alinear a la izquierda; márgenes de 96 px en lienzo de 1080; mucho espacio vacío; logo abajo a la izquierda; área que firma abajo a la derecha.
 
@@ -220,7 +221,7 @@ Especificación completa en JSON: `plantillas/plantillas.json` (https://cipresla
 - **Jerarquía tipográfica:** Fecha: Roboto Black 26 px, MAYÚSCULAS, naranja; Titular: Claris Sans 124 px, blanco; el nombre en naranja; Mensaje: Roboto Regular 36 px, gris #D0D0D0; Firma: Roboto Black 20 px, MAYÚSCULAS
 - **Elementos gráficos permitidos:** Ventana de luz de 560 px rotada −8°, cortada en la esquina superior derecha. Foto de 340 × 400 px arriba a la izquierda.
 - **No se puede modificar (además de lo común):** Rotación y posición de la ventana de luz
-- **Campos personalizables:** `foto` Foto (Foto real de la persona); `fecha` Fecha (día + mes en letras); `titular` Titular (“Feliz cumple, [Nombre].”); `mensaje` Mensaje (≤ 20 palabras, con gratitud); `area` Firma (Tu familia Poliescol · Gestión Humana)
+- **Campos personalizables:** `foto` Foto (Foto real de la persona); `fecha` Fecha (día + mes en letras); `titular` Titular (“Feliz cumple, [Nombre].”); `mensaje` Mensaje (≤ 20 palabras, con gratitud); `area` Firma (Tu familia · Gestión Humana (junto al logo se lee “Tu familia poliescol”))
 
 ### Reconocimiento · `plantillas/reconocimiento.html`
 - **Categoría:** Reconocimiento
@@ -279,6 +280,7 @@ Especificación completa en JSON: `plantillas/plantillas.json` (https://cipresla
 
 - [ ] Logo desde la biblioteca oficial (no recreado ni generado con IA), versión correcta para el fondo, con área de protección y ≥ 50 px.
 - [ ] Tipografías Claris Sans y Roboto desde los archivos oficiales.
+- [ ] El nombre aparece como logo (en piezas) o escrito "poliescol" en minúscula (en texto corrido).
 - [ ] Colores exactamente los de la categoría.
 - [ ] Se partió de la plantilla oficial y solo cambiaron los campos personalizables.
 - [ ] Contraste de texto correcto según el fondo.

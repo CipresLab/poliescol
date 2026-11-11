@@ -1,7 +1,8 @@
 {
-  "$descripcion": "Especificación de las plantillas oficiales de Gestión Humana de Poliescol. Solo se cambian los campos de 'campos'. Todo lo demás es fijo.",
+  "$descripcion": "Especificación de las plantillas oficiales de Gestión Humana de poliescol. Solo se cambian los campos de 'campos'. Todo lo demás es fijo.",
   "reglaGeneral": "La estructura visual, el logo, los colores y las tipografías se mantienen. Si un campo trae 'opciones', solo se elige entre ellas.",
   "reglaLogo": "Está prohibido recrear, redibujar, reinterpretar, vectorizar de nuevo o generar versiones del logotipo mediante inteligencia artificial o cualquier otra herramienta. Siempre se debe utilizar el archivo oficial suministrado en esta biblioteca.",
+  "reglaNombre": "El nombre de la marca se escribe siempre en minúscula: poliescol (también al inicio de una oración), en la misma tipografía del texto que lo rodea y sin imitar el logotipo. Nunca \"Poliescol\" ni \"POLIESCOL\". En piezas gráficas el nombre no se escribe: se usa el logo oficial. Si un titular necesita la marca, se reemplaza por el logo o se reescribe la frase.",
   "reglaColor": "La IA (y cualquier persona) no puede elegir libremente colores de la paleta: debe usar exactamente la combinación asignada a la categoría de la comunicación. Si la categoría no está en la tabla, se usa la de Comunicado institucional.",
   "dimensiones": {
     "ancho": 1080,
@@ -252,9 +253,9 @@
         {
           "campo": "area",
           "nombre": "Firma",
-          "regla": "Tu familia Poliescol · Gestión Humana",
+          "regla": "Tu familia · Gestión Humana (junto al logo se lee “Tu familia poliescol”)",
           "opciones": [
-            "Tu familia Poliescol",
+            "Tu familia",
             "Gestión Humana"
           ]
         }

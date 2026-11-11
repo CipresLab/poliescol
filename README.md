@@ -1,6 +1,6 @@
-# Poliescol · Manual de marca (versión web)
+# poliescol · Manual de marca (versión web)
 
-Manual de marca vivo de Poliescol, pensado para que **cualquier persona o IA** pueda diseñar piezas alineadas con la marca, en especial para Gestión Humana.
+Manual de marca vivo de poliescol, pensado para que **cualquier persona o IA** pueda diseñar piezas alineadas con la marca, en especial para Gestión Humana.
 
 **Sitio:** https://cipreslab.github.io/poliescol/
 
