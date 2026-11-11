@@ -7,7 +7,7 @@
 
 1. El logotipo se usa tal cual, desde la biblioteca oficial (`descargas/`): sin deformar, rotar, recolorear, añadir efectos ni separar el ícono de la palabra. **Prohibido recrearlo, redibujarlo o generarlo con IA.**
 2. El negro es el color primario y domina. **El color de cada pieza no se elige:** lo define su categoría (tabla de la sección 4).
-3. Titulares **en minúscula** en Claris Sans; textos en Roboto (Regular 400 y Black 900). Usa los archivos oficiales; no deduzcas tipografías de imágenes.
+3. Titulares en **tipo oración** (mayúscula inicial y en nombres propios; nunca todo en minúscula) en Claris Sans; textos en Roboto (Regular 400 y Black 900). Usa los archivos oficiales; no deduzcas tipografías de imágenes.
 4. Texto **negro** sobre verde, aqua, naranja y gris claro. Texto **blanco** sobre negro y violeta.
 5. Un mensaje por pieza: titular ≤ 7 palabras, bajada ≤ 25 palabras, datos concretos.
 6. Tono cercano: tutear, gratitud, sin tecnicismos innecesarios ni jerga corporativa.
@@ -21,7 +21,7 @@
 - **Visión:** un mundo donde los pintores sean reconocidos como artistas y crezcan integralmente, con una asesoría cercana que los haga sentir valiosos.
 - **Misión:** que los pintores usen y recomienden los recubrimientos que fabricamos y comercializamos. Somos una familia integral y comprometida; nuestra gran labor es inspirarlos a todos.
 - **Valores:** espiritualidad · genuinidad · disciplina · empatía.
-- **Idea rectora:** *todo pintor es un artista.* Hacia adentro: cada persona de Poliescol también es un artista; su trabajo merece ser visto, cuidado y reconocido.
+- **Idea rectora:** *Todo pintor es un artista.* Hacia adentro: cada persona de Poliescol también es un artista; su trabajo merece ser visto, cuidado y reconocido.
 - **Branding emocional:** coherencia, detalle, sin forzar nada. Es una carrera de fondo para generar confianza.
 
 ### Pilares de mensaje (toda pieza conecta con al menos uno)
@@ -43,7 +43,7 @@
 | Espirituales | doctrinarios | Gratitud, propósito, esperanza. Referencias explícitas a Dios solo si el momento lo pide y con respeto por todas las creencias. |
 
 **Escribir así:**
-- Titular ≤ 7 palabras, en minúscula; termina en punto si es afirmación.
+- Titular ≤ 7 palabras, en **tipo oración**: mayúscula inicial y en nombres propios, el resto en minúscula. Nunca todo en minúscula ni todo en mayúscula. Termina en punto si es afirmación.
 - Bajada ≤ 25 palabras; una idea por frase; verbos activos en presente.
 - Datos concretos: fecha, hora (formato 12 h: "2:00 p. m."), lugar, a quién va dirigido, a quién preguntar.
 - Nombrar a las personas por su nombre y área.
@@ -60,9 +60,9 @@
 **Palabras de la casa:** familia, personas, equipo, oficio, arte, crecer, juntos, cuidarnos, gracias, valioso, integral, cercanía, acompañar, huella.
 
 **Antes → después**
-- "Se informa a todo el personal que a partir del lunes se modifica el horario laboral." → **nuevo horario de planta.** Para que todos podamos descansar mejor, desde el lunes ajustamos la jornada.
-- "¡¡¡FELIZ CUMPLEAÑOS!!! 🎉🎂" → **feliz cumple, andrés.** Gracias por todo lo que pones en cada día.
-- "Es obligatoria la asistencia. La inasistencia será reportada." → **crecemos juntos.** Te esperamos el jueves a las 2:00 p. m. Si no puedes asistir, avísale a tu líder.
+- "Se informa a todo el personal que a partir del lunes se modifica el horario laboral." → **Nuevo horario de planta.** Para que todos podamos descansar mejor, desde el lunes ajustamos la jornada.
+- "¡¡¡FELIZ CUMPLEAÑOS!!! 🎉🎂" → **Feliz cumple, Andrés.** Gracias por todo lo que pones en cada día.
+- "Es obligatoria la asistencia. La inasistencia será reportada." → **Crecemos juntos.** Te esperamos el jueves a las 2:00 p. m. Si no puedes asistir, avísale a tu líder.
 
 ## 3. Logotipo · biblioteca oficial
 
@@ -125,13 +125,15 @@
 
 ## 5. Tipografía · ficha técnica (OBLIGATORIO)
 
+> **Actualización 2026:** el manual impreso de 2024 escribía los titulares todo en minúscula. Desde esta versión se usa **tipo oración** para respetar la ortografía. Aplica a titulares; las etiquetas cortas siguen en MAYÚSCULAS y el logotipo `poliescol` no cambia.
+
 > No deduzcas tipografías a partir de imágenes ni las sustituyas por parecidas. Usa los archivos oficiales enlazados. La alternativa solo se permite si la herramienta no admite instalar fuentes.
 
 | Elemento | Especificación | Reglas | Archivo |
 |---|---|---|---|
 | Tipografía principal | Claris Sans | Archivo único (un solo estilo). No aplicar negrita, cursiva ni contorno sintéticos. | [ClarisSans.ttf](https://cipreslab.github.io/poliescol/assets/fonts/ClarisSans.ttf) |
 | Tipografía de apoyo | Roboto | Familia completa de Thin (100) a Black (900), con itálicas y variable. | [poliescol-fuente-roboto.zip](https://cipreslab.github.io/poliescol/descargas/poliescol-fuente-roboto.zip) |
-| Titulares | Claris Sans · estilo único | Siempre en minúscula. Interlineado 0,98. Tracking −1,5 %. Máx. 7 palabras. | [ClarisSans.ttf](https://cipreslab.github.io/poliescol/assets/fonts/ClarisSans.ttf) |
+| Titulares | Claris Sans · estilo único | Tipo oración: mayúscula inicial y en nombres propios, resto en minúscula (nunca todo en minúscula ni todo en mayúscula). Interlineado 0,98. Tracking −1,5 %. Máx. 7 palabras. | [ClarisSans.ttf](https://cipreslab.github.io/poliescol/assets/fonts/ClarisSans.ttf) |
 | Numerales (01. 02.) y cifras grandes | Claris Sans · estilo único | Formato “01.” con punto final. | [ClarisSans.ttf](https://cipreslab.github.io/poliescol/assets/fonts/ClarisSans.ttf) |
 | Subtítulos, etiquetas y destacados | Roboto Black (900) | Etiquetas en MAYÚSCULAS con tracking +20 %. Nombres de personas y etiquetas de datos (“Hora:”). | [Roboto-Black.ttf](https://cipreslab.github.io/poliescol/descargas/poliescol-fuente-roboto.zip) |
 | Cuerpo de texto y bajadas | Roboto Regular (400) | Interlineado 1,35–1,45. Sin justificar: alineado a la izquierda. | [Roboto-Regular.ttf](https://cipreslab.github.io/poliescol/descargas/poliescol-fuente-roboto.zip) |
@@ -151,7 +153,7 @@
 **Jerarquía en lienzo de 1080 px de ancho:**
 - Etiqueta: Roboto Black 20–26 px, MAYÚSCULAS, tracking 0,2 em, color de acento, ≤ 4 palabras.
 - Numeral: Claris Sans, 56–150 px, formato "01.", gris #5F5F5F o color de acento.
-- Titular: Claris Sans, 90–150 px, interlineado 0,98, minúscula, ≤ 7 palabras, 2–4 líneas.
+- Titular: Claris Sans, 90–150 px, interlineado 0,98, tipo oración (mayúscula inicial y en nombres propios), ≤ 7 palabras, 2–4 líneas.
 - Bajada: Roboto Regular 32–38 px, interlineado 1,35, ≤ 25 palabras.
 - Datos: Roboto Regular 28–32 px; la etiqueta del dato ("Hora:") en Roboto Black.
 
@@ -193,10 +195,10 @@ Especificación completa en JSON: `plantillas/plantillas.json` (https://cipresla
 - **Dimensiones:** 1080 × 1350 px (4:5)
 - **Colores:** fondo #000000 · texto #FFFFFF · acento #20F9F5. Panel gris claro #EDEDED con texto negro; ventana de luz pequeña.
 - **Logo:** `descargas/poliescol-logo-principal-blanco.svg` — Abajo a la izquierda: 96 px del borde izquierdo y 80 px del borde inferior, 86 px de alto.
-- **Jerarquía tipográfica:** Etiqueta: Roboto Black 26 px, MAYÚSCULAS, aqua; Titular: Claris Sans 118 px, blanco, minúscula; Bajada: Roboto Regular 36 px, gris #CFCFCF; Datos: Roboto Regular 30 px negro sobre panel gris claro; etiqueta del dato en Roboto Black; Firma: Roboto Black 20 px, MAYÚSCULAS
+- **Jerarquía tipográfica:** Etiqueta: Roboto Black 26 px, MAYÚSCULAS, aqua; Titular: Claris Sans 118 px, blanco, tipo oración; Bajada: Roboto Regular 36 px, gris #CFCFCF; Datos: Roboto Regular 30 px negro sobre panel gris claro; etiqueta del dato en Roboto Black; Firma: Roboto Black 20 px, MAYÚSCULAS
 - **Elementos gráficos permitidos:** Ventana de luz de 210 px arriba a la derecha. Panel gris claro con esquina mayor de 96 px.
 - **No se puede modificar (además de lo común):** —
-- **Campos personalizables:** `tipo` Etiqueta (COMUNICADO · AVISO · RECORDATORIO); `titular` Titular (≤ 7 palabras, minúscula); `bajada` Bajada (≤ 25 palabras); `datos` Datos (3 líneas: Desde / Turno o Hora / Dudas); `area` Área que firma (Gestión Humana · Seguridad y Salud en el Trabajo)
+- **Campos personalizables:** `tipo` Etiqueta (COMUNICADO · AVISO · RECORDATORIO); `titular` Titular (≤ 7 palabras, tipo oración); `bajada` Bajada (≤ 25 palabras); `datos` Datos (3 líneas: Desde / Turno o Hora / Dudas); `area` Área que firma (Gestión Humana · Seguridad y Salud en el Trabajo)
 
 ### Bienvenida · `plantillas/bienvenida.html`
 - **Categoría:** Bienvenida
@@ -204,10 +206,10 @@ Especificación completa en JSON: `plantillas/plantillas.json` (https://cipresla
 - **Dimensiones:** 1080 × 1350 px (4:5)
 - **Colores:** fondo #20F9F5 · texto #000000 · acento #000000. Foto de la persona.
 - **Logo:** `descargas/poliescol-logo-principal-negro.svg` — Abajo a la izquierda: 96 px del borde izquierdo y 80 px del borde inferior, 86 px de alto.
-- **Jerarquía tipográfica:** Etiqueta: Roboto Black 26 px, MAYÚSCULAS, negro; Titular: Claris Sans 118 px, negro: “bienvenida/bienvenido, [nombre].”; Nombre completo: Roboto Black 40 px; Cargo y sede: Roboto Regular 30 px; Mensaje: Roboto Regular 30 px
+- **Jerarquía tipográfica:** Etiqueta: Roboto Black 26 px, MAYÚSCULAS, negro; Titular: Claris Sans 118 px, negro: “Bienvenida/Bienvenido, [Nombre].”; Nombre completo: Roboto Black 40 px; Cargo y sede: Roboto Regular 30 px; Mensaje: Roboto Regular 30 px
 - **Elementos gráficos permitidos:** Foto de 470 × 560 px con esquinas mayores (arriba-izquierda y abajo-derecha).
 - **No se puede modificar (además de lo común):** La etiqueta “NUEVO EN LA FAMILIA”
-- **Campos personalizables:** `titular` Titular (bienvenida/bienvenido + nombre de pila); `foto` Foto (Foto real de la persona, de frente, fondo limpio); `nombre` Nombre completo (Nombre y primer apellido); `cargo` Cargo y sede (2 líneas); `mensaje` Mensaje (≤ 25 palabras, invita a saludar)
+- **Campos personalizables:** `titular` Titular (Bienvenida/Bienvenido + nombre de pila); `foto` Foto (Foto real de la persona, de frente, fondo limpio); `nombre` Nombre completo (Nombre y primer apellido); `cargo` Cargo y sede (2 líneas); `mensaje` Mensaje (≤ 25 palabras, invita a saludar)
 
 ### Cumpleaños · `plantillas/cumpleanos.html`
 - **Categoría:** Cumpleaños
@@ -218,7 +220,7 @@ Especificación completa en JSON: `plantillas/plantillas.json` (https://cipresla
 - **Jerarquía tipográfica:** Fecha: Roboto Black 26 px, MAYÚSCULAS, naranja; Titular: Claris Sans 124 px, blanco; el nombre en naranja; Mensaje: Roboto Regular 36 px, gris #D0D0D0; Firma: Roboto Black 20 px, MAYÚSCULAS
 - **Elementos gráficos permitidos:** Ventana de luz de 560 px rotada −8°, cortada en la esquina superior derecha. Foto de 340 × 400 px arriba a la izquierda.
 - **No se puede modificar (además de lo común):** Rotación y posición de la ventana de luz
-- **Campos personalizables:** `foto` Foto (Foto real de la persona); `fecha` Fecha (día + mes en letras); `titular` Titular (“feliz cumple, [nombre].”); `mensaje` Mensaje (≤ 20 palabras, con gratitud); `area` Firma (Tu familia Poliescol · Gestión Humana)
+- **Campos personalizables:** `foto` Foto (Foto real de la persona); `fecha` Fecha (día + mes en letras); `titular` Titular (“Feliz cumple, [Nombre].”); `mensaje` Mensaje (≤ 20 palabras, con gratitud); `area` Firma (Tu familia Poliescol · Gestión Humana)
 
 ### Reconocimiento · `plantillas/reconocimiento.html`
 - **Categoría:** Reconocimiento
@@ -228,7 +230,7 @@ Especificación completa en JSON: `plantillas/plantillas.json` (https://cipresla
 - **Logo:** `descargas/poliescol-logo-principal-negro.svg` — Abajo a la izquierda: 96 px del borde izquierdo y 80 px del borde inferior, 86 px de alto.
 - **Jerarquía tipográfica:** Etiqueta: Roboto Black 26 px, MAYÚSCULAS, negro; Titular: Claris Sans 118 px, negro; Cifra: Claris Sans 110 px, verde sobre panel negro; Texto de la cifra: Roboto Black 30 px, MAYÚSCULAS, verde; Nombre: Roboto Black 44 px, blanco; Detalle: Roboto Regular 30 px, gris #CFCFCF
 - **Elementos gráficos permitidos:** Panel negro anclado al borde derecho con esquina mayor arriba a la derecha. Foto 300 × 340 px dentro del panel.
-- **No se puede modificar (además de lo común):** El titular “lo que haces también es arte.” puede cambiarse solo por otro titular del pilar “tu trabajo es arte”
+- **No se puede modificar (además de lo común):** El titular “Lo que haces también es arte.” puede cambiarse solo por otro titular del pilar “tu trabajo es arte”
 - **Campos personalizables:** `tipo` Etiqueta (RECONOCIMIENTO · ANIVERSARIO · BUENA PRÁCTICA); `titular` Titular (≤ 7 palabras); `foto` Foto (Foto real de la persona); `cifra` Cifra (número (años, metas, etc.)); `cifra_texto` Texto de la cifra (≤ 4 palabras); `nombre` Nombre (Nombre y primer apellido); `detalle` Detalle (Área · línea o sede); `area` Firma (Gracias, de corazón · Gestión Humana)
 
 ### Formación y eventos · `plantillas/formacion.html`
@@ -262,7 +264,7 @@ Especificación completa en JSON: `plantillas/plantillas.json` (https://cipresla
 - **Jerarquía tipográfica:** Línea: 84 × 2 px, blanco 50 %; Etiqueta: Roboto Black 26 px, MAYÚSCULAS, blanco 60 %; Titular: Claris Sans 92 px, blanco; Mensaje: Roboto Regular 36 px, gris #BDBDBD; Datos: Roboto Regular 30 px, gris #8A8A8A
 - **Elementos gráficos permitidos:** Solo la línea fina. Composición centrada verticalmente.
 - **No se puede modificar (además de lo común):** Sin ventana de luz ni colores complementarios; Sin exclamaciones ni emojis; La etiqueta “EN MEMORIA”
-- **Campos personalizables:** `titular` Titular (“acompañamos con cariño a la familia de [nombre].”); `mensaje` Mensaje (≤ 25 palabras, respetuoso; confirmar con la familia); `datos` Datos (Exequias: día, hora y lugar)
+- **Campos personalizables:** `titular` Titular (“Acompañamos con cariño a la familia de [Nombre].”); `mensaje` Mensaje (≤ 25 palabras, respetuoso; confirmar con la familia); `datos` Datos (Exequias: día, hora y lugar)
 
 **Otros formatos:**
 | Formato | Medida | Adaptación |
@@ -271,7 +273,7 @@ Especificación completa en JSON: `plantillas/plantillas.json` (https://cipresla
 | Cartelera impresa | carta 21,6 × 27,9 cm | márgenes 2 cm; logo ≥ 20 mm |
 | Encabezado de correo | 600 × 200 px | logo horizontal + etiqueta + titular; fondo negro |
 | Fondo de videollamada | 1920 × 1080 px | negro, ventana a la derecha cortada, logo horizontal abajo izquierda |
-| Presentación | 1920 × 1080 px | portadillas: numeral "01." + título en minúscula + ventana |
+| Presentación | 1920 × 1080 px | portadillas: numeral "01." + título en tipo oración + ventana |
 
 ## 9. Lista de chequeo (verificar antes de entregar)
 
@@ -280,7 +282,7 @@ Especificación completa en JSON: `plantillas/plantillas.json` (https://cipresla
 - [ ] Colores exactamente los de la categoría.
 - [ ] Se partió de la plantilla oficial y solo cambiaron los campos personalizables.
 - [ ] Contraste de texto correcto según el fondo.
-- [ ] Titular en minúscula, ≤ 7 palabras.
+- [ ] Titular en tipo oración, con buena ortografía, ≤ 7 palabras.
 - [ ] Un solo mensaje, con datos concretos.
 - [ ] Tono cercano, genuino, sin jerga ni amenazas, ≤ 1 exclamación.
 - [ ] Nombres, cargos, fechas y cifras confirmados por Gestión Humana.

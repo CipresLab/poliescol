@@ -21,7 +21,7 @@ body{display:grid;place-items:center;min-height:100vh;font-family:var(--p-font-b
 /* ---- Tipografía ---- */
 .kicker{font-family:var(--p-font-copy);font-weight:900;font-size:26px;letter-spacing:.2em;text-transform:uppercase}
 .numeral{font-family:var(--p-font-titular);font-weight:600;font-size:64px;color:var(--p-gris);line-height:1}
-.titular{font-family:var(--p-font-titular);font-weight:600;text-transform:lowercase;line-height:.98;letter-spacing:-.015em;font-size:118px}
+.titular{font-family:var(--p-font-titular);font-weight:600;line-height:.98;letter-spacing:-.015em;font-size:118px}
 .titular.xl{font-size:150px}
 .titular.m{font-size:92px}
 .bajada{font-size:36px;line-height:1.35;max-width:820px}

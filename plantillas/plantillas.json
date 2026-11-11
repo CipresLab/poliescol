@@ -43,7 +43,7 @@
         },
         {
           "elemento": "Titular",
-          "especificacion": "Claris Sans 118 px, blanco, minúscula"
+          "especificacion": "Claris Sans 118 px, blanco, tipo oración"
         },
         {
           "elemento": "Bajada",
@@ -81,7 +81,7 @@
         {
           "campo": "titular",
           "nombre": "Titular",
-          "regla": "≤ 7 palabras, minúscula"
+          "regla": "≤ 7 palabras, tipo oración"
         },
         {
           "campo": "bajada",
@@ -129,7 +129,7 @@
         },
         {
           "elemento": "Titular",
-          "especificacion": "Claris Sans 118 px, negro: “bienvenida/bienvenido, [nombre].”"
+          "especificacion": "Claris Sans 118 px, negro: “Bienvenida/Bienvenido, [Nombre].”"
         },
         {
           "elemento": "Nombre completo",
@@ -158,7 +158,7 @@
         {
           "campo": "titular",
           "nombre": "Titular",
-          "regla": "bienvenida/bienvenido + nombre de pila"
+          "regla": "Bienvenida/Bienvenido + nombre de pila"
         },
         {
           "campo": "foto",
@@ -242,7 +242,7 @@
         {
           "campo": "titular",
           "nombre": "Titular",
-          "regla": "“feliz cumple, [nombre].”"
+          "regla": "“Feliz cumple, [Nombre].”"
         },
         {
           "campo": "mensaje",
@@ -312,7 +312,7 @@
         "Colores asignados a la categoría",
         "Tipografías, tamaños y alineación",
         "Orden de los elementos",
-        "El titular “lo que haces también es arte.” puede cambiarse solo por otro titular del pilar “tu trabajo es arte”"
+        "El titular “Lo que haces también es arte.” puede cambiarse solo por otro titular del pilar “tu trabajo es arte”"
       ],
       "camposPersonalizables": [
         {
@@ -619,7 +619,7 @@
         {
           "campo": "titular",
           "nombre": "Titular",
-          "regla": "“acompañamos con cariño a la familia de [nombre].”"
+          "regla": "“Acompañamos con cariño a la familia de [Nombre].”"
         },
         {
           "campo": "mensaje",
